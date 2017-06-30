@@ -1,0 +1,89 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+		oneside,titlepage,numbers=noenddot,headinclude,%1headlines,
+	 	footinclude=true,cleardoublepage=empty,
+		dottedtoc, % Make page numbers in the table of contents flushed right with dots leading to them
+		BCOR=5mm,paper=a4,fontsize=12pt, % Binding correction, paper type and font size
+		italian,american, % Languages, change this to your language(s)
+		]{scrreprt} 
+                
+% Includes the file which contains all the document configurations and packages - make sure to edit this file
+\input{classicthesis-config}
+
+\addbibresource{Bibliography.bib} 
+\usepackage{eso-pic}
+\usepackage{tikz}
+\newcommand\BackgroundPic{%
+	\put(0,0){%
+		\parbox[b][\paperheight]{\paperwidth}{%
+			\vfill
+			\centering
+			\includegraphics[width=\paperwidth,height=\paperheight,%
+			keepaspectratio]{img/train.jpg}%
+			\vfill
+}}}
+
+
+\begin{document}
+
+\AddToShipoutPicture*{\BackgroundPic}
+
+\frenchspacing % Reduces space after periods to make text more compact
+
+\raggedbottom % Makes all pages the height of the text on that page
+
+\selectlanguage{italian}
+
+\pagenumbering{roman} % Roman page numbering prior to the start of the thesis content (i, ii, iii, etc)
+
+\pagestyle{plain} % Suppress headers for the pre-content pages
+
+%-------------------------------------------------------------------
+%	Frontespizio-Indice
+%-------------------------------------------------------------------
+
+\include{FrontBackMatter/Titlepage} % Main title page
+\cleardoublepage
+\cleardoublepage\include{FrontBackMatter/Contents} % Contents, list of figures/tables/listings and acronyms
+
+\cleardoublepage
+
+\pagenumbering{arabic} 
+
+\cleardoublepage % Avoids problems with pdfbookmark
+
+%----------------------------------------------------------------------------------------
+%	Contenuto della relazione
+%----------------------------------------------------------------------------------------
+
+\include{Chapters/Introduction}
+\include{Chapters/AlteraCycloneVBoot}
+\include{Chapters/Zedboard}
+\include{Chapters/AnotherZedboard}
+\include{Chapters/LinuxOnCycloneV}
+\include{Chapters/Conclusions}
+\cleardoublepage
+
+%----------------------------------------------------------------------------------------
+%	Appendici della relazione
+%----------------------------------------------------------------------------------------
+
+\appendix
+
+\part{Appendix}
+
+\include{Chapters/AppendixA}
+
+%----------------------------------------------------------------------------------------
+%	Bibliografia
+%----------------------------------------------------------------------------------------
+
+\cleardoublepage\include{FrontBackMatter/Bibliography} % Bibliography
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
