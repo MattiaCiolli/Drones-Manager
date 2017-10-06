@@ -26,6 +26,9 @@ class CreateAddressesTable extends Migration
 
             $table->integer('ordtrasp_id')->unsigned()->index()->nullable();
             $table->foreign('ordtrasp_id')->references('id')->on('order_transports');
+
+            $table->integer('enttrasp_id')->unsigned()->index()->nullable();
+            $table->foreign('enttrasp_id')->references('id')->on('enterprise_transports');
         });
     }
 

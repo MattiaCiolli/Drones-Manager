@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCurrenciesTable extends Migration
+class CreatePathsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateCurrenciesTable extends Migration
      */
     public function up()
     {
-        Schema::create('currencies', function (Blueprint $table) {
+        Schema::create('paths', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
 
-            $table->integer('price_id')->unsigned()->index()->nullable();
-            $table->foreign('price_id')->references('id')->on('prices');
+            $table->integer('ordtransport_id')->unsigned()->index()->nullable();
+            $table->foreign('ordtransport_id')->references('id')->on('order_transports');
         });
     }
 
@@ -29,6 +29,6 @@ class CreateCurrenciesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('currencies');
+        Schema::dropIfExists('paths');
     }
 }

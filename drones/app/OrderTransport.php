@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class OrderTransport extends Model
 {
-    public function products()
+    public function carriers()
     {
         return $this->hasMany(Carrier::class);
     }
@@ -16,13 +16,23 @@ class OrderTransport extends Model
         return $this->hasOne(Address::class);
     }
 
-    public function enterpriseTransport()
+    public function path()
     {
-        return $this->hasOne(EnterpriseTransport::class);
+        return $this->hasOne(Path::class);
+    }
+
+    public function entTransport()
+    {
+        return $this->belongsTo(EnterpriseTransport::class);
     }
 
     public function maitreTransport()
     {
         return $this->hasOne(MaitreTransport::class);
+    }
+
+    public function price()
+    {
+        return $this->hasOne(Price::class);
     }
 }

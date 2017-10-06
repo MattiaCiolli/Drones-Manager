@@ -10,4 +10,9 @@ class MaitreTransport extends Model
     {
         return $this->belongsTo(OrderTransport::class);
     }
+
+    public function entTransport()
+    {
+        return $this->belongsTo(EnterpriseTransport::class);
+    }
 }
