@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/getOrder/{idMaitre}/{idEnterprise}', 'OrderTransportController@newOrder');

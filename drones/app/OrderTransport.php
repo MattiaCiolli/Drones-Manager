@@ -3,36 +3,21 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\MaitreTransport;
+use App\EnterpriseTransport;
 
 class OrderTransport extends Model
 {
-    public function carriers()
-    {
-        return $this->hasMany(Carrier::class);
-    }
-
-    public function address()
-    {
-        return $this->hasOne(Address::class);
-    }
-
-    public function path()
-    {
-        return $this->hasOne(Path::class);
-    }
+	private $maitreTransport;
+	private $enterpriseTransport;
 
     public function entTransport()
     {
-        return $this->belongsTo(EnterpriseTransport::class);
+        $this->enterpriseTransport = $this->belongsTo(EnterpriseTransport::class);
     }
 
     public function maitreTransport()
     {
-        return $this->belongsTo(MaitreTransport::class);
-    }
-
-    public function price()
-    {
-        return $this->hasOne(Price::class);
+        $this->maitreTransport =  $this->belongsTo(MaitreTransport::class);
     }
 }
