@@ -16,12 +16,12 @@ class OrderTransport extends Model
         return $this->hasOne(Address::class);
     }
 
-    public function enterprisetransport()
+    public function enterpriseTransport()
     {
         return $this->hasOne(EnterpriseTransport::class);
     }
 
-    public function maitretransport()
+    public function maitreTransport()
     {
         return $this->hasOne(MaitreTransport::class);
     }

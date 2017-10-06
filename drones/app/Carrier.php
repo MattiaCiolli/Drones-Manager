@@ -11,7 +11,7 @@ class Carrier extends Model
         return $this->hasMany(Product::class);
     }
 
-    public function ordertransport()
+    public function orderTransport()
     {
         return $this->belongsTo(OrderTransport::class);
     }

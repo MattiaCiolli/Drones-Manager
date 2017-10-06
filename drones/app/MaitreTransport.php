@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class MaitreTransport extends Model
 {
-    public function ordertransport()
+    public function orderTransport()
     {
         return $this->belongsTo(OrderTransport::class);
     }

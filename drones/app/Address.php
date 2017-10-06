@@ -11,7 +11,7 @@ class Address extends Model
         return $this->belongsTo(Path::class);
     }
 
-    public function ordertransport()
+    public function orderTransport()
     {
         return $this->belongsTo(OrderTransport::class);
     }
