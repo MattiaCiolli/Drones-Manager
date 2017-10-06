@@ -12,7 +12,7 @@ class MaitreTransportSeeder extends Seeder
     public function run()
     {
         DB::table('maitre_transports')->insert([
-            'name' => 'MarioR',
+            'name' => 'MarioRr',
             'surname' => 'Rossi',
             'created_at' => Carbon\Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon\Carbon::now()->format('Y-m-d H:i:s'),
