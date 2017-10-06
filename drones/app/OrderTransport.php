@@ -28,7 +28,7 @@ class OrderTransport extends Model
 
     public function maitreTransport()
     {
-        return $this->hasOne(MaitreTransport::class);
+        return $this->belongsTo(MaitreTransport::class);
     }
 
     public function price()

@@ -8,7 +8,7 @@ class MaitreTransport extends Model
 {
     public function orderTransport()
     {
-        return $this->belongsTo(OrderTransport::class);
+        return $this->hasMany(OrderTransport::class);
     }
 
     public function entTransport()

@@ -17,6 +17,9 @@ class CreateOrderTransportsTable extends Migration
             $table->increments('id');
             $table->timestamps();
 
+            $table->integer('maitretrasp_id')->unsigned()->index()->nullable();
+            $table->foreign('maitretrasp_id')->references('id')->on('maitre_transports');
+
             $table->integer('enttransport_id')->unsigned()->index()->nullable();
             $table->foreign('enttransport_id')->references('id')->on('enterprise_transports');
         });
