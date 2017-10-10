@@ -37,5 +37,14 @@ class AddressTableSeeder extends Seeder
             'created_at' => \Carbon\Carbon::Now(),
             'updated_at' => \Carbon\Carbon::Now(),
         ]);
+
+        DB::table('addresses')->insert([
+            'address' => "via quaquaraqua",
+            'lat' => 42.2132100,
+            'lon' => 13.8251100,
+            'srid' => 4326,
+            'created_at' => \Carbon\Carbon::Now(),
+            'updated_at' => \Carbon\Carbon::Now(),
+        ]);
     }
 }
