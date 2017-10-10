@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'AddressTableSeeder' => $baseDir . '/database/seeds/AddressTableSeeder.php',
+    'AddressesPathsTableSeeder' => $baseDir . '/database/seeds/AddressesPathsTableSeeder.php',
     'App\\Carrier' => $baseDir . '/app/Carrier.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Currency' => $baseDir . '/app/Currency.php',
@@ -2052,7 +2053,6 @@ return array(
     'PHPUnit\\Framework\\TestCase' => $vendorDir . '/phpunit/phpunit/src/Framework/TestCase.php',
     'PHPUnit\\Framework\\TestFailure' => $vendorDir . '/phpunit/phpunit/src/Framework/TestFailure.php',
     'PHPUnit\\Framework\\TestListener' => $vendorDir . '/phpunit/phpunit/src/Framework/TestListener.php',
-    'PHPUnit\\Framework\\TestListenerDefaultImplementation' => $vendorDir . '/phpunit/phpunit/src/Framework/TestListenerDefaultImplementation.php',
     'PHPUnit\\Framework\\TestResult' => $vendorDir . '/phpunit/phpunit/src/Framework/TestResult.php',
     'PHPUnit\\Framework\\TestSuite' => $vendorDir . '/phpunit/phpunit/src/Framework/TestSuite.php',
     'PHPUnit\\Framework\\TestSuiteIterator' => $vendorDir . '/phpunit/phpunit/src/Framework/TestSuiteIterator.php',
@@ -2096,10 +2096,8 @@ return array(
     'PHPUnit\\Util\\TestDox\\ResultPrinter' => $vendorDir . '/phpunit/phpunit/src/Util/TestDox/ResultPrinter.php',
     'PHPUnit\\Util\\TestDox\\TextResultPrinter' => $vendorDir . '/phpunit/phpunit/src/Util/TestDox/TextResultPrinter.php',
     'PHPUnit\\Util\\TestDox\\XmlResultPrinter' => $vendorDir . '/phpunit/phpunit/src/Util/TestDox/XmlResultPrinter.php',
-    'PHPUnit\\Util\\TextTestListRenderer' => $vendorDir . '/phpunit/phpunit/src/Util/TextTestListRenderer.php',
     'PHPUnit\\Util\\Type' => $vendorDir . '/phpunit/phpunit/src/Util/Type.php',
     'PHPUnit\\Util\\Xml' => $vendorDir . '/phpunit/phpunit/src/Util/Xml.php',
-    'PHPUnit\\Util\\XmlTestListRenderer' => $vendorDir . '/phpunit/phpunit/src/Util/XmlTestListRenderer.php',
     'PHPUnit_Framework_MockObject_BadMethodCallException' => $vendorDir . '/phpunit/phpunit-mock-objects/src/Exception/BadMethodCallException.php',
     'PHPUnit_Framework_MockObject_Builder_Identity' => $vendorDir . '/phpunit/phpunit-mock-objects/src/Builder/Identity.php',
     'PHPUnit_Framework_MockObject_Builder_InvocationMocker' => $vendorDir . '/phpunit/phpunit-mock-objects/src/Builder/InvocationMocker.php',
@@ -3523,6 +3521,7 @@ return array(
     'TijsVerkoyen\\CssToInlineStyles\\Css\\Property\\Property' => $vendorDir . '/tijsverkoyen/css-to-inline-styles/src/Css/Property/Property.php',
     'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Processor' => $vendorDir . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Processor.php',
     'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => $vendorDir . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
+    'TransportMaitresTableSeeder' => $baseDir . '/database/seeds/TransportMaitresTableSeeder.php',
     'Webmozart\\Assert\\Assert' => $vendorDir . '/webmozart/assert/src/Assert.php',
     'Whoops\\Exception\\ErrorException' => $vendorDir . '/filp/whoops/src/Whoops/Exception/ErrorException.php',
     'Whoops\\Exception\\Formatter' => $vendorDir . '/filp/whoops/src/Whoops/Exception/Formatter.php',
@@ -3611,4 +3610,5 @@ return array(
     'phpDocumentor\\Reflection\\Types\\String_' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/String_.php',
     'phpDocumentor\\Reflection\\Types\\This' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/This.php',
     'phpDocumentor\\Reflection\\Types\\Void_' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Void_.php',
+    'transport_enterpriseTableSeeder' => $baseDir . '/database/seeds/transport_enterpriseTableSeeder.php',
 );
