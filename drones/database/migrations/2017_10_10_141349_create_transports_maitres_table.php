@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCarriersTable extends Migration
+class CreateTransportsMaitresTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateCarriersTable extends Migration
      */
     public function up()
     {
-        Schema::create('carriers', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('transports_maitres', function (Blueprint $table) {
+			$table->increments('id');
+			$table->string('name');
+			$table->string('surname');
+			$table->integer('enterprise_id')->unsigned();
             $table->timestamps();
-
-            $table->integer('ordertransport_id')->unsigned()->index()->nullable();
-            $table->foreign('ordertransport_id')->references('id')->on('order_transports');
         });
     }
 
@@ -29,6 +29,6 @@ class CreateCarriersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('carriers');
+        Schema::dropIfExists('transports_maitres');
     }
 }

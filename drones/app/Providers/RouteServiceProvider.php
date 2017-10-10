@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use App\MaitreTransport;
+use App\EnterpriseTransport;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -26,6 +28,9 @@ class RouteServiceProvider extends ServiceProvider
         //
 
         parent::boot();
+
+		Route::model('maitre', \App\Models\MaitreTransport::class);
+		Route::model('enterprise', \App\Models\EnterpriseTransport::class);
     }
 
     /**

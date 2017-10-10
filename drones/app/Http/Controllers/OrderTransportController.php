@@ -2,13 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\OrderTransport;
 use Illuminate\Http\Request;
+use App\Models\EnterpriseTransport;
+use App\Models\MaitreTransport;
+use App\Models\OrderTransport;
+use App\Http\Controllers\OrderTransportController;
 
 class OrderTransportController extends Controller
 {
-	public function newOrder($idMaitre, $idEnterprise)
+	public function newOrder(MaitreTransport $maitre, EnterpriseTransport $enterprise)
     {
-		return $idMaitre + $idEnterprise;
     }
+
+	public function setAddress($address)
+	{
+	}
 }

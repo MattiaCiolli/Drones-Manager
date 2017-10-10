@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/getOrder/{idMaitre}/{idEnterprise}', 'OrderTransportController@newOrder');
+Route::get('/getOrder/{maitre}/{enterprise}', 'OrderTransportController@newOrder');
