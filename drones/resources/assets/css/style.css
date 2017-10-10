@@ -1,0 +1,184 @@
+body {
+    background: url('../images/2.jpg') no-repeat center center;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+.home-content{
+
+    margin-top: 150px;
+    background-color:#1e1d1d;
+    opacity: 0.8;
+    border-radius: 15px;
+    height: 550px;
+    width: 380px;
+    padding-top: 80px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.home-content h1{
+    position: relative;
+    color:white;
+    text-align: center;
+    font-size: 60px;
+    font-style: italic;
+}
+
+.home-content p{
+    position: relative;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-style: italic;
+}
+
+.btn{
+    position: relative;
+    margin-left: 15%;
+    font-size: 28px;
+    width: 200px;
+    height: 80px;
+    font-style: italic;
+}
+
+
+
+.address-content{
+
+    margin-top: 60px;
+    background-color:#1e1d1d;
+    opacity: 0.8;
+    border-radius: 15px;
+    height: 850px;
+    width: 1000px;
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
+.address-content h3{
+    color: white;
+    font-size:40px;
+}
+
+.address-content p{
+    position: relative;
+    color: white;
+    font-size: 20px;
+    font-style: italic;
+}
+
+#map {
+    position: relative;
+    margin-top: 20px;
+    height: 580px;
+    width: 100%;
+    margin-top: 10px;
+   }
+
+.btn-address{
+    position: relative;
+    float: right;
+    margin-top: 2px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    width: 150px;
+    height: 60px;
+    font-style: italic;
+}
+
+/***** Media queries *****/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .home-content{
+
+        margin-top: 100px;
+        background-color:#1e1d1d;
+        opacity: 0.8;
+        border-radius: 15px;
+        height: 500px;
+        width: 380px;
+        padding-top: 120px;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    .home-content h1{
+        position: relative;
+        color:white;
+        text-align: center;
+        font-size: 60px;
+        font-style: italic;
+    }
+
+    .home-content p{
+        position: relative;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        font-style: italic;
+    }
+
+    .btn{
+        position: relative;
+        margin-left: 15%;
+        font-size: 28px;
+        width: 200px;
+        height: 80px;
+        font-style: italic;
+    }
+
+}
+
+@media  (max-width: 991px) {
+    body {
+    background: url('../images/2_medio.jpg') no-repeat center center;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+    .home-content{
+
+        margin-top: 100px;
+        background-color:#1e1d1d;
+        opacity: 0.8;
+        border-radius: 15px;
+        height: 500px;
+        width: 380px;
+        padding-top: 50px;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    .home-content h1{
+        position: relative;
+        color:white;
+        text-align: center;
+        font-size: 50px;
+        font-style: italic;
+    }
+
+    .home-content p{
+        position: relative;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        font-style: italic;
+    }
+
+    .btn{
+        position: relative;
+        margin-left: 15%;
+        font-size: 28px;
+        width: 200px;
+        height: 80px;
+        font-style: italic;
+    }
+}
+
