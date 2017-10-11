@@ -6,13 +6,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class TransportOrder extends Order
 {
-	public function entTransport()
+	protected $table = 'transports_orders';
+	protected $fillable = ['maitre_id'];
+
+	private $maitre_id;
+
+	public function setIdMaitre($maitreId)
 	{
-		$this->enterpriseTransport = $this->belongsTo(EnterpriseTransport::class);
+		$this->maitre_id = $maitreId;
 	}
 
-	public function maitreTransport()
+	public function maitre()
 	{
-		$this->maitreTransport =  $this->belongsTo(MaitreTransport::class);
+		return $this->hasOne('App\MaitreTransport');
 	}
+
 }
