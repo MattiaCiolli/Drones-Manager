@@ -11,14 +11,14 @@ abstract class Maitre extends Model
 
 	public function orderTransport()
 	{
-		return $this->hasMany(OrderTransport::class);
+		return $this->hasMany('App\Models\TransportOrder');
 	}
 
 	public function entTransport()
 	{
 		return $this->belongsTo(EnterpriseTransport::class);
 	}
-	
+
 	public function getName()
 	{
 		return $this->name;

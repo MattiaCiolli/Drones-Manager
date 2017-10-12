@@ -14,7 +14,7 @@ class OrderService
 		//sicuramente esiste perché sono stati creati i seeds, direttametne a mano.
 		$transportMaitre = \App\Models\TransportMaitre::find(1);
 		$transportOrder = new TransportOrder();
-		$transportOrder->setIdMaitre($transportMaitre->id);
+		$transportOrder->setMaitre($transportMaitre);
 		$transportOrder->save();
 	}
 }

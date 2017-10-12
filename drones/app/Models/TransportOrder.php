@@ -4,21 +4,20 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+
 class TransportOrder extends Order
 {
 	protected $table = 'transports_orders';
 	protected $fillable = ['maitre_id'];
 
-	private $maitre_id;
-
-	public function setIdMaitre($maitreId)
+	public function setMaitre($maitre)
 	{
-		$this->maitre_id = $maitreId;
+		$this->maitre()->associate($maitre);
 	}
 
 	public function maitre()
 	{
-		return $this->hasOne('App\MaitreTransport');
+		return $this->belongsTo('App\Models\TransportMaitre');
 	}
 
 }
