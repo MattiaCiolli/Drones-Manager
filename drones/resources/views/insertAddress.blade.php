@@ -28,7 +28,7 @@
     <!--Theme Responsive css-->
     <link rel="stylesheet" href="../resources/assets/css/responsive.css" />
 
-    <script src="../resources/assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="../resources/ assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body>
 <!--[if lt IE 8]>
