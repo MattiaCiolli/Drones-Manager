@@ -2,9 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
-
 class TransportOrder extends Order
 {
 	protected $table = 'transports_orders';
