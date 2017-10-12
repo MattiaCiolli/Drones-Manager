@@ -20,3 +20,4 @@ Route::get('/newOrder', 'TransportOrderController@newOrder');
 Route::get('/insertAddress', 'TransportOrderController@insertAddress');
 
 Route::get('/insertProducts', 'TransportOrderController@productAnalysis');
+
