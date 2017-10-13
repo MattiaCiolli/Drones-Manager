@@ -21,7 +21,7 @@ class TransportMaitresTableSeeder extends Seeder
 
         DB::table('transports_maitres')->insert([
             'name' => "Joe",
-            'surname' => "bastianich ",
+            'surname' => "Bastianich ",
             'enterprise_id' => 1,
             'created_at' => Carbon\Carbon::Now(),
             'updated_at' => Carbon\Carbon::Now(),
