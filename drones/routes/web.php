@@ -17,7 +17,11 @@ Route::get('/', function () {
 
 Route::get('/newOrder', 'TransportOrderController@newOrder');
 
-Route::get('/insertAddress', 'TransportOrderController@insertAddress');
+#Route::get('/insertAddress', 'TransportOrderController@insertAddress');
 
 Route::get('/insertProducts', 'TransportOrderController@productAnalysis');
 
+
+Route::get('/insertAddress', function () {
+    return view('insertAddress');
+});
