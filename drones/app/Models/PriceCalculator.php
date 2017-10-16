@@ -55,7 +55,7 @@ class TransportPriceCalculator extends PriceCalculator
                 //product price
                 $priceTemp=$priceTemp+1;
                 //transport type
-                $priceTemp=$priceTemp+$ini_array['types']['hot'];
+                $priceTemp=$priceTemp+$ini_array['types']['normal'];
             }
 
         }

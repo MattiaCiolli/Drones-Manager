@@ -59,6 +59,7 @@ class TransportOrderController extends Controller
         return $priceContext->preventive();
     }*/
 
+//test
     public function calculatePrice()
     {
         $priceContext = new PriceContext(null, new TransportPriceCalculator());;
