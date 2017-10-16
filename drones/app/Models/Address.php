@@ -6,10 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Address extends Model
 {
-	private $srid;
+	private $stringAddress;
 	private $lat;
 	private $lon;
-	private $stringAddress;
+	private $srid;
+
+	function __construct($stringAddress, $lat, $lon, $srid)
+	{
+		$this->stringAddress = $stringAddress;
+		$this->lat = $lat;
+		$this->lon = $lon;
+		$this->srid = $srid;
+  	}
 
 	public function setSrid($srid)
 	{
@@ -46,7 +54,7 @@ class Address extends Model
 		$this->$stringAddress = $stringAddress;
 	}
 
-	public function getAStringddress()
+	public function getStringAddress()
 	{
 		return $this->stringAddress;
 	}

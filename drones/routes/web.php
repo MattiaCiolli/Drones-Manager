@@ -16,3 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('/newOrder', 'TransportOrderController@newOrder');
+
+Route::get('/insertAddress/{destinationAddress}', 'TransportOrderController@insertAddress');
