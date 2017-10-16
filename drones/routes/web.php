@@ -27,3 +27,5 @@ Route::get('/insertAddress', function () {
 });
 
 Route::get('/insertAddress/{destinationAddress}', 'TransportOrderController@insertAddress');
+
+Route::get('/calculatePrice', 'TransportOrderController@calculatePrice');
