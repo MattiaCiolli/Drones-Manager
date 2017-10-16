@@ -17,6 +17,16 @@ class TransportOrderController extends Controller
 		$orderService->newOrderTransport();
 	}
 
+<<<<<<< HEAD
+	public function insertAddress($destinationAddress)
+	{
+		//In questo momento sto creando l'oggetto ma in un futuro prossimo questo
+		//dovrà ripreso dal Singleton
+		$addressService = new AddressService();
+		$jsonAddress = json_decode($destinationAddress);
+		$addressService->parseAddress($jsonAddress);
+	}
+=======
 	/*
 	 *  $jsonProductsList dovrà contenere un json che conterrà
 	 *  ID di descrittori con relative quantità
@@ -41,13 +51,5 @@ class TransportOrderController extends Controller
         $orderService->consignCarriers($carriersList);
         */
     }
-	public function insertAddress($destinationAddress)
-	{
-		//In questo momento sto creando l'oggetto ma in un futuro prossimo questo
-		//dovrà ripreso dal Singleton
-		$addressService = new AddressService();
-		$jsonAddress = json_decode($destinationAddress);
-		$addressService->parseAddress($jsonAddress);
-	}
-
+>>>>>>> dfe8571e942d5f6202acf0bd521cf44cf77d2210
 }

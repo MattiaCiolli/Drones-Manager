@@ -1,0 +1,278 @@
+
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+body {
+  background: url('../images/2.jpg') no-repeat center center;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.home-content{
+
+  margin-top: 90px;
+  background-color:#1e1d1d;
+  opacity: 0.8;
+  border-radius: 15px;
+  height: 550px;
+  width: 380px;
+  padding-top: 80px;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.home-content h1{
+  position: relative;
+  color:white;
+  text-align: center;
+  font-size: 60px;
+  font-style: italic;
+}
+
+.home-content p{
+  position: relative;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-style: italic;
+}
+
+.btn{
+  position: relative;
+  margin-left: 15%;
+  font-size: 28px;
+  width: 200px;
+  height: 80px;
+  font-style: italic;
+}
+
+
+
+.address-content{
+
+  margin-top: 60px;
+  background-color:#1e1d1d;
+  opacity: 0.8;
+  border-radius: 15px;
+  height: 650px;
+  width: 700px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.address-content h3{
+  color: white;
+  font-size:30px;
+  margin-top: 0px;
+}
+
+.address-content p{
+  position: relative;
+  color: white;
+  margin-top: 0px;
+  font-size: 15px;
+  font-style: italic;
+  float: left;
+}
+
+
+#map {
+  position: relative;
+  height: 460px;
+  width: 100%;
+  margin-top: -30px;
+  margin-bottom: 10px;
+}
+
+.btn-address{
+  position: relative;
+  float: right;
+  margin-top: 2px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  width: 150px;
+  height: 60px;
+  font-style: italic;
+}
+
+/* mappa */
+#description {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+#infowindow-content .title {
+  font-weight: bold;
+}
+
+#infowindow-content {
+  display: none;
+}
+
+#map #infowindow-content {
+  display: inline;
+}
+
+.pac-card {
+  margin: 10px 10px 0 0;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  font-family: Roboto;
+}
+
+#pac-container {
+  padding-bottom: 12px;
+  margin-right: 12px;
+}
+
+.pac-controls {
+  display: inline-block;
+  padding: 5px 11px;
+}
+
+.pac-controls label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 400px;
+  margin-top: 10px;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+#title {
+  color: #fff;
+  background-color: #4d90fe;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 6px 12px;
+}
+#target {
+  width: 345px;
+}
+
+#text_via{
+  float: left;
+  background-color:#1e1d1d;
+  opacity: 0.8;
+}
+
+/***** Media queries *****/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .home-content{
+
+    margin-top: 100px;
+    background-color:#1e1d1d;
+    opacity: 0.8;
+    border-radius: 15px;
+    height: 500px;
+    width: 380px;
+    padding-top: 120px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  .home-content h1{
+    position: relative;
+    color:white;
+    text-align: center;
+    font-size: 60px;
+    font-style: italic;
+  }
+
+  .home-content p{
+    position: relative;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-style: italic;
+  }
+
+  .btn{
+    position: relative;
+    margin-left: 15%;
+    font-size: 28px;
+    width: 200px;
+    height: 80px;
+    font-style: italic;
+  }
+
+}
+
+@media  (max-width: 991px) {
+  body {
+    background: url('../images/2_medio.jpg') no-repeat center center;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .home-content{
+
+    margin-top: 100px;
+    background-color:#1e1d1d;
+    opacity: 0.8;
+    border-radius: 15px;
+    height: 500px;
+    width: 380px;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  .home-content h1{
+    position: relative;
+    color:white;
+    text-align: center;
+    font-size: 50px;
+    font-style: italic;
+  }
+
+  .home-content p{
+    position: relative;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-style: italic;
+  }
+
+  .btn{
+    position: relative;
+    margin-left: 15%;
+    font-size: 28px;
+    width: 200px;
+    height: 80px;
+    font-style: italic;
+  }
+}
+
