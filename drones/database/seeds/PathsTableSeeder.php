@@ -20,6 +20,5 @@ class PathsTableSeeder extends Seeder
             'created_at' => Carbon\Carbon::Now(),
             'updated_at' => Carbon\Carbon::Now(),
         ]);
-        
     }
 }

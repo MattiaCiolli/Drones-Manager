@@ -10,8 +10,8 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         '1d1b89d124cc9cb8219922c9d5569199' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
-        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
+        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
@@ -62,6 +62,7 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
             'Psr\\Log\\' => 8,
             'Psr\\Container\\' => 14,
             'PhpParser\\' => 10,
+            'Phaza\\LaravelPostgis\\' => 21,
         ),
         'M' => 
         array (
@@ -75,6 +76,11 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         'I' => 
         array (
             'Illuminate\\' => 11,
+        ),
+        'G' => 
+        array (
+            'GeoIO\\WKB\\Parser\\' => 17,
+            'GeoIO\\' => 6,
         ),
         'F' => 
         array (
@@ -99,6 +105,10 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         array (
             'Cron\\' => 5,
             'Carbon\\' => 7,
+        ),
+        'B' => 
+        array (
+            'Bosnadev\\Database\\' => 18,
         ),
         'A' => 
         array (
@@ -205,6 +215,10 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
         ),
+        'Phaza\\LaravelPostgis\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phaza/laravel-postgis/src',
+        ),
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
@@ -220,6 +234,14 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         'Illuminate\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate',
+        ),
+        'GeoIO\\WKB\\Parser\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/geo-io/wkb-parser/src',
+        ),
+        'GeoIO\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/geo-io/interface/src',
         ),
         'Fideloper\\Proxy\\' => 
         array (
@@ -269,6 +291,10 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
         ),
+        'Bosnadev\\Database\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/bosnadev/database/src/Bosnadev/Database',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -305,6 +331,13 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
                 0 => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src',
             ),
         ),
+        'G' => 
+        array (
+            'GeoJson\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/jmikola/geojson/src',
+            ),
+        ),
         'D' => 
         array (
             'Doctrine\\DBAL\\' => 
@@ -325,9 +358,9 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
     public static $classMap = array (
         'AddressTableSeeder' => __DIR__ . '/../..' . '/database/seeds/AddressTableSeeder.php',
         'AddressesPathsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/AddressesPathsTableSeeder.php',
-        'App\\Carrier' => __DIR__ . '/../..' . '/app/Carrier.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Currency' => __DIR__ . '/../..' . '/app/Currency.php',
+        'App\\DataMappers\\RegulationMapper' => __DIR__ . '/../..' . '/app/DataMappers/RegulationMapper.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
@@ -353,17 +386,24 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         'App\\Models\\TransportMaitre' => __DIR__ . '/../..' . '/app/Models/TransportMaitre.php',
         'App\\Models\\TransportOrder' => __DIR__ . '/../..' . '/app/Models/TransportOrder.php',
         'App\\Price' => __DIR__ . '/../..' . '/app/Price.php',
-        'App\\Product' => __DIR__ . '/../..' . '/app/Product.php',
-        'App\\ProductDescription' => __DIR__ . '/../..' . '/app/ProductDescription.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Services\\AddressService' => __DIR__ . '/../..' . '/app/Services/AddressService.php',
         'App\\Services\\CarrierService' => __DIR__ . '/../..' . '/app/Services/CarrierService.php',
         'App\\Services\\OrderService' => __DIR__ . '/../..' . '/app/Services/OrderService.php',
         'App\\Services\\ProductService' => __DIR__ . '/../..' . '/app/Services/ProductService.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'Bosnadev\\Database\\Connectors\\ConnectionFactory' => __DIR__ . '/..' . '/bosnadev/database/src/Bosnadev/Database/Connectors/ConnectionFactory.php',
+        'Bosnadev\\Database\\DatabaseServiceProvider' => __DIR__ . '/..' . '/bosnadev/database/src/Bosnadev/Database/DatabaseServiceProvider.php',
+        'Bosnadev\\Database\\PostgresConnection' => __DIR__ . '/..' . '/bosnadev/database/src/Bosnadev/Database/PostgresConnection.php',
+        'Bosnadev\\Database\\Query\\Grammars\\PostgresGrammar' => __DIR__ . '/..' . '/bosnadev/database/src/Bosnadev/Database/Query/Grammars/PostgresGrammar.php',
+        'Bosnadev\\Database\\Schema\\Blueprint' => __DIR__ . '/..' . '/bosnadev/database/src/Bosnadev/Database/Schema/Blueprint.php',
+        'Bosnadev\\Database\\Schema\\Builder' => __DIR__ . '/..' . '/bosnadev/database/src/Bosnadev/Database/Schema/Builder.php',
+        'Bosnadev\\Database\\Schema\\Grammars\\PostgresGrammar' => __DIR__ . '/..' . '/bosnadev/database/src/Bosnadev/Database/Schema/Grammars/PostgresGrammar.php',
+        'Bosnadev\\Database\\Traits\\UuidTrait' => __DIR__ . '/..' . '/bosnadev/database/src/Bosnadev/Database/Traits/UuidTrait.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
@@ -1257,6 +1297,32 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',
         'File_Iterator_Factory' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Factory.php',
+        'GeoIO\\Dimension' => __DIR__ . '/..' . '/geo-io/interface/src/Dimension.php',
+        'GeoIO\\Extractor' => __DIR__ . '/..' . '/geo-io/interface/src/Extractor.php',
+        'GeoIO\\Factory' => __DIR__ . '/..' . '/geo-io/interface/src/Factory.php',
+        'GeoIO\\WKB\\Parser\\Exception\\Exception' => __DIR__ . '/..' . '/geo-io/wkb-parser/src/Exception/Exception.php',
+        'GeoIO\\WKB\\Parser\\Exception\\ParserException' => __DIR__ . '/..' . '/geo-io/wkb-parser/src/Exception/ParserException.php',
+        'GeoIO\\WKB\\Parser\\Parser' => __DIR__ . '/..' . '/geo-io/wkb-parser/src/Parser.php',
+        'GeoIO\\WKB\\Parser\\Scanner' => __DIR__ . '/..' . '/geo-io/wkb-parser/src/Scanner.php',
+        'GeoJson\\BoundingBox' => __DIR__ . '/..' . '/jmikola/geojson/src/GeoJson/BoundingBox.php',
+        'GeoJson\\CoordinateReferenceSystem\\CoordinateReferenceSystem' => __DIR__ . '/..' . '/jmikola/geojson/src/GeoJson/CoordinateReferenceSystem/CoordinateReferenceSystem.php',
+        'GeoJson\\CoordinateReferenceSystem\\Linked' => __DIR__ . '/..' . '/jmikola/geojson/src/GeoJson/CoordinateReferenceSystem/Linked.php',
+        'GeoJson\\CoordinateReferenceSystem\\Named' => __DIR__ . '/..' . '/jmikola/geojson/src/GeoJson/CoordinateReferenceSystem/Named.php',
+        'GeoJson\\Exception\\Exception' => __DIR__ . '/..' . '/jmikola/geojson/src/GeoJson/Exception/Exception.php',
+        'GeoJson\\Exception\\UnserializationException' => __DIR__ . '/..' . '/jmikola/geojson/src/GeoJson/Exception/UnserializationException.php',
+        'GeoJson\\Feature\\Feature' => __DIR__ . '/..' . '/jmikola/geojson/src/GeoJson/Feature/Feature.php',
+        'GeoJson\\Feature\\FeatureCollection' => __DIR__ . '/..' . '/jmikola/geojson/src/GeoJson/Feature/FeatureCollection.php',
+        'GeoJson\\GeoJson' => __DIR__ . '/..' . '/jmikola/geojson/src/GeoJson/GeoJson.php',
+        'GeoJson\\Geometry\\Geometry' => __DIR__ . '/..' . '/jmikola/geojson/src/GeoJson/Geometry/Geometry.php',
+        'GeoJson\\Geometry\\GeometryCollection' => __DIR__ . '/..' . '/jmikola/geojson/src/GeoJson/Geometry/GeometryCollection.php',
+        'GeoJson\\Geometry\\LineString' => __DIR__ . '/..' . '/jmikola/geojson/src/GeoJson/Geometry/LineString.php',
+        'GeoJson\\Geometry\\LinearRing' => __DIR__ . '/..' . '/jmikola/geojson/src/GeoJson/Geometry/LinearRing.php',
+        'GeoJson\\Geometry\\MultiLineString' => __DIR__ . '/..' . '/jmikola/geojson/src/GeoJson/Geometry/MultiLineString.php',
+        'GeoJson\\Geometry\\MultiPoint' => __DIR__ . '/..' . '/jmikola/geojson/src/GeoJson/Geometry/MultiPoint.php',
+        'GeoJson\\Geometry\\MultiPolygon' => __DIR__ . '/..' . '/jmikola/geojson/src/GeoJson/Geometry/MultiPolygon.php',
+        'GeoJson\\Geometry\\Point' => __DIR__ . '/..' . '/jmikola/geojson/src/GeoJson/Geometry/Point.php',
+        'GeoJson\\Geometry\\Polygon' => __DIR__ . '/..' . '/jmikola/geojson/src/GeoJson/Geometry/Polygon.php',
+        'GeoJson\\JsonUnserializable' => __DIR__ . '/..' . '/jmikola/geojson/src/GeoJson/JsonUnserializable.php',
         'Hamcrest\\Arrays\\IsArray' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArray.php',
         'Hamcrest\\Arrays\\IsArrayContaining' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContaining.php',
         'Hamcrest\\Arrays\\IsArrayContainingInAnyOrder' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContainingInAnyOrder.php',
@@ -2092,6 +2158,7 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         'JakubOnderka\\PhpConsoleColor\\ConsoleColor' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/JakubOnderka/PhpConsoleColor/ConsoleColor.php',
         'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/JakubOnderka/PhpConsoleColor/InvalidStyleException.php',
         'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src/JakubOnderka/PhpConsoleHighlighter/Highlighter.php',
+        'JsonSerializable' => __DIR__ . '/..' . '/jmikola/geojson/stubs/JsonSerializable.php',
         'Laravel\\Tinker\\ClassAliasAutoloader' => __DIR__ . '/..' . '/laravel/tinker/src/ClassAliasAutoloader.php',
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
         'Laravel\\Tinker\\TinkerCaster' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerCaster.php',
@@ -2734,6 +2801,29 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         'PharIo\\Version\\VersionConstraintParser' => __DIR__ . '/..' . '/phar-io/version/src/VersionConstraintParser.php',
         'PharIo\\Version\\VersionConstraintValue' => __DIR__ . '/..' . '/phar-io/version/src/VersionConstraintValue.php',
         'PharIo\\Version\\VersionNumber' => __DIR__ . '/..' . '/phar-io/version/src/VersionNumber.php',
+        'Phaza\\LaravelPostgis\\Connectors\\ConnectionFactory' => __DIR__ . '/..' . '/phaza/laravel-postgis/src/Connectors/ConnectionFactory.php',
+        'Phaza\\LaravelPostgis\\DatabaseServiceProvider' => __DIR__ . '/..' . '/phaza/laravel-postgis/src/DatabaseServiceProvider.php',
+        'Phaza\\LaravelPostgis\\Eloquent\\Builder' => __DIR__ . '/..' . '/phaza/laravel-postgis/src/Eloquent/Builder.php',
+        'Phaza\\LaravelPostgis\\Eloquent\\PostgisTrait' => __DIR__ . '/..' . '/phaza/laravel-postgis/src/Eloquent/PostgisTrait.php',
+        'Phaza\\LaravelPostgis\\Exceptions\\PostgisFieldsNotDefinedException' => __DIR__ . '/..' . '/phaza/laravel-postgis/src/Exceptions/PostgisFieldsNotDefinedException.php',
+        'Phaza\\LaravelPostgis\\Exceptions\\PostgisTypesMalformedException' => __DIR__ . '/..' . '/phaza/laravel-postgis/src/Exceptions/PostgisTypesMalformedException.php',
+        'Phaza\\LaravelPostgis\\Exceptions\\UnknownWKTTypeException' => __DIR__ . '/..' . '/phaza/laravel-postgis/src/Exceptions/UnknownWKTTypeException.php',
+        'Phaza\\LaravelPostgis\\Exceptions\\UnsupportedGeomtypeException' => __DIR__ . '/..' . '/phaza/laravel-postgis/src/Exceptions/UnsupportedGeomtypeException.php',
+        'Phaza\\LaravelPostgis\\Geometries\\Factory' => __DIR__ . '/..' . '/phaza/laravel-postgis/src/Geometries/Factory.php',
+        'Phaza\\LaravelPostgis\\Geometries\\Geometry' => __DIR__ . '/..' . '/phaza/laravel-postgis/src/Geometries/Geometry.php',
+        'Phaza\\LaravelPostgis\\Geometries\\GeometryCollection' => __DIR__ . '/..' . '/phaza/laravel-postgis/src/Geometries/GeometryCollection.php',
+        'Phaza\\LaravelPostgis\\Geometries\\GeometryInterface' => __DIR__ . '/..' . '/phaza/laravel-postgis/src/Geometries/GeometryInterface.php',
+        'Phaza\\LaravelPostgis\\Geometries\\LineString' => __DIR__ . '/..' . '/phaza/laravel-postgis/src/Geometries/LineString.php',
+        'Phaza\\LaravelPostgis\\Geometries\\MultiLineString' => __DIR__ . '/..' . '/phaza/laravel-postgis/src/Geometries/MultiLineString.php',
+        'Phaza\\LaravelPostgis\\Geometries\\MultiPoint' => __DIR__ . '/..' . '/phaza/laravel-postgis/src/Geometries/MultiPoint.php',
+        'Phaza\\LaravelPostgis\\Geometries\\MultiPolygon' => __DIR__ . '/..' . '/phaza/laravel-postgis/src/Geometries/MultiPolygon.php',
+        'Phaza\\LaravelPostgis\\Geometries\\Point' => __DIR__ . '/..' . '/phaza/laravel-postgis/src/Geometries/Point.php',
+        'Phaza\\LaravelPostgis\\Geometries\\PointCollection' => __DIR__ . '/..' . '/phaza/laravel-postgis/src/Geometries/PointCollection.php',
+        'Phaza\\LaravelPostgis\\Geometries\\Polygon' => __DIR__ . '/..' . '/phaza/laravel-postgis/src/Geometries/Polygon.php',
+        'Phaza\\LaravelPostgis\\PostgisConnection' => __DIR__ . '/..' . '/phaza/laravel-postgis/src/PostgisConnection.php',
+        'Phaza\\LaravelPostgis\\Schema\\Blueprint' => __DIR__ . '/..' . '/phaza/laravel-postgis/src/Schema/Blueprint.php',
+        'Phaza\\LaravelPostgis\\Schema\\Builder' => __DIR__ . '/..' . '/phaza/laravel-postgis/src/Schema/Builder.php',
+        'Phaza\\LaravelPostgis\\Schema\\Grammars\\PostgisGrammar' => __DIR__ . '/..' . '/phaza/laravel-postgis/src/Schema/Grammars/PostgisGrammar.php',
         'PhpParser\\Autoloader' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Autoloader.php',
         'PhpParser\\Builder' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Builder.php',
         'PhpParser\\BuilderAbstract' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/BuilderAbstract.php',
@@ -3212,6 +3302,7 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         'Ramsey\\Uuid\\UuidFactory' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidFactory.php',
         'Ramsey\\Uuid\\UuidFactoryInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidFactoryInterface.php',
         'Ramsey\\Uuid\\UuidInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidInterface.php',
+        'RegulationUDF' => __DIR__ . '/../..' . '/database/seeds/RegulationUDF.php',
         'SebastianBergmann\\CodeCoverage\\CodeCoverage' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/CodeCoverage.php',
         'SebastianBergmann\\CodeCoverage\\CoveredCodeNotExecutedException' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Exception/CoveredCodeNotExecutedException.php',
         'SebastianBergmann\\CodeCoverage\\Driver\\Driver' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Driver/Driver.php',

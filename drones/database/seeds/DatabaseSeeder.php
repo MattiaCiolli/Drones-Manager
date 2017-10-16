@@ -18,5 +18,6 @@ class DatabaseSeeder extends Seeder
         $this->call(transport_enterpriseTableSeeder::class);
         $this->call(TransportMaitresTableSeeder::class);
         $this->call(ProductsDescriptionsTableSeeder::class);
+		$this->call(RegulationUDF::class);
     }
 }
