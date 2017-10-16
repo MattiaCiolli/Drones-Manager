@@ -35,13 +35,11 @@ class TransportOrderController extends Controller
         //dovrà ripreso dal Singleton
         $productService = new ProductService();
         $carrierService = new CarrierService();
+        $orderService = new OrderService();
 
         $productList = $productService->generateProducts($stringProductList);   //da modificare con catalogo
         $carriersList = $carrierService->handleProduct($productList);           //da modificare con gestione carriers
-
-        /*  Da fare
         $orderService->consignCarriers($carriersList);
-        */
     }
 
 	public function insertAddress($destinationAddress)
