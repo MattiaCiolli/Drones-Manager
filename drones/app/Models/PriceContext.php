@@ -6,10 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class PriceContext extends Model
 {
-    private $order = NULL;
-    private $priceCalculatorState = NULL;
+    private $order;
+    private $priceCalculatorState;
 
     public function __construct($order_in, $priceCalculatorState_in) {
+        parent::__construct();
         $this->order = $order_in;
         $this->setPriceCalculatorState($priceCalculatorState_in);
     }

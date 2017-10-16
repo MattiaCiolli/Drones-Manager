@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\PriceContext;
+use App\Models\TransportPriceCalculator;
 use App\Services\CarrierService;
 use App\Services\ProductService;
 use Illuminate\Http\Request;
@@ -41,6 +43,7 @@ class TransportOrderController extends Controller
         $orderService->consignCarriers($carriersList);
         */
     }
+
 	public function insertAddress($destinationAddress)
 	{
 		//In questo momento sto creando l'oggetto ma in un futuro prossimo questo
@@ -49,5 +52,17 @@ class TransportOrderController extends Controller
 		$jsonAddress = json_decode($destinationAddress);
 		$addressService->parseAddress($jsonAddress);
 	}
+
+    /*public function calculatePrice($order_in)
+    {
+        $priceContext = new PriceContext($order_in, new TransportPriceCalculator());;
+        return $priceContext->preventive();
+    }*/
+
+    public function calculatePrice()
+    {
+        $priceContext = new PriceContext(null, new TransportPriceCalculator());;
+        return $priceContext->preventive();
+    }
 
 }

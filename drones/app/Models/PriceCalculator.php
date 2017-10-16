@@ -26,37 +26,42 @@ class TransportPriceCalculator extends PriceCalculator
 {
     public function calculatePrice($order_in)
     {
+        //read price policies
+        $ini_array = parse_ini_file("configApp/CarrierConfig.ini", true);
+
         //initialize price
         $finalPrice = new Price(0, $this->getCurrency());
         $priceTemp=0;
         //analyze products and update price
-        foreach ($order_in->getCarriers() as &$carr) {
+       /* foreach ($order_in->getCarriers() as &$carr) {
 
             //carrier price
-            $priceTemp=$priceTemp+1;
+            $priceTemp=$priceTemp+$ini_array['carrierPrice'];
 
             foreach ($carr->getProducts() as &$prod) {
                 //product price
                 $priceTemp=$priceTemp+$prod->getPrice();
                 //transport type
-                if($prod->getType()=="hot")
-                {
-                    $priceTemp=$priceTemp+1;
-                }
-                else if($prod->getType()=="normal")
-                {
-                    $priceTemp=$priceTemp+0;
-                }
-                else if($prod->getType()=="cold")
-                {
-                    $priceTemp=$priceTemp+2;
-                }
+                $priceTemp=$priceTemp+$ini_array[$prod->getType()];
             }
+        }*/
+
+       for($i=0; $i<4; $i++)
+        {
+            $priceTemp=$priceTemp+2;
+
+            for($j=0; $j<4; $j++)
+            {
+                //product price
+                $priceTemp=$priceTemp+1;
+                //transport type
+                $priceTemp=$priceTemp+$ini_array['types']['hot'];
+            }
+
         }
 
-
         //set final price
-        return $finalPrice;
+        return $priceTemp;
     }
 }
 /*

@@ -32,7 +32,7 @@ class Price extends Model
     public function __construct($value_in, $currency_in) {
 
         $this->value = $value_in;
-        $this->currency = currency_in;
+        $this->currency = $currency_in;
     }
 
     public function ordTransport()
