@@ -13,10 +13,50 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProductDescription extends Model
 {
+
+    protected $table = 'product_descriptions';
+
+    private $size;
+    private $type;
+    private $description;
+
     public function product()
     {
         return $this->hasMany('App/Models/Product');
     }
+
+
+    public function getSize()
+    {
+        return $this->size;
+    }
+
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+
+    public function setSize($size)
+    {
+        $this->size = $size;
+    }
+
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
+
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
 
 
 }
