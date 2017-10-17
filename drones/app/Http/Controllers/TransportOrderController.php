@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\PriceContext;
 use App\Models\TransportPriceCalculator;
 use App\Services\CarrierService;
+use App\Services\ConfigurationService;
 use App\Services\ProductService;
 use Illuminate\Http\Request;
 use App\Services\OrderService;
@@ -12,7 +13,10 @@ use App\Services\AddressService;
 
 class TransportOrderController extends Controller
 {
+
     public function newOrder() {
+        $s = ConfigurationService::getInstance();
+        $s->loadConfig();
 		//In questo momento sto creando l'oggetto ma in un futuro prossimo questo
 		//dovrà ripreso dal Singleton
 		$orderService = new OrderService();
@@ -60,6 +64,8 @@ class TransportOrderController extends Controller
 //test
     public function calculatePrice()
     {
+        $s = ConfigurationService::getInstance();
+        $s->loadConfig();
         $priceContext = new PriceContext(null, new TransportPriceCalculator());;
         return $priceContext->preventive();
     }
