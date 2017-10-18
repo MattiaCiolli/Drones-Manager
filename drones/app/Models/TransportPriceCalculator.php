@@ -17,8 +17,8 @@ class TransportPriceCalculator extends PriceCalculator
         $currencyConf = config('currency.currency.defaultCurrency');
 
         //initialize price
-        $finalPrice = new Price(0, $currencyConf);
         $priceTemp=0;
+
         //analyze products and update price
         /*foreach ($order_in->getCarriers() as &$carr) {
 
@@ -32,7 +32,7 @@ class TransportPriceCalculator extends PriceCalculator
                  $priceTemp=$priceTemp+config('carrier.carrierType.'.$prod->getType().'\'');
              }
          }*/
-
+//TEST
         for($i=0; $i<4; $i++)
         {
             $priceTemp=$priceTemp+config('carrier.carrierPrice');
@@ -48,6 +48,6 @@ class TransportPriceCalculator extends PriceCalculator
         }
 
         //set final price
-        return $priceTemp;
+        return new Price($priceTemp, $currencyConf);
     }
 }
