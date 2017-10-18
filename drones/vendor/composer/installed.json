@@ -4316,29 +4316,36 @@
         ]
     },
     {
-        "name": "geo-io/interface",
-        "version": "v1.0.1",
-        "version_normalized": "1.0.1.0",
+        "name": "bosnadev/database",
+        "version": "0.18",
+        "version_normalized": "0.18.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/geo-io/interface.git",
-            "reference": "cf46fe7b013de20ab8b601238c7d91b480810644"
+            "url": "https://github.com/bosnadev/database.git",
+            "reference": "3ada618cb0c218dde0fbc7229df40bd511dd975e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/geo-io/interface/zipball/cf46fe7b013de20ab8b601238c7d91b480810644",
-            "reference": "cf46fe7b013de20ab8b601238c7d91b480810644",
+            "url": "https://api.github.com/repos/bosnadev/database/zipball/3ada618cb0c218dde0fbc7229df40bd511dd975e",
+            "reference": "3ada618cb0c218dde0fbc7229df40bd511dd975e",
             "shasum": ""
         },
         "require": {
-            "php": ">=5.3.3"
+            "doctrine/dbal": "^2.5",
+            "illuminate/database": "^5.0",
+            "php": ">=5.4",
+            "ramsey/uuid": "^3.0"
         },
-        "time": "2016-07-28T07:17:02+00:00",
+        "require-dev": {
+            "mockery/mockery": "0.9.*",
+            "phpunit/phpunit": "~4.5"
+        },
+        "time": "2016-08-19T16:43:44+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "GeoIO\\": "src/"
+                "Bosnadev\\Database\\": "src/Bosnadev/Database/"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -4347,15 +4354,21 @@
         ],
         "authors": [
             {
-                "name": "Jan Sorgalla",
-                "email": "jsorgalla@gmail.com"
+                "name": "Peter Haza",
+                "email": "peter.haza@gmail.com"
+            },
+            {
+                "name": "Mirza Pasic",
+                "email": "mirza@bosnadev.com"
             }
         ],
-        "description": "Geo I/O base interfaces.",
+        "description": "Eloquent Extended, added some PostgreSQL features",
+        "homepage": "https://bosnadev.com",
         "keywords": [
-            "geo",
-            "geometry",
-            "io"
+            "database",
+            "eloquent",
+            "laravel",
+            "postgresql"
         ]
     },
     {
@@ -4414,6 +4427,49 @@
         ]
     },
     {
+        "name": "geo-io/interface",
+        "version": "v1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/geo-io/interface.git",
+            "reference": "cf46fe7b013de20ab8b601238c7d91b480810644"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/geo-io/interface/zipball/cf46fe7b013de20ab8b601238c7d91b480810644",
+            "reference": "cf46fe7b013de20ab8b601238c7d91b480810644",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3"
+        },
+        "time": "2016-07-28T07:17:02+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "GeoIO\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jan Sorgalla",
+                "email": "jsorgalla@gmail.com"
+            }
+        ],
+        "description": "Geo I/O base interfaces.",
+        "keywords": [
+            "geo",
+            "geometry",
+            "io"
+        ]
+    },
+    {
         "name": "geo-io/wkb-parser",
         "version": "v1.0.1",
         "version_normalized": "1.0.1.0",
@@ -4465,62 +4521,6 @@
             "io",
             "parser",
             "wkb"
-        ]
-    },
-    {
-        "name": "bosnadev/database",
-        "version": "0.18",
-        "version_normalized": "0.18.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/bosnadev/database.git",
-            "reference": "3ada618cb0c218dde0fbc7229df40bd511dd975e"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/bosnadev/database/zipball/3ada618cb0c218dde0fbc7229df40bd511dd975e",
-            "reference": "3ada618cb0c218dde0fbc7229df40bd511dd975e",
-            "shasum": ""
-        },
-        "require": {
-            "doctrine/dbal": "^2.5",
-            "illuminate/database": "^5.0",
-            "php": ">=5.4",
-            "ramsey/uuid": "^3.0"
-        },
-        "require-dev": {
-            "mockery/mockery": "0.9.*",
-            "phpunit/phpunit": "~4.5"
-        },
-        "time": "2016-08-19T16:43:44+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Bosnadev\\Database\\": "src/Bosnadev/Database/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Peter Haza",
-                "email": "peter.haza@gmail.com"
-            },
-            {
-                "name": "Mirza Pasic",
-                "email": "mirza@bosnadev.com"
-            }
-        ],
-        "description": "Eloquent Extended, added some PostgreSQL features",
-        "homepage": "https://bosnadev.com",
-        "keywords": [
-            "database",
-            "eloquent",
-            "laravel",
-            "postgresql"
         ]
     },
     {
