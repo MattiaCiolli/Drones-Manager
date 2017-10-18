@@ -6,6 +6,7 @@ use App\Models\PriceContext;
 use App\Models\TransportPriceCalculator;
 use App\Services\CarrierService;
 use App\Services\ConfigurationService;
+use App\Services\PriceService;
 use App\Services\ProductService;
 use Illuminate\Http\Request;
 use App\Services\OrderService;
@@ -64,10 +65,11 @@ class TransportOrderController extends Controller
 //test
     public function calculatePrice()
     {
-        $s = ConfigurationService::getInstance();
-        $s->loadConfig();
-        $priceContext = new PriceContext(null, new TransportPriceCalculator());;
-        return $priceContext->preventive();
+        /*$s = ConfigurationService::getInstance();
+        $s->loadConfig();*/
+        $priceServ = new PriceService();
+        $finalPrice = $priceServ->CalculateTransportPrice(null);
+        return $finalPrice;
     }
 
 }

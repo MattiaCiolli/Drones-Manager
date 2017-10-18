@@ -16,6 +16,15 @@ return  [
         'differentSize' => 8
     ],
 
+    'carrierPrice' => 1,
+
+    'carrierType' => [
+
+        'hot' => 2,
+        'normal' => 1,
+        'cold' => 3,
+    ],
+
     'packet' =>[
 
         'defaultSize' => [

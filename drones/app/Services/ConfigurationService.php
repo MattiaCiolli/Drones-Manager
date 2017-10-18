@@ -15,7 +15,9 @@ final class ConfigurationService
     private static $instance;
     private $lastModified;
     private $confFile = "../config/configApp/generalConfig.ini";
-    private $globalConf;
+    private $carrierConf;
+    private $priceConf;
+    private $currencyConf;
 
 
     public function getConffile()
