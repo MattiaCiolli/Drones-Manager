@@ -11,6 +11,5 @@ class RegulationUDF extends Seeder
      */
     public function run()
     {
-        DB:raw();
     }
 }
