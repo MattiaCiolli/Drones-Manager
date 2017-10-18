@@ -17,4 +17,15 @@ class OrderService
 		$transportOrder->setMaitre($transportMaitre);
 		$transportOrder->save();
 	}
+
+    public function consignCarriers($carriersList){
+
+        //Qui il transport Order dovrà essere recuperato da sessione e non direttamente
+        $transportOrder = \App\Models\TransportOrder::find(1);
+
+        foreach($carriersList as $carri){
+            $carri->setTransportOrder($transportOrder);
+            $carri->save();
+        }
+    }
 }
