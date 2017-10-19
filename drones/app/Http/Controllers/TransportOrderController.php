@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\PriceContext;
-use App\Models\TransportPriceCalculator;
+use App\Utility\PriceContext;
+use App\Utility\TransportPriceCalculator;
 use App\Services\CarrierService;
 use App\Services\ConfigurationService;
 use App\Services\PriceService;
@@ -31,7 +31,7 @@ class TransportOrderController extends Controller
     public function productAnalysis(/*$jsonProductsList*/){
 
         // $jsonProductsList utilizzato solo per debug
-        $jsonProductsList='{"productDescriptionID":[1, 2, 3], "productQuantity":[2, 5, 6]}';
+        $jsonProductsList='{"productDescriptionID":[1, 4, 6], "productQuantity":[2, 5, 6]}';
         $stringProductList = json_decode($jsonProductsList);
 
         //In questo momento sto creando gli oggetti service ma in un futuro prossimo questo
