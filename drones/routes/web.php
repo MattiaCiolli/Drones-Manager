@@ -19,16 +19,16 @@ Route::get('/newOrder', 'TransportOrderController@newOrder');
 
 Route::get('/insertAddress', 'TransportOrderController@insertAddress');
 
-Route::get('/insertProducts', 'TransportOrderController@productAnalysis');
+Route::get('/productAnalysis', 'TransportOrderController@productAnalysis');
 
 
 Route::get('/insertAddress', function () {
     return view('insertAddress');
 });
 
-/*Route::get('/insertProducts', function () {
+Route::get('/insertProducts', function () {
     return view('insertProduct');
-});*/
+});
 
 Route::get('/insertAddress/{destinationAddress}', 'TransportOrderController@insertAddress');
 

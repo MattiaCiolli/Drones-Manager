@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
         $this->call(AddressTableSeeder::class);
         $this->call(PathsTableSeeder::class);
         $this->call(AddressesPathsTableSeeder::class);
+        $this->call(CatalogsTableSeeder::class);
         $this->call(transport_enterpriseTableSeeder::class);
         $this->call(TransportMaitresTableSeeder::class);
         $this->call(ProductsDescriptionsTableSeeder::class);
@@ -22,5 +23,6 @@ class DatabaseSeeder extends Seeder
 		$this->call(NoFlyZoneTableSeeder::class);
         $this->call(CurrencyTableSeeder::class);
         $this->call(PriceTableSeeder::class);
+
     }
 }
