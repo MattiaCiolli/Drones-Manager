@@ -13,9 +13,6 @@ class TransportPriceCalculator extends PriceCalculator
 {
     public function calculatePrice($order_in)
     {
-        //read policies
-        $currencyConf = config('currency.currency.defaultCurrency');
-
         //initialize price
         $priceTemp=0;
 
@@ -48,6 +45,6 @@ class TransportPriceCalculator extends PriceCalculator
         }
 
         //set final price
-        return new Price($priceTemp, $currencyConf);
+        return $priceTemp;
     }
 }
