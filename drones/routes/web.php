@@ -26,9 +26,9 @@ Route::get('/insertAddress', function () {
     return view('insertAddress');
 });
 
-Route::get('/insertProducts', function () {
+/*Route::get('/insertProducts', function () {
     return view('insertProduct');
-});
+});*/
 
 Route::get('/insertAddress/{destinationAddress}', 'TransportOrderController@insertAddress');
 
