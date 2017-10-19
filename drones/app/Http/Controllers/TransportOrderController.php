@@ -16,8 +16,6 @@ class TransportOrderController extends Controller
 {
 
     public function newOrder() {
-        $s = ConfigurationService::getInstance();
-        $s->loadConfig();
 		//In questo momento sto creando l'oggetto ma in un futuro prossimo questo
 		//dovrà ripreso dal Singleton
 		$orderService = new OrderService();

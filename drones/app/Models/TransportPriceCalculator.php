@@ -46,7 +46,7 @@ class TransportPriceCalculator extends PriceCalculator
 
         }
 
-        $pathLengthPrice = config('path.pricePerKm')*2;
+        $pathLengthPrice = config('path.pricePerKm')*3;
         $priceTemp = $priceTemp+$pathLengthPrice;
         //set final price
         return $priceTemp;
