@@ -26,6 +26,18 @@ class ProductDescription extends Model
     }
 
 
+    public function setCatalog($catalog)
+    {
+        $this->catalog()->associate($catalog);
+    }
+
+
+    public function catalog()
+    {
+        return $this->belongsTo('App\Models\Catalog');
+    }
+
+
     public function getSize()
     {
         return $this->size;
