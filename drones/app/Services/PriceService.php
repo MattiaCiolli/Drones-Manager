@@ -28,6 +28,6 @@ class PriceService
         $price->save();
         $order_in->save();
         */
-        return $priceContext;
+        return $priceValue;
     }
 }
