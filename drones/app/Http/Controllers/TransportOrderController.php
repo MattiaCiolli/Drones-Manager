@@ -53,7 +53,12 @@ class TransportOrderController extends Controller
 		//dovrà ripreso dal Singleton
 		$addressService = new AddressService();
 		$jsonAddress = json_decode($destinationAddress);
-		$addressService->parseAddress($jsonAddress);
+		$address = $addressService->parseAddress($jsonAddress);
+		$addressIsValid = $addressService->checkAddress($address);
+		if($addressIsValid)
+			echo("L'indirizzo è valido");
+		else
+			echo("L'indirizzo non è valido");
 	}
 
     /*public function calculatePrice($order_in)

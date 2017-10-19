@@ -6,14 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Address extends Model
 {
-	private $stringAddress;
+	private $address;
 	private $lat;
 	private $lon;
 	private $srid;
 
-	function __construct($stringAddress, $lat, $lon, $srid)
+	function __construct($address, $lat, $lon, $srid)
 	{
-		$this->stringAddress = $stringAddress;
+		$this->address = $address;
 		$this->lat = $lat;
 		$this->lon = $lon;
 		$this->srid = $srid;
@@ -49,14 +49,14 @@ class Address extends Model
 		return $this->lon;
 	}
 
-	public function setStringAddress($stringAddress)
+	public function setStringAddress($address)
 	{
-		$this->$stringAddress = $stringAddress;
+		$this->$address = $address;
 	}
 
 	public function getStringAddress()
 	{
-		return $this->stringAddress;
+		return $this->address;
 	}
 
 	public function setCoordinates($lat, $lon)

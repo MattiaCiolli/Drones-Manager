@@ -2,6 +2,6 @@
 
 namespace database\foundation;
 
-inteface InterfaceFoundation
-{
+interface InterfaceFoundation {
+
 }
