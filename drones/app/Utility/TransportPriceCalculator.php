@@ -6,7 +6,7 @@
  * Time: 11.08
  */
 
-namespace App\Models;
+namespace App\Utility;
 
 
 class TransportPriceCalculator extends PriceCalculator

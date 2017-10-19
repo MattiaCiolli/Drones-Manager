@@ -9,8 +9,8 @@
 namespace App\Services;
 
 use App\Models\Price;
-use App\Models\PriceContext;
-use App\Models\TransportPriceCalculator;
+use App\Utility\PriceContext;
+use App\Utility\TransportPriceCalculator;
 
 class PriceService
 {

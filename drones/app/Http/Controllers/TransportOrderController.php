@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\PriceContext;
-use App\Models\TransportPriceCalculator;
+use App\Utility\PriceContext;
+use App\Utility\TransportPriceCalculator;
 use App\Services\CarrierService;
 use App\Services\ConfigurationService;
 use App\Services\PriceService;
