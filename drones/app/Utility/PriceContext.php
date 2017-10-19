@@ -2,9 +2,7 @@
 
 namespace App\Utility;
 
-use Illuminate\Database\Eloquent\Model;
-
-class PriceContext extends Model
+class PriceContext
 {
     private $order;
     private $priceCalculatorState;
