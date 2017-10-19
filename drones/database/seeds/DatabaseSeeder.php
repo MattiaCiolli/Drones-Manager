@@ -20,5 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ProductsDescriptionsTableSeeder::class);
 		$this->call(RegulationUDF::class);
 		$this->call(NoFlyZoneTableSeeder::class);
+        $this->call(CurrencyTableSeeder::class);
+        $this->call(PriceTableSeeder::class);
     }
 }

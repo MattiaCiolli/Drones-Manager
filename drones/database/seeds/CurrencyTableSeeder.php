@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class PriceTableSeeder extends Seeder
+class CurrencyTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,11 +11,12 @@ class PriceTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('prices')->insert([
-            'currency_id' => 1,
-            'transport_order_id'=>null,
+        DB::table('currencies')->insert([
+            'currency_name' => 'Euro',
+            'currency_symbol'=>'€',
             'created_at' => Carbon\Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon\Carbon::now()->format('Y-m-d H:i:s'),
         ]);
+
     }
 }
