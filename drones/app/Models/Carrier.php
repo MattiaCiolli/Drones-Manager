@@ -22,7 +22,8 @@ class Carrier extends Model
         return $this->belongsTo('App\Models\TransportOrder');
     }
 
-    public function setTransportOrder($order){
+    public function setTransportOrder($order)
+    {
         $this->transportOrder()->associate($order);
     }
 

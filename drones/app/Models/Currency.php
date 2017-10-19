@@ -8,6 +8,6 @@ class Currency extends Model
 {
     public function price()
     {
-        return $this->belongsTo(Price::class);
+        return $this->hasMany(Price::class);
     }
 }

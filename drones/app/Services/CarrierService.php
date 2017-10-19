@@ -17,64 +17,45 @@ class CarrierService
 
     public function handleProduct($productList){
 
-        $slotCarrier = config('carrier.carrier.defaultSize');
+        usort($productList, array($this, "cmp"));
+
         $numberOfProduct = count($productList);
 
 
-        // ordinare i prodotti nella lista rispetto alla size in modo che quando si riempie un carrier
-        // si puo continuare a riempire il successivo semplicemnte con un indice sulla lista
-        //while ($numberOfProduct>0){
+        $slotCarrier = config('carrier.carrier.defaultSize');
+        $indexCarrier=0;
+        $indexProduct=0;
+        while ($indexProduct<$numberOfProduct){
 
-            /*All'interno di un iterazione si riempie un carrier*/
-            $carrier = new Carrier();
 
-            //$carrier->setFreeSlots($slotCarrier);
-            $carrier->free_slots=$slotCarrier;
+            $carrier[$indexCarrier] = new Carrier();
+            $carrier[$indexCarrier]->free_slots=$slotCarrier;
+            $carrier[$indexCarrier]->save();
 
-            $carrier->save();
-            $freeSlot=$carrier->free_slots;                                                 //???
-            for($i = 0; $i<count($productList) && ($freeSlot>0) ;$i++){
-                $sizeOfProduct = $productList[$i]->description->size;
+            $freeSlot=$carrier[$indexCarrier]->free_slots;
+
+            $sizeOfProduct = $productList[$indexProduct]->description->size;
+            $slotOfProduct = config('carrier.packet.defaultSize.'.$sizeOfProduct);
+            for($indexProduct; $slotOfProduct <= $freeSlot ;$indexProduct++){
+
+                $sizeOfProduct = $productList[$indexProduct]->description->size;
                 $slotOfProduct = config('carrier.packet.defaultSize.'.$sizeOfProduct);
 
-                if($slotOfProduct<=$freeSlot){
-                    $productList[$i]->setCarrier($carrier);                     //?? dentro al set
-                    $productList[$i]->save();
+                $productList[$indexProduct]->setCarrier($carrier[$indexCarrier]);
+                $productList[$indexProduct]->save();
 
-                    $freeSlot=$freeSlot - $slotOfProduct;
-                    $carrier->setFreeSlots($freeSlot);
-                    $numberOfProduct = $numberOfProduct - 1;
-                }
+                $freeSlot = $freeSlot - $slotOfProduct;
+                $carrier[$indexCarrier]->setFreeSlots($freeSlot);
 
             }
-            $carriersList[] = $carrier;
-
-        //}
-
-
-        /*****************************************/
-        //Logica da implementare diversamente, cosa fatta per vedere se le cose funzionano
-        /*
-        $carrier1 = new Carrier();
-        $carrier2 = new Carrier();
-        $carrier1->save();
-        $carrier2->save();
-        foreach ($productList as $product) {
-            if($product->description->type == 'Cold'){
-                $product->setCarrier($carrier1);
-            }
-            else{
-                $product->setCarrier($carrier2);
-            }
-            $product->save();
+            $indexCarrier++;
         }
-        $carriersList[]=$carrier1;
-        $carriersList[]=$carrier2;
-        */
+        return $carrier;
+    }
 
-        /****************************************/
-
-        return $carriersList;
+    public  function cmp($a, $b)
+    {
+        return -1*(strcmp($a->description->size, $b->description->size));
     }
 
 }

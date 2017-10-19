@@ -17,15 +17,18 @@ class TransportOrder extends Order
         $this->maitre()->associate($price);
     }
 
-
 	public function maitre()
 	{
 		return $this->belongsTo('App\Models\TransportMaitre');
 	}
 
-
     public function carrier()
     {
         return $this->hasMany('App\Models\Carrier');
+    }
+
+    public function price()
+    {
+        return $this->hasOne('App\Models\Price');
     }
 }

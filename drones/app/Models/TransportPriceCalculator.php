@@ -13,12 +13,9 @@ class TransportPriceCalculator extends PriceCalculator
 {
     public function calculatePrice($order_in)
     {
-        //read policies
-        $currencyConf = config('currency.currency.defaultCurrency');
-
         //initialize price
-        $finalPrice = new Price(0, $currencyConf);
         $priceTemp=0;
+
         //analyze products and update price
         /*foreach ($order_in->getCarriers() as &$carr) {
 
@@ -31,8 +28,10 @@ class TransportPriceCalculator extends PriceCalculator
                  //transport type
                  $priceTemp=$priceTemp+config('carrier.carrierType.'.$prod->getType().'\'');
              }
-         }*/
-
+         }
+        $pathLengthPrice = config('path.pricePerKm') * $order_in->getPath()->getLength();
+        */
+//TEST
         for($i=0; $i<4; $i++)
         {
             $priceTemp=$priceTemp+config('carrier.carrierPrice');
@@ -42,11 +41,13 @@ class TransportPriceCalculator extends PriceCalculator
                 //product price
                 $priceTemp=$priceTemp+1;
                 //transport type
-                $priceTemp=$priceTemp+config('carrier.carrierType.cold');
+                $priceTemp=$priceTemp+config('carrier.carrierType.hot');
             }
 
         }
 
+        $pathLengthPrice = config('path.pricePerKm')*3;
+        $priceTemp = $priceTemp+$pathLengthPrice;
         //set final price
         return $priceTemp;
     }
