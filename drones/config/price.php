@@ -10,9 +10,11 @@
 return  [
 
 
-    'policies' => [
+    'discountStrategies' => [
 
-        'a' => 5,
-        'b' => 8
+        'summer' => 0.9,
+        'quantity' => 0.95,
+	'fidelity' => 0.8,
+	'pathLength' => 2,
     ],
 ];

@@ -58,7 +58,7 @@ class TransportPriceCalculator extends PriceCalculator
         }
 
         */
-//TEST
+//TEST-----------------------------------------------------------------------------------
         for($i=0; $i<4; $i++)
         {
             $priceTemp=$priceTemp+config('carrier.carrierPrice');
@@ -68,13 +68,17 @@ class TransportPriceCalculator extends PriceCalculator
                 //product price
                 $priceTemp=$priceTemp+1;
                 //transport type
-                $priceTemp=$priceTemp+config('carrier.carrierType.hot');
+                $priceTemp=$priceTemp+config('carrier.carrierType.normal');
             }
 
         }
 
-        $pathLengthPrice = config('path.pricePerKm')*3;
+        $pathLengthPrice = config('path.pricePerKm')*1;
         $priceTemp = $priceTemp+$pathLengthPrice;
+        $priceStrategyContext = new PriceStrategyContext('Q');
+        $priceTemp= $priceStrategyContext->discount($priceTemp);
+//FINE TEST-----------------------------------------------------------------------------------
+
         //set final price
         return $priceTemp;
     }

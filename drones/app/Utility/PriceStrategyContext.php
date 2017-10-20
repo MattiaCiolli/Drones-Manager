@@ -8,7 +8,6 @@
 
 namespace App\Utility;
 
-
 class PriceStrategyContext
 {
     private $strategy = NULL;
@@ -16,16 +15,16 @@ class PriceStrategyContext
     public function __construct($strategy_ind_id) {
         switch ($strategy_ind_id) {
             case "S":
-                $this->strategy = new StrategySummer();
+                $this->strategy = new SummerStrategy();
                 break;
             case "Q":
-                $this->strategy = new StrategyQuantity();
+                $this->strategy = new QuantityStrategy();
                 break;
             case "P":
-                $this->strategy = new StrategyPathLength();
+                $this->strategy = new PathLengthStrategy();
                 break;
             case "F":
-                $this->strategy = new StrategyFidelity();
+                $this->strategy = new FidelityStrategy();
         }
     }
     public function discount($value_in) {

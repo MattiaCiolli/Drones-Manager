@@ -12,7 +12,7 @@ namespace App\Utility;
 class QuantityStrategy implements PriceStrategy
 {
     public function discount($value_in) {
-        $value_in= $value_in*0.8;
+        $value_in = $value_in*config('price.discountStrategies.quantity');
         return $value_in;
     }
 }

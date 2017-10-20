@@ -12,8 +12,7 @@ namespace App\Utility;
 class SummerStrategy implements PriceStrategy
 {
     public function discount($value_in) {
-        //if estate
-        $value_in= $value_in*0.9;
+        $value_in = $value_in*config('price.discountStrategies.summer');
         return $value_in;
     }
 }

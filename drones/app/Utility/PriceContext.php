@@ -8,7 +8,6 @@ class PriceContext
     private $priceCalculatorState;
 
     public function __construct($order_in, $priceCalculatorState_in) {
-        parent::__construct();
         $this->order = $order_in;
         $this->setPriceCalculatorState($priceCalculatorState_in);
     }
