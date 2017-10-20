@@ -14,7 +14,7 @@
                         <p>Fai la tua richiesta e </br>ricevi l'ordinazione a </br> <strong>casa tua! <strong> </p> </br></br>
                     </div>
                     <div class="testo-down">
-                        <a target="_blank" href="#"><button class="btn btn-danger btn-lg">Nuovo ordine</button></a>
+                        <a target="_blank" href="{{ url("/insertAddress") }}"><button class="btn btn-danger btn-lg">Nuovo ordine</button></a>
                     </div>
                 </div>
             </div>

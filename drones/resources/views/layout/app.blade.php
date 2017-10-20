@@ -17,6 +17,11 @@
     <link rel="stylesheet" href="/css/app.css">
     <script src="/js/app.js"></script>
 
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >
+    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+
+
+
 </head>
 <body>
 

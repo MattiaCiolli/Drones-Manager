@@ -8437,6 +8437,7 @@ body {
   width: 150px;
   height: 60px;
   font-style: italic;
+  padding: auto;
 }
 
 /* mappa */
@@ -8516,11 +8517,29 @@ body {
   width: 345px;
 }
 
-#text_via {
+.text_via {
   float: left;
   background-color: #1e1d1d;
   opacity: 0.8;
 }
+
+#text_via {
+  color: #f9f2f4;
+}
+
+.text_via span {
+  margin-left: 20px;
+  visibility: hidden;
+}
+
+/*
+.CheckButton{
+  width: 80px;
+  height: 25px;
+  font-size: 15px;
+  padding:auto;
+}
+*/
 
 .testo-top-product {
   height: 80px;

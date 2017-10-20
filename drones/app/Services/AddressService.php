@@ -8,10 +8,16 @@ use database\foundation\RegulationFoundation;
 
 class AddressService
 {
+    /*
     public function parseAddress($jsonAddress)
 	{
 		return new Address($jsonAddress->address, $jsonAddress->lat, $jsonAddress->lon, 4326);
 	}
+    */
+    public function parseAddress($address, $lat, $lon)
+    {
+        return new Address($address, $lat, $lon, 4326);
+    }
 
 	public function checkAddress($address)
 	{

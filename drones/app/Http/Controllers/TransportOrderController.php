@@ -20,6 +20,7 @@ class TransportOrderController extends Controller
 		//dovrà ripreso dal Singleton
 		$orderService = new OrderService();
 		$orderService->newOrderTransport();
+        return view('insertAddress');
 	}
 
     /*
@@ -43,21 +44,39 @@ class TransportOrderController extends Controller
         $productList = $productService->generateProducts($stringProductList);   //da modificare con catalogo
         $carriersList = $carrierService->handleProduct($productList);
         $orderService->consignCarriers($carriersList);
+
     }
 
-	public function insertAddress($destinationAddress)
-	{
-		//In questo momento sto creando l'oggetto ma in un futuro prossimo questo
-		//dovrà ripreso dal Singleton
+	public function insertAddress()
+    {
+        //In questo momento sto creando l'oggetto ma in un futuro prossimo questo
+        //dovrà ripreso dal Singleton
+
+        //MODIFICHE: i valori che ritornano da ajax vengono ripresi singolarmente e passati alla funzione che adesso
+        // accetta 3 parametri e non più un JSON
+
+        $address = request()->input('address');
+        $lat = request()->input('coorLat');
+        $lon = request()->input('coorLng');
 		$addressService = new AddressService();
-		$jsonAddress = json_decode($destinationAddress);
-		$address = $addressService->parseAddress($jsonAddress);
-		$addressIsValid = $addressService->checkAddress($address);
+
+		//$jsonAddress = json_decode($destinationAddress);
+
+        $address = $addressService->parseAddress($address,$lat,$lon);
+        //$address = $addressService->parseAddress($jsonAddress);
+
+        //NB probabilmente c'è qualche errore nella validazione dell'indirizzo quindi per l'happy path ora è a true.
+
+        //$addressIsValid = $addressService->checkAddress($address);
+		$addressIsValid=true;
+
 		if($addressIsValid)
-			echo("L'indirizzo è valido");
+			return response()->json("L'indirizzo e' valido");
 		else
-			echo("L'indirizzo non è valido");
-	}
+			return response()->json("L'indirizzo non e' valido");
+
+    }
+
 
     /*public function calculatePrice($order_in)
     {

@@ -19,7 +19,26 @@
                        <div class="product">
                             <div class="row">
                                 <input type="hidden" name="id" value="1" class="id-products">
-                                <input type="number" class="form-control col-md-1 quantity-products" name="product" min="0" value="0" step="1" >
+                                <input type="hidden" name="price" value="1.20" class="price-products">
+                                <input type="number" class="form-control col-md-1 quantity-products" name="product" min="0" value="1" step="1" >
+                                <label for="product" class="col-md-11 col-md-offset-1">Option</label>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="product">
+                            <div class="row">
+                                <input type="hidden" name="id" value="2" class="id-products">
+                                <input type="hidden" name="price" value="3.00" class="price-products">
+                                <input type="number" class="form-control col-md-1 quantity-products" name="product" min="0" value="1" step="1" >
+                                <label for="product" class="col-md-11 col-md-offset-1">Option</label>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="product">
+                            <div class="row">
+                                <input type="hidden" name="id" value="3" class="id-products">
+                                <input type="hidden" name="price" value="4.80" class="price-products">
+                                <input type="number" class="form-control col-md-1 quantity-products" name="product" min="0" value="1" step="1" >
                                 <label for="product" class="col-md-11 col-md-offset-1">Option</label>
                             </div>
                             <hr>
@@ -67,9 +86,15 @@ $("#insertProductsButton").click(function() {
         }
     }
 
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
     $.ajax({
         type: "POST",
-        url: "TransportOrderController.php",
+        url: host + '/productAnalysis',
         data: {
             productDescriptionID: product_list_chiave,
             productQuantity: product_list_descr
