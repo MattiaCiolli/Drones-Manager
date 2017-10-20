@@ -20,14 +20,14 @@ class PriceService
         $priceValue=$priceContext->preventive();
         //read currency
         $currencyConf = config('currency.currency.defaultCurrency');
-        /*
         $price = new Price();
         $price->setCurrency($currencyConf);
         $price->setValue($priceValue);
+        /*
         $order_in.setPrice($price);
         $price->save();
         $order_in->save();
         */
-        return $priceValue;
+        return $price;
     }
 }

@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Price extends Model
 {
-    private $value;
+    protected $table = 'prices';
+    protected $fillable = ['value'];
 
     public function getValue()
     {
@@ -15,7 +16,7 @@ class Price extends Model
 
     public function setValue($value)
     {
-        $this->value = $value;
+        $this->fill(['value' => $value]);
     }
 
     public function setCurrency($currency)
