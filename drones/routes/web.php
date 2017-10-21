@@ -20,14 +20,19 @@ Route::get('/insertAddress', 'TransportOrderController@newOrder');
 Route::post('/insertAddress', 'TransportOrderController@insertAddress');
 
 
-//Route::post('/insertProduct', 'TransportOrderController@productAnalysis');
+Route::post('/insertProduct', 'TransportOrderController@productAnalysis');
 
+/*
 Route::get('/insertProduct', function () {
     return view('insertProduct');
 });
 
-/*
+*/
 
+Route::get('/insertProduct', 'TransportOrderController@insertProduct');
+
+
+/*
 Route::get('/calculatePrice', 'TransportOrderController@calculatePrice');
 
 */

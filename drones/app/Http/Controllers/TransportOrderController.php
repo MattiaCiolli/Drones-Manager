@@ -31,19 +31,19 @@ class TransportOrderController extends Controller
      * */
     public function productAnalysis(/*$jsonProductsList*/){
 
+        $jsonProductsList = request()->input('products');
         // $jsonProductsList utilizzato solo per debug
-        $jsonProductsList='{"productDescriptionID":[1, 4, 6], "productQuantity":[2, 5, 6]}';
+        //$jsonProductsList='{"productDescriptionID":[1, 3, 4], "productQuantity":[2, 5, 6]}';
         $stringProductList = json_decode($jsonProductsList);
-
         //In questo momento sto creando gli oggetti service ma in un futuro prossimo questo
         //dovrà ripreso dal Singleton
         $productService = new ProductService();
         $carrierService = new CarrierService();
         $orderService = new OrderService();
-
         $productList = $productService->generateProducts($stringProductList);   //da modificare con catalogo
         $carriersList = $carrierService->handleProduct($productList);
         $orderService->consignCarriers($carriersList);
+        return response()->json("Ok");
 
     }
 
@@ -92,6 +92,14 @@ class TransportOrderController extends Controller
         $priceServ = new PriceService();
         $finalPrice = $priceServ->CalculateTransportPrice(null);
         return $finalPrice;
+    }
+
+
+    public function insertProduct()
+    {
+        $productService = new ProductService();
+        $products = $productService->productForView();
+        return view('insertProduct', compact('products'));
     }
 
 }

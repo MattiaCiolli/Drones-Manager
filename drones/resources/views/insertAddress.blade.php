@@ -5,31 +5,46 @@
 
 @section('content')
 
+<!--
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-4 col-sm-3 col-sm-offset-4 col-xs-3 col-xs-offset-4">
-            <div class="address-content">
-                <div class="testo-top">
-                    <h3><span>Drone</span> manager</h3>
+<div class=" address-content-external col-md-8 col-md-offset-3 col-sm-8 col-sm-offset-1 ">
+    <div class="testo-top-address ">
+        <h3><span>Drone</span> manager</h3>
+        <p>Seleziona l'indirizzo di destinazione sulla mappa!</p>
+    </div>
 
-                    <p>Seleziona l'indirizzo di destinazione sulla mappa!</p>
-                    <input id="pac-input" class="controls" type="text" placeholder="Ricerca"></input>
-
-                </div>
-                <div id="map"></div>
-                <div class="testo-down">
-                    <div class="text_via">
-                        <p id="text_via"> </p>
-                        <span id="spanCheckOk" class="glyphicon glyphicon-ok text-success"></span>
-                        <span id="spanCheckNo" class="glyphicon glyphicon-remove text-danger"></span>
-
-                    </div>
-                    <a id="insertAddressButton" href="{{ url("/insertProduct") }}" class="btn btn-danger btn-lg btn-address disabled">Avanti</a>
-
-                </div>
-            </div>
+    <div class="address-content-internal">
+        <div class="row">
+            <div id="map"></div>
         </div>
+        <div class="testo-down row">
+            <div class="text_via">
+                <p id="text_via"> </p>
+                <span id="spanCheckOk" class="glyphicon glyphicon-ok text-success"></span>
+                <span id="spanCheckNo" class="glyphicon glyphicon-remove text-danger"></span>
+
+            </div>
+            <a id="insertAddressButton" href="{{ url("/insertProduct") }}" class="btn btn-danger btn-lg btn-address disabled">Avanti</a>
+
+        </div>
+    </div>
+</div>
+
+-->
+
+<div class="address-content col-md-8 col-md-offset-4 col-sm-3 col-sm-offset-4 col-xs-3 col-xs-offset-4">
+    <div class="testo-top-product ">
+        <h3><span>Drone</span> manager</h3>
+        <p>Scegli l'indirizzo di destinazione della consegna!</p>
+        <input id="pac-input" class="controls" type="text" placeholder="Ricerca"></input>
+    </div>
+
+    <div id="map"></div>
+    <div class="row">
+        <p id="text_via" class="col-md-5"> </p>
+        <span id="spanCheckOk" class="col-md-1 glyphicon glyphicon-ok text-success"></span>
+        <span id="spanCheckNo" class="col-md-1 glyphicon glyphicon-remove text-danger"></span>
+        <a id="insertAddressButton" href="{{ url("/insertProduct") }}" class="col-md-2 btn btn-danger btn-lg btn-address disabled">Avanti</a>
     </div>
 </div>
 
@@ -128,23 +143,22 @@
                                 }
                             });
 
-                            /*
+
                             var destinationAddress = {
                                 coorLat: coorLat,
                                 coorLng: coorLng,
                                 indirizzo: indirizzo,
-                                _token: $('input[name=csrf-token]').attr('content') };
-                                */
+                                _token: $('input[name=csrf-token]').attr('content')
+                            };
+
 
                             $.ajax({
                                 type: "POST",
                                 url: '/insertAddress',
                                 //data:JSON.stringify(destinationAddress),
-                                data:{coorLat: coorLat,
-                                    coorLng: coorLng,
-                                    indirizzo: indirizzo,
-                                _token: $('input[name=csrf-token]').attr('content') },
-
+                                data:{
+                                    address: JSON.stringify(destinationAddress)
+                                },
                                 dataType: "html",
                                 success: function(msg)
                                 {
