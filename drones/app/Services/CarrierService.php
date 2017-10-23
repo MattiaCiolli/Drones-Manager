@@ -32,14 +32,14 @@ class CarrierService
             $carrier[$indexCarrier]->free_slots=$slotCarrier;
             $carrier[$indexCarrier]->save();
 
-            $freeSlot=$carrier[$indexCarrier]->free_slots;
+            $freeSlot=$slotCarrier;//$carrier[$indexCarrier]->free_slots;
 
             $sizeOfProduct = $productList[$indexProduct]->description->size;
             $slotOfProduct = config('carrier.packet.defaultSize.'.$sizeOfProduct);
             for($indexProduct; $slotOfProduct <= $freeSlot ;$indexProduct++){
 
-                $sizeOfProduct = $productList[$indexProduct]->description->size;
-                $slotOfProduct = config('carrier.packet.defaultSize.'.$sizeOfProduct);
+                //$sizeOfProduct = $productList[$indexProduct]->description->size;
+                //$slotOfProduct = config('carrier.packet.defaultSize.'.$sizeOfProduct);
 
                 $productList[$indexProduct]->setCarrier($carrier[$indexCarrier]);
                 $productList[$indexProduct]->save();
@@ -47,6 +47,12 @@ class CarrierService
                 $freeSlot = $freeSlot - $slotOfProduct;
                 $carrier[$indexCarrier]->setFreeSlots($freeSlot);
 
+                $carrier[$indexCarrier]->save();
+
+                if(($indexProduct+1)<$numberOfProduct){
+                    $sizeOfProduct = $productList[$indexProduct+1]->description->size;
+                    $slotOfProduct = config('carrier.packet.defaultSize.'.$sizeOfProduct);
+                }
             }
             $indexCarrier++;
         }

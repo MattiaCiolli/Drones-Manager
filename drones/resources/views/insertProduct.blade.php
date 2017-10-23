@@ -94,6 +94,7 @@ $("#insertProductsButton").click(function() {
         },
         error: function()
         {
+            console.log(msg);
             alert("Invio ordine fallito, si prega di riprovare...");
         }
     });
