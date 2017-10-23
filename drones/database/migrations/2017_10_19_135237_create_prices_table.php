@@ -15,6 +15,7 @@ class CreatePricesTable extends Migration
     {
         Schema::create('prices', function (Blueprint $table) {
             $table->increments('id');
+            $table->float('value');
             $table->integer('currency_id');
             $table->foreign('currency_id')->references('id')->on('currencies');
             $table->integer('transport_order_id')->nullable();//null per test

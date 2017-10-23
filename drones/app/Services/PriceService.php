@@ -9,6 +9,7 @@
 namespace App\Services;
 
 use App\Models\Price;
+use App\Models\Currency;
 use App\Utility\PriceContext;
 use App\Utility\TransportPriceCalculator;
 
@@ -20,9 +21,11 @@ class PriceService
         $priceValue=$priceContext->preventive();
         //read currency
         $currencyConf = config('currency.currency.defaultCurrency');
+        $curr = Currency::where('currency_symbol', $currencyConf)->first();
         $price = new Price();
-        $price->setCurrency($currencyConf);
+        $price->setCurrency($curr);
         $price->setValue($priceValue);
+        $price->save();
         /*
         $order_in.setPrice($price);
         $price->save();

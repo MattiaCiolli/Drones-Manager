@@ -32,8 +32,8 @@ Route::get('/insertProduct', function () {
 Route::get('/insertProduct', 'TransportOrderController@insertProduct');
 
 
-/*
+
 Route::get('/calculatePrice', 'TransportOrderController@calculatePrice');
 
-*/
+
 
