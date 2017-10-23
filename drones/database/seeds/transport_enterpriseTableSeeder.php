@@ -12,9 +12,10 @@ class transport_enterpriseTableSeeder extends Seeder
     public function run()
     {
         DB::table('transports_enterprises')->insert([
-            'name' => 'pizzeria polsinelli',
+            'name' => 'Pingue Supermercati Srl',
             'address_id' => 4,
             'catalog_id'=> 4,
+			'hangar_id' => 5,
             'created_at' => \Carbon\Carbon::Now(),
             'updated_at' => \Carbon\Carbon::Now(),
         ]);

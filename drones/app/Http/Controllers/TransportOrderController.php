@@ -60,29 +60,27 @@ class TransportOrderController extends Controller
 		$jsonAddressInit = request()->input('address');
 		$jsonAddress = json_decode($jsonAddressInit);
         $addressDestination = $addressService->parseAddress($jsonAddress);
-        echo($addressDestination->getLatitudine());
-
-        //NB probabilmente c'è qualche errore nella validazione dell'indirizzo quindi per l'happy path ora è a true.
-
         $addressIsValid = $addressService->checkAddress($addressDestination);
 
 		if($addressIsValid)
 		{
+			$addressDestination->save();
+
 			//queste cose poi vanno spostate
 			$order = \App\Models\TransportOrder::find(1);
-			$order->address = $addressDestination;
+			$order->address_id = $addressDestination->id;
 			$order->save();
+
 			$pathService = new PathService();
 
-			//bisogna agiustare diverse cose nelle tabelle prima che qeusta cosa funzioni
-			//per scopi di test per il momento inserisco dati fasulli
-			$pathService->generatePath($address->getLongitudine, $address->getLatitudine, 41.89193, 12.51133, 42.35055, 13.39954);
+			$pathService->generatePath($address->getLongitudine, $address->getLatitudine, $order->maitre->enterprise->getAddrress()->getLongitudine(), $order->maitre->enterprise->getAddrress()->getLongitudine(), 42.35055, 13.39954);
 
 			return response()->json("L'indirizzo e' valido");
 		}
 		else
+		{
 			return response()->json("L'indirizzo non e' valido");
-
+		}
     }
 
 

@@ -38,10 +38,21 @@ class AddressTableSeeder extends Seeder
             'updated_at' => \Carbon\Carbon::Now(),
         ]);
 
+		//Indirizzo conad centro commerciale amiternum
         DB::table('addresses')->insert([
-            'address' => "via quaquaraqua",
-            'lat' => 42.2132100,
-            'lon' => 13.8251100,
+            'address' => "1 Via Fermi Enrico, Pettino, AQ 67100",
+            'lat' => 42.373757,
+            'lon' => 13.351591,
+            'srid' => 4326,
+            'created_at' => \Carbon\Carbon::Now(),
+            'updated_at' => \Carbon\Carbon::Now(),
+        ]);
+
+		//Indirizzo hangar per la conad vicino al centro commerciale amiternum
+		DB::table('addresses')->insert([
+            'address' => "Via Enrico De Nicola, 6 67100 L'Aquila AQ",
+            'lat' => 42.372712,
+            'lon' => 13.360164,
             'srid' => 4326,
             'created_at' => \Carbon\Carbon::Now(),
             'updated_at' => \Carbon\Carbon::Now(),

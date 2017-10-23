@@ -14,8 +14,8 @@ class AddAddressIdToTransportOrder extends Migration
     public function up()
     {
         Schema::table('transports_orders', function (Blueprint $table) {
-			$table->integer('address_id');
-			$table->foreign('catalog_id')->references('id')->on('catalogs');
+			$table->integer('address_id')->nullable();
+			$table->foreign('address_id')->references('id')->on('addresses');
         });
     }
 
@@ -27,7 +27,7 @@ class AddAddressIdToTransportOrder extends Migration
     public function down()
     {
         Schema::table('transports_orders', function (Blueprint $table) {
-            //
+			$table->dropForeign('transports_orders_address_id_foreign');
         });
     }
 }

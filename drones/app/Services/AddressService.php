@@ -11,9 +11,8 @@ class AddressService
 
     public function parseAddress($jsonAddress)
 	{
-		return new Address($jsonAddress->indirizzo,$jsonAddress->coorLat,$jsonAddress->coorLng, 4326);
+		return new Address(['address' => $jsonAddress->indirizzo, 'lat' => $jsonAddress->coorLat, 'lon' => $jsonAddress->coorLng, 'srid' => 4326]);
 	}
-
 
 	public function checkAddress(Address $address)
 	{

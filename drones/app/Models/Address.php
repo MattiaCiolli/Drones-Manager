@@ -6,18 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Address extends Model
 {
-	private $address;
-	private $lat;
-	private $lon;
-	private $srid;
-
-	function __construct($address, $lat, $lon, $srid)
-	{
-		$this->address = $address;
-		$this->lat = $lat;
-		$this->lon = $lon;
-		$this->srid = $srid;
-  	}
+	protected $table = 'addresses';
+	protected $fillable = ['address', 'lat', 'lon', 'srid'];
 
 	public function setSrid($srid)
 	{

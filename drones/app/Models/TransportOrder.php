@@ -17,6 +17,11 @@ class TransportOrder extends Order
         $this->maitre()->associate($price);
     }
 
+	public function address()
+	{
+		return $this->belongsTo('App\Models\Address');
+	}
+
 	public function maitre()
 	{
 		return $this->belongsTo('App\Models\TransportMaitre');
