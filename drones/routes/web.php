@@ -15,21 +15,25 @@ Route::get('/', function () {
     return view('newOrder');
 });
 
-Route::get('/newOrder', 'TransportOrderController@newOrder');
+Route::get('/insertAddress', 'TransportOrderController@newOrder');
 
-Route::get('/insertAddress', 'TransportOrderController@insertAddress');
-
-Route::get('/productAnalysis', 'TransportOrderController@productAnalysis');
+Route::post('/insertAddress', 'TransportOrderController@insertAddress');
 
 
-Route::get('/insertAddress', function () {
-    return view('insertAddress');
-});
+Route::post('/insertProduct', 'TransportOrderController@productAnalysis');
 
-Route::get('/insertProducts', function () {
+/*
+Route::get('/insertProduct', function () {
     return view('insertProduct');
 });
 
-Route::get('/insertAddress/{destinationAddress}', 'TransportOrderController@insertAddress');
+*/
 
+Route::get('/insertProduct', 'TransportOrderController@insertProduct');
+
+
+/*
 Route::get('/calculatePrice', 'TransportOrderController@calculatePrice');
+
+*/
+

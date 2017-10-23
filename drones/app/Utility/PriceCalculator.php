@@ -2,10 +2,7 @@
 
 namespace App\Utility;
 
-use App\Services\ConfigurationService;
-use Illuminate\Database\Eloquent\Model;
-
-abstract class PriceCalculator extends Model
+abstract class PriceCalculator
 {
     public abstract function calculatePrice($order_in);
 }

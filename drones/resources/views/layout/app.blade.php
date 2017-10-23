@@ -17,8 +17,13 @@
     <link rel="stylesheet" href="/css/app.css">
     <script src="/js/app.js"></script>
 
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >
+    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+
+
+
 </head>
-<body>
+<body class="container-fluid">
 
     <!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>

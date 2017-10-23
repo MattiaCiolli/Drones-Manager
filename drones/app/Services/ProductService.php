@@ -14,7 +14,16 @@ use App\Models\Product;
 class ProductService
 {
 
-    public function generateProducts($stringProductList){
+    public function generateProducts($stringProductList ){
+
+        // In questo momento sto prendendo l'id dell'enterprise fisso, ma in futuro dovrà
+        //  essere recuperato da sessione
+        $transportEnterprise=\App\Models\TransportEnterprise::find(1);
+
+        $catalog = \App\Models\Catalog::find($transportEnterprise->catalog_id);
+        $productCatalog = \App\Models\ProductDescription::where('catalog_id', $catalog->id)->get();
+        $productCatalog = $productCatalog->keyBy('id');
+
         $descriptionsID = $stringProductList->productDescriptionID;
         $quantity = $stringProductList->productQuantity;
 
@@ -24,8 +33,7 @@ class ProductService
             for ($j = 0; $j < $quantity[$i]; $j++){
                 $product = new Product();
 
-                //invece di recuperarli direttamente dovrebbe passare dal catalogo
-                $productDescription = \App\Models\ProductDescription::find($descriptionsID[$i]);
+                $productDescription=$productCatalog->get($descriptionsID[$i]);
 
                 $product->setDescription($productDescription);
                 $product->save();
@@ -35,4 +43,15 @@ class ProductService
         return $productList;
 
     }
+
+    public function productForView(){
+        // In questo momento sto prendendo l'id dell'enterprise fisso, ma in futuro dovrà
+        //  essere recuperato da sessione
+        $transportEnterprise=\App\Models\TransportEnterprise::find(1);
+
+        $catalog = \App\Models\Catalog::find($transportEnterprise->catalog_id);
+        $productCatalog = \App\Models\ProductDescription::where('catalog_id', $catalog->id)->get();
+        return $productCatalog;
+    }
+
 }

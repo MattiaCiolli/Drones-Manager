@@ -4,4 +4,5 @@ namespace App\Models;
 
 class TransportEnterprise extends Enterprise
 {
+    protected $table = 'transports_enterprises';
 }

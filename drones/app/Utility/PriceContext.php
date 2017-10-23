@@ -2,15 +2,12 @@
 
 namespace App\Utility;
 
-use Illuminate\Database\Eloquent\Model;
-
-class PriceContext extends Model
+class PriceContext
 {
     private $order;
     private $priceCalculatorState;
 
     public function __construct($order_in, $priceCalculatorState_in) {
-        parent::__construct();
         $this->order = $order_in;
         $this->setPriceCalculatorState($priceCalculatorState_in);
     }
