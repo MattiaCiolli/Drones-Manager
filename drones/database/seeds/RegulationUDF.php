@@ -11,7 +11,7 @@ class RegulationUDF extends Seeder
      */
     public function run()
     {
-		DB::raw("
+		DB::statement("
 			CREATE OR REPLACE FUNCTION checkAddressCoordinates(lat float, lon float) RETURNS boolean LANGUAGE plpgsql AS $$
 			DECLARE
     			addressPoint GEOMETRY;

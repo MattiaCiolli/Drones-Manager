@@ -14,9 +14,9 @@ abstract class Maitre extends Model
 		return $this->hasMany('App\Models\TransportOrder');
 	}
 
-	public function entTransport()
+	public function enterprise()
 	{
-		return $this->belongsTo(TransportEnterprise::class);
+		return $this->belongsTo('App\Models\TransportEnterprise');
 	}
 
 	public function getName()

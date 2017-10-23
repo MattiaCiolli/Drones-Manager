@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
         $this->call(TransportMaitresTableSeeder::class);
         $this->call(ProductsDescriptionsTableSeeder::class);
 		$this->call(RegulationUDF::class);
+		$this->call(PathServiceUDFs::class);
 		$this->call(NoFlyZoneTableSeeder::class);
         $this->call(CurrencyTableSeeder::class);
         $this->call(PriceTableSeeder::class);

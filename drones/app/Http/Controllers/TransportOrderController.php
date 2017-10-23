@@ -74,7 +74,7 @@ class TransportOrderController extends Controller
 
 			$pathService = new PathService();
 
-			$pathService->generatePath($address->getLongitudine, $address->getLatitudine, $order->maitre->enterprise->getAddrress()->getLongitudine(), $order->maitre->enterprise->getAddrress()->getLongitudine(), 42.35055, 13.39954);
+			$pathService->generatePath($addressDestination, $order->maitre->enterprise->address, $order->maitre->enterprise->hangar->address);
 
 			return response()->json("L'indirizzo e' valido");
 		}
