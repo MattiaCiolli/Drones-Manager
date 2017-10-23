@@ -15,7 +15,7 @@ class transport_enterpriseTableSeeder extends Seeder
             'name' => 'Pingue Supermercati Srl',
             'address_id' => 4,
             'catalog_id'=> 4,
-			'hangar_id' => 5,
+			'hangar_id' => 1,
             'created_at' => \Carbon\Carbon::Now(),
             'updated_at' => \Carbon\Carbon::Now(),
         ]);

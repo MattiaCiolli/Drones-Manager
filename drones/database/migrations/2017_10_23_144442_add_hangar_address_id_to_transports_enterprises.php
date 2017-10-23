@@ -15,7 +15,7 @@ class AddHangarAddressIdToTransportsEnterprises extends Migration
     {
         Schema::table('transports_enterprises', function (Blueprint $table) {
 			$table->integer('hangar_id')->nullable();
-			$table->foreign('hangar_id')->references('id')->on('addresses');
+			$table->foreign('hangar_id')->references('id')->on('hangars');
         });
     }
 
