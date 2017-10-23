@@ -409,10 +409,6 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         'App\\Services\\PathService' => __DIR__ . '/../..' . '/app/Services/PathService.php',
         'App\\Services\\PriceService' => __DIR__ . '/../..' . '/app/Services/PriceService.php',
         'App\\Services\\ProductService' => __DIR__ . '/../..' . '/app/Services/ProductService.php',
-<<<<<<< HEAD
-        'App\\Utility\\PriceCalculator' => __DIR__ . '/../..' . '/app/Utility/PriceCalculator.php',
-        'App\\Utility\\PriceContext' => __DIR__ . '/../..' . '/app/Utility/PriceContext.php',
-=======
         'App\\Utility\\FidelityStrategy' => __DIR__ . '/../..' . '/app/Utility/Strategies/FidelityStrategy.php',
         'App\\Utility\\PathLengthStrategy' => __DIR__ . '/../..' . '/app/Utility/Strategies/PathLengthStrategy.php',
         'App\\Utility\\PriceCalculator' => __DIR__ . '/../..' . '/app/Utility/PriceCalculator.php',
@@ -421,7 +417,6 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         'App\\Utility\\PriceStrategyContext' => __DIR__ . '/../..' . '/app/Utility/PriceStrategyContext.php',
         'App\\Utility\\QuantityStrategy' => __DIR__ . '/../..' . '/app/Utility/Strategies/QuantityStrategy.php',
         'App\\Utility\\SummerStrategy' => __DIR__ . '/../..' . '/app/Utility/Strategies/SummerStrategy.php',
->>>>>>> 329f76922d682d0c8d6a4e033ec2f0d392953b9b
         'App\\Utility\\TransportPriceCalculator' => __DIR__ . '/../..' . '/app/Utility/TransportPriceCalculator.php',
         'Bosnadev\\Database\\Connectors\\ConnectionFactory' => __DIR__ . '/..' . '/bosnadev/database/src/Bosnadev/Database/Connectors/ConnectionFactory.php',
         'Bosnadev\\Database\\DatabaseServiceProvider' => __DIR__ . '/..' . '/bosnadev/database/src/Bosnadev/Database/DatabaseServiceProvider.php',
@@ -2477,6 +2472,7 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         'PHPUnit\\Framework\\TestCase' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/TestCase.php',
         'PHPUnit\\Framework\\TestFailure' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/TestFailure.php',
         'PHPUnit\\Framework\\TestListener' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/TestListener.php',
+        'PHPUnit\\Framework\\TestListenerDefaultImplementation' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/TestListenerDefaultImplementation.php',
         'PHPUnit\\Framework\\TestResult' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/TestResult.php',
         'PHPUnit\\Framework\\TestSuite' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/TestSuite.php',
         'PHPUnit\\Framework\\TestSuiteIterator' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/TestSuiteIterator.php',
@@ -2520,8 +2516,10 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         'PHPUnit\\Util\\TestDox\\ResultPrinter' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/TestDox/ResultPrinter.php',
         'PHPUnit\\Util\\TestDox\\TextResultPrinter' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/TestDox/TextResultPrinter.php',
         'PHPUnit\\Util\\TestDox\\XmlResultPrinter' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/TestDox/XmlResultPrinter.php',
+        'PHPUnit\\Util\\TextTestListRenderer' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/TextTestListRenderer.php',
         'PHPUnit\\Util\\Type' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Type.php',
         'PHPUnit\\Util\\Xml' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Xml.php',
+        'PHPUnit\\Util\\XmlTestListRenderer' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/XmlTestListRenderer.php',
         'PHPUnit_Framework_MockObject_BadMethodCallException' => __DIR__ . '/..' . '/phpunit/phpunit-mock-objects/src/Exception/BadMethodCallException.php',
         'PHPUnit_Framework_MockObject_Builder_Identity' => __DIR__ . '/..' . '/phpunit/phpunit-mock-objects/src/Builder/Identity.php',
         'PHPUnit_Framework_MockObject_Builder_InvocationMocker' => __DIR__ . '/..' . '/phpunit/phpunit-mock-objects/src/Builder/InvocationMocker.php',

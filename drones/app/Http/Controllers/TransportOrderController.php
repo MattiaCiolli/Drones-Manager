@@ -67,11 +67,18 @@ class TransportOrderController extends Controller
 
         //NB probabilmente c'è qualche errore nella validazione dell'indirizzo quindi per l'happy path ora è a true.
 
-        //$addressIsValid = $addressService->checkAddress($address);
-		$addressIsValid=true;
+        $addressIsValid = $addressService->checkAddress($address);
 
 		if($addressIsValid)
+		{
+			//queste cose poi vanno spostate
+			$order = \App\Models\TransportOrder::find(1);
+			$order->address = $address;
+			$order->save();
+
+
 			return response()->json("L'indirizzo e' valido");
+		}
 		else
 			return response()->json("L'indirizzo non e' valido");
 
