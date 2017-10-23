@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Utility\PriceContext;
 use App\Utility\TransportPriceCalculator;
 use App\Services\CarrierService;
 use App\Services\ConfigurationService;
 use App\Services\PriceService;
 use App\Services\ProductService;
-use Illuminate\Http\Request;
 use App\Services\OrderService;
 use App\Services\AddressService;
+use App\Services\PathService;
 
 class TransportOrderController extends Controller
 {
@@ -75,7 +76,11 @@ class TransportOrderController extends Controller
 			$order = \App\Models\TransportOrder::find(1);
 			$order->address = $address;
 			$order->save();
+			$pathService = new PathService();
 
+			//bisogna agiustare diverse cose nelle tabelle prima che qeusta cosa funzioni
+			//per scopi di test per il momento inserisco dati fasulli
+			$pathService->generatePath($address->getLongitudine, $address->getLatitudine, 41.89193, 12.51133, 42.35055, 13.39954);
 
 			return response()->json("L'indirizzo e' valido");
 		}
@@ -108,5 +113,4 @@ class TransportOrderController extends Controller
         $products = $productService->productForView();
         return view('insertProduct', compact('products'));
     }
-
 }

@@ -7,8 +7,8 @@ use database\foundation\InterfaceFoundation;
 
 class PathFoundation implements InterfaceFoundation
 {
-	public function triangulate(($lat1, $lon1, $lat2, $lon2, $lat3, $lon3)
+	public function triangulate($lat1, $lon1, $lat2, $lon2, $lat3, $lon3)
 	{
-		return DB::select('select checkAddressCoordinates(?, ?);', [$lat, $lon]);
+		return DB::select('select  generatePath(?, ?, ?, ?, ?, ?);', [$lat1, $lon1, $lat2, $lon2, $lat3, $lon3]);
 	}
 }
