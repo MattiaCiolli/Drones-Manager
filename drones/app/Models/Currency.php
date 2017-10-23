@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Currency extends Model
 {
+    protected $table = 'currencies';
+
     public function price()
     {
         return $this->hasMany(Price::class);

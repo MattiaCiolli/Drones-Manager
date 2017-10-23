@@ -60,6 +60,9 @@ class TransportOrderController extends Controller
         $lat = request()->input('coorLat');
         $lon = request()->input('coorLng');
 		$addressService = new AddressService();
+		$jsonAddress = json_decode($jsonAddressInit);
+        $addressDestination = $addressService->parseAddress($jsonAddress);
+        echo($addressDestination->getLatitudine());
 
 		//$jsonAddress = json_decode($destinationAddress);
 

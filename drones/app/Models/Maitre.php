@@ -16,7 +16,7 @@ abstract class Maitre extends Model
 
 	public function entTransport()
 	{
-		return $this->belongsTo(EnterpriseTransport::class);
+		return $this->belongsTo(TransportEnterprise::class);
 	}
 
 	public function getName()
