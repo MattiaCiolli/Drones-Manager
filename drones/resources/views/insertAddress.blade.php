@@ -151,7 +151,7 @@
                                 _token: $('input[name=csrf-token]').attr('content')
                             };
 
-
+                            console.log(destinationAddress);
                             $.ajax({
                                 type: "POST",
                                 url: '/insertAddress',

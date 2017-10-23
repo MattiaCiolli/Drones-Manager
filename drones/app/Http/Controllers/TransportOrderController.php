@@ -55,30 +55,22 @@ class TransportOrderController extends Controller
         //MODIFICHE: i valori che ritornano da ajax vengono ripresi singolarmente e passati alla funzione che adesso
         // accetta 3 parametri e non più un JSON
 
-        $address = request()->input('address');
-        $lat = request()->input('coorLat');
-        $lon = request()->input('coorLng');
+        $jsonAddressInit = request()->input('address');
+
 		$addressService = new AddressService();
+		$jsonAddress = json_decode($jsonAddressInit);
+        $addressDestination = $addressService->parseAddress($jsonAddress);
+        echo($addressDestination->getLatitudine());
 
-		//$jsonAddress = json_decode($destinationAddress);
+        $addressIsValid = $addressService->checkAddress($addressDestination);
+		//$addressIsValid=true;
 
-        $address = $addressService->parseAddress($address,$lat,$lon);
-        //$address = $addressService->parseAddress($jsonAddress);
-
-        //NB probabilmente c'è qualche errore nella validazione dell'indirizzo quindi per l'happy path ora è a true.
-
-        $addressIsValid = $addressService->checkAddress($address);
-
-		if($addressIsValid)
-		{
-			//queste cose poi vanno spostate
-			$order = \App\Models\TransportOrder::find(1);
-			$order->address = $address;
-			$order->save();
-
-
-			return response()->json("L'indirizzo e' valido");
-		}
+		if($addressIsValid) {
+            $order = \App\Models\TransportOrder::find(1);
+            $order->address = $addressDestination;
+            $order->save();
+            return response()->json("L'indirizzo e' valido");
+        }
 		else
 			return response()->json("L'indirizzo non e' valido");
 

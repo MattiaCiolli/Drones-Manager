@@ -8,18 +8,14 @@ use database\foundation\RegulationFoundation;
 
 class AddressService
 {
-    /*
+
     public function parseAddress($jsonAddress)
 	{
-		return new Address($jsonAddress->address, $jsonAddress->lat, $jsonAddress->lon, 4326);
+		return new Address($jsonAddress->indirizzo,$jsonAddress->coorLat,$jsonAddress->coorLng, 4326);
 	}
-    */
-    public function parseAddress($address, $lat, $lon)
-    {
-        return new Address($address, $lat, $lon, 4326);
-    }
 
-	public function checkAddress($address)
+
+	public function checkAddress(Address $address)
 	{
 		$regulationFoundation = new RegulationFoundation();
 		$regulationMapper = new RegulationMapper($regulationFoundation);
