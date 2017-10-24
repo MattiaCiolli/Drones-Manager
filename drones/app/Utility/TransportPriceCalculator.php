@@ -34,7 +34,7 @@ class TransportPriceCalculator extends PriceCalculator
             }
         }
 
-        if($i>=5)
+        if($i>=5)//conf
         {
             $priceStrategyContext = new PriceStrategyContext('Q');
             $priceTemp= $priceStrategyContext->discount($priceTemp);
@@ -42,7 +42,8 @@ class TransportPriceCalculator extends PriceCalculator
 
         $pathLengthPrice = config('path.pricePerKm') * ($order_in->path->path_length/1000);
         $priceTemp=$priceTemp+$pathLengthPrice;
-        if($order_in->path->path_length>5000)
+
+        if($order_in->path->path_length>5000)//conf
         {
             $priceStrategyContext = new PriceStrategyContext('P');
             $priceTemp= $priceStrategyContext->discount($priceTemp);
