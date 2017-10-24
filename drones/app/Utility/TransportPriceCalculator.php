@@ -9,25 +9,28 @@
 namespace App\Utility;
 
 
+use App\Models\TransportOrder;
+
 class TransportPriceCalculator extends PriceCalculator
 {
-    public function calculatePrice($order_in)
+    public function calculatePrice()
     {
         //initialize price
         $priceTemp=0;
         $i=0;
+        $order_in=\App\Models\TransportOrder::find(1);
         //analyze products and update price
-        /*foreach ($order_in->getCarriers() as &$carr) {
+        foreach ($order_in->carriers as &$carr) {
 
              //carrier price
              $priceTemp=$priceTemp+config('carrier.carrierPrice');
 
-             foreach ($carr->getProducts() as &$prod) {
+             foreach ($carr->product as &$prod) {
                  $i++;
                  //product price
-                 $priceTemp=$priceTemp+$prod->getPrice();
+                 $priceTemp=$priceTemp+$prod->description->price;
                  //transport type
-                 $priceTemp=$priceTemp+config('carrier.carrierType.'.$prod->getType().'\'');
+                 $priceTemp=$priceTemp+config('carrier.carrierType.'.$prod->description->type.'\'');
              }
          }
 
@@ -57,9 +60,9 @@ class TransportPriceCalculator extends PriceCalculator
             $priceTemp= $priceStrategyContext->discount($priceTemp);
         }
 
-        */
+
 //TEST-----------------------------------------------------------------------------------
-        for($i=0; $i<4; $i++)
+ /*       for($i=0; $i<4; $i++)
         {
             $priceTemp=$priceTemp+config('carrier.carrierPrice');
 
@@ -78,7 +81,7 @@ class TransportPriceCalculator extends PriceCalculator
         $priceStrategyContext = new PriceStrategyContext('Q');
         $priceTemp= $priceStrategyContext->discount($priceTemp);
 //FINE TEST-----------------------------------------------------------------------------------
-
+*/
         //set final price
         return $priceTemp;
     }
