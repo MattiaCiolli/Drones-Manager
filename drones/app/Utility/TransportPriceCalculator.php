@@ -22,17 +22,17 @@ class TransportPriceCalculator extends PriceCalculator
         //analyze products and update price
         foreach ($order_in->carrier as &$carr) {
 
-             //carrier price
-             $priceTemp=$priceTemp+config('carrier.carrierPrice');
+            //carrier price
+            $priceTemp=$priceTemp+config('carrier.carrierPrice');
 
-             foreach ($carr->product as &$prod) {
-                 $i++;
-                 //product price
-                 $priceTemp=$priceTemp+$prod->description->price;
-                 //transport type
-                 $priceTemp=$priceTemp+config('carrier.carrierType.'.$prod->description->type.'\'');
-             }
-         }
+            foreach ($carr->product as &$prod) {
+                $i++;
+                //product price
+                $priceTemp=$priceTemp+$prod->description->price;
+                //transport type
+                $priceTemp=$priceTemp+config('carrier.carrierType.'.$prod->description->type);
+            }
+        }
 
         if($i>=5)
         {
@@ -40,11 +40,9 @@ class TransportPriceCalculator extends PriceCalculator
             $priceTemp= $priceStrategyContext->discount($priceTemp);
         }
 
-        //echo($order_in->path->path_length);
         $pathLengthPrice = config('path.pricePerKm') * ($order_in->path->path_length/1000);
         $priceTemp=$priceTemp+$pathLengthPrice;
-
-        if($order_in->path->path_length>10)
+        if($order_in->path->path_length>5000)
         {
             $priceStrategyContext = new PriceStrategyContext('P');
             $priceTemp= $priceStrategyContext->discount($priceTemp);
@@ -64,27 +62,27 @@ class TransportPriceCalculator extends PriceCalculator
 
 
 //TEST----------------------------------------------------------------------------------
- /*       for($i=0; $i<4; $i++)
-        {
-            $priceTemp=$priceTemp+config('carrier.carrierPrice');
+        /*       for($i=0; $i<4; $i++)
+               {
+                   $priceTemp=$priceTemp+config('carrier.carrierPrice');
 
-            for($j=0; $j<4; $j++)
-            {
-                //product price
-                $priceTemp=$priceTemp+1;
-                //transport type
-                $priceTemp=$priceTemp+config('carrier.carrierType.normal');
-            }
+                   for($j=0; $j<4; $j++)
+                   {
+                       //product price
+                       $priceTemp=$priceTemp+1;
+                       //transport type
+                       $priceTemp=$priceTemp+config('carrier.carrierType.normal');
+                   }
 
-        }
+               }
 
-        $pathLengthPrice = config('path.pricePerKm')*1;
-        $priceTemp = $priceTemp+$pathLengthPrice;
-        $priceStrategyContext = new PriceStrategyContext('Q');
-        $priceTemp= $priceStrategyContext->discount($priceTemp);
-//FINE TEST----------------------------------------------------------------------------------
-*/
+               $pathLengthPrice = config('path.pricePerKm')*1;
+               $priceTemp = $priceTemp+$pathLengthPrice;
+               $priceStrategyContext = new PriceStrategyContext('Q');
+               $priceTemp= $priceStrategyContext->discount($priceTemp);
+       //FINE TEST----------------------------------------------------------------------------------
+       */
         //set final price
-        return $priceTemp;
+        return round($priceTemp, 2);
     }
 }
