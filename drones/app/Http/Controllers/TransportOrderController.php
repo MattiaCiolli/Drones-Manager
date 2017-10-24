@@ -27,6 +27,7 @@ class TransportOrderController extends Controller
 
     public function productAnalysis(){
 
+        //$jsonProductsList='{"productDescriptionID":[1, 4, 6], "productQuantity":[2, 5, 6]}';
         $jsonProductsList = request()->input('products');
 
         $stringProductList = json_decode($jsonProductsList);
@@ -39,8 +40,8 @@ class TransportOrderController extends Controller
 
         $productList = $productService->generateProducts($stringProductList);
         $carriersList = $carrierService->handleProduct($productList);
+
         $orderService->consignCarriers($carriersList);
-        return response()->json("Ok");
 
     }
 

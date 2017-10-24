@@ -90,7 +90,8 @@ $("#insertProductsButton").click(function() {
         dataType: "html",
         success: function(msg)
         {
-            console.log(msg);
+            //console.log(msg);
+            document.location.href="calculatePrice";
         },
         error: function()
         {
