@@ -30,7 +30,7 @@ class RegulationUDF extends Seeder
 			$$");
 
 		DB::statement("
-			CREATE OR REPLACE FUNCTION checkPathRoute(geometry path) RETURNS boolean LANGUAGE plpgsql AS $$
+			CREATE OR REPLACE FUNCTION checkPathRoute(path geometry) RETURNS boolean LANGUAGE plpgsql AS $$
 			DECLARE
 				noFlyZone Record;
 				isOk boolean;
