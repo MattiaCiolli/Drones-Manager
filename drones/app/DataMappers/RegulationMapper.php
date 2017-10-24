@@ -16,8 +16,13 @@ class RegulationMapper
 
 	public function checkAddress(Address $address)
 	{
-	    echo($address->getLatitudine().$address->getLongitudine());
 		$result = $this->foundation->checkAddressCoordinates($address->getLatitudine(), $address->getLongitudine());
 		return $result[0]->checkaddresscoordinates;
+	}
+
+	public function checkPath($geomtry)
+	{
+		$result = $this->foundation->checkPathRoute($geomtry);
+		return $result[0]->checkpathroute;
 	}
 }

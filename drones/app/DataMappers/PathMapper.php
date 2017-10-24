@@ -19,7 +19,13 @@ class PathMapper
 
 	public function generatePathGeometry($lat1, $lon1, $lat2, $lon2, $lat3, $lon3)
 	{
-		$result = $this->foundation->triangulate($lat1, $lon1, $lat2, $lon2, $lat3, $lon3);
-		return $result;
+		$path = $this->foundation->triangulate($lat1, $lon1, $lat2, $lon2, $lat3, $lon3);
+		$pathLength = $this->calculateGeometryLength($path[0]->generatepath);
+		return new Path(['path_geometry' => $path[0]->generatepath, 'path_length' => $pathLength[0]->st_length]);
+	}
+
+	public function calculateGeometryLength($geometry)
+	{
+		return $this->foundation->calculateLength($geometry);
 	}
 }

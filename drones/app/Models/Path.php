@@ -6,5 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Path extends Model
 {
-	
+	protected $fillable = ['path_geometry', 'path_length'];
+
 }

@@ -28,5 +28,21 @@ class RegulationUDF extends Seeder
         		return isOK;
     		END;
 			$$");
+
+		DB::statement("
+			CREATE OR REPLACE FUNCTION checkPathRoute(geometry path) RETURNS boolean LANGUAGE plpgsql AS $$
+			DECLARE
+				noFlyZone Record;
+				isOk boolean;
+			BEGIN
+				isOk = true;
+				FOR noFlyZone IN (SELECT * FROM no_fly_zones) LOOP
+					IF st_intersects(noFlyZone.building, path) THEN
+						isOK = false;
+					END IF;
+				END LOOP;
+				return isOK;
+			END;
+			$$");
     }
 }

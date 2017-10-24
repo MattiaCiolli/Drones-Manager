@@ -36,4 +36,9 @@ class TransportOrder extends Order
     {
         return $this->hasOne('App\Models\Price');
     }
+
+	public function path()
+	{
+		return $this->belongsTo('App\Models\Path');
+	}
 }

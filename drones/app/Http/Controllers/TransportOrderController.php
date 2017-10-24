@@ -65,22 +65,27 @@ class TransportOrderController extends Controller
 
 		if($addressIsValid)
 		{
-			$addressDestination->save();
-
 			//queste cose poi vanno spostate
 			$order = \App\Models\TransportOrder::find(1);
-			$order->address_id = $addressDestination->id;
-			$order->save();
 
 			$pathService = new PathService();
+			$path = $pathService->generatePath($addressDestination, $order->maitre->enterprise->address, $order->maitre->enterprise->hangar->address);
 
-			$pathService->generatePath($addressDestination, $order->maitre->enterprise->address, $order->maitre->enterprise->hangar->address);
+			if($path)
+			{
+				$addressDestination->save();
+				$path->save();
 
-			return response()->json("L'indirizzo e' valido");
-		}
-		else
-		{
-			return response()->json("L'indirizzo non e' valido");
+				$order->path_id = $path->id;
+				$order->address_id = $addressDestination->id;
+				$order->save();
+				
+				return response()->json("L'indirizzo e' valido");
+			}
+			else
+			{
+				return response()->json("L'indirizzo non e' valido");
+			}
 		}
     }
 

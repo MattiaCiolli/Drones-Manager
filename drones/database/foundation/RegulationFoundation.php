@@ -12,4 +12,9 @@ class RegulationFoundation implements InterfaceFoundation
 	{
 		return DB::select('select checkAddressCoordinates(?, ?);', [$lat, $lon]);
 	}
+
+	public function checkPathRoute($geom)
+	{
+		return DB::select('select checkPathRoute(ST_GeomFromText(st_astext(?), 3857));', [$geom]);
+	}
 }

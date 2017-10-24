@@ -15,7 +15,7 @@ class AddColumnsToPathsTable extends Migration
     {
         Schema::table('paths', function (Blueprint $table) {
             $table->geometry('path_geometry');
-			$table->float('path_lenght', 3, 2);
+			$table->float('path_length', 3, 2);
         });
     }
 
