@@ -18,6 +18,7 @@ class ProductsDescriptionsTableSeeder extends Seeder
             'catalog_id' => 4,
             'created_at' => Carbon\Carbon::Now(),
             'updated_at' => Carbon\Carbon::Now(),
+            'price' => 3.00,
         ]);
 
         DB::table('product_descriptions')->insert([
@@ -27,6 +28,7 @@ class ProductsDescriptionsTableSeeder extends Seeder
             'catalog_id' => 1,
             'created_at' => Carbon\Carbon::Now(),
             'updated_at' => Carbon\Carbon::Now(),
+            'price' => 2.70,
         ]);
 
         DB::table('product_descriptions')->insert([
@@ -36,6 +38,7 @@ class ProductsDescriptionsTableSeeder extends Seeder
             'catalog_id' => 1,
             'created_at' => Carbon\Carbon::Now(),
             'updated_at' => Carbon\Carbon::Now(),
+            'price' => 1.20,
         ]);
 
         DB::table('product_descriptions')->insert([
@@ -45,6 +48,7 @@ class ProductsDescriptionsTableSeeder extends Seeder
             'description' => "Gelato. Ahahaha come no",
             'created_at' => Carbon\Carbon::Now(),
             'updated_at' => Carbon\Carbon::Now(),
+            'price' => 5.50,
         ]);
 
         DB::table('product_descriptions')->insert([
@@ -54,6 +58,7 @@ class ProductsDescriptionsTableSeeder extends Seeder
             'catalog_id' => 2,
             'created_at' => Carbon\Carbon::Now(),
             'updated_at' => Carbon\Carbon::Now(),
+            'price' => 3.30,
         ]);
 
         DB::table('product_descriptions')->insert([
@@ -63,6 +68,7 @@ class ProductsDescriptionsTableSeeder extends Seeder
             'description' => "Prodotto bollente, prendere con presine",
             'created_at' => Carbon\Carbon::Now(),
             'updated_at' => Carbon\Carbon::Now(),
+            'price' => 10.00,
         ]);
 
         DB::table('product_descriptions')->insert([
@@ -72,6 +78,7 @@ class ProductsDescriptionsTableSeeder extends Seeder
             'catalog_id' => 3,
             'created_at' => Carbon\Carbon::Now(),
             'updated_at' => Carbon\Carbon::Now(),
+            'price' => 12.70,
         ]);
 
     }
