@@ -25,8 +25,8 @@ class DeleteForeignPriceTable extends Migration
      */
     public function down()
     {
-        Schema::table('prices', function (Blueprint $table) {
+       /* Schema::table('prices', function (Blueprint $table) {
             $table->dropForeign('prices_transport_order_id_foreign');
-        });
+        });*/
     }
 }

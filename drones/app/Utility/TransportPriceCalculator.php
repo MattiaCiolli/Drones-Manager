@@ -30,7 +30,7 @@ class TransportPriceCalculator extends PriceCalculator
                  //product price
                  $priceTemp=$priceTemp+$prod->description->price;
                  //transport type
-                 $priceTemp=$priceTemp+config('carrier.carrierType.'.$prod->description->type.'\'');
+                 $priceTemp=$priceTemp+config('carrier.carrierType.'.$prod->description->type);
              }
          }
 
@@ -40,11 +40,9 @@ class TransportPriceCalculator extends PriceCalculator
             $priceTemp= $priceStrategyContext->discount($priceTemp);
         }
 
-        //echo($order_in->path->path_length);
         $pathLengthPrice = config('path.pricePerKm') * ($order_in->path->path_length/1000);
         $priceTemp=$priceTemp+$pathLengthPrice;
-
-        if($order_in->path->path_length>10)
+        if($order_in->path->path_length>5000)
         {
             $priceStrategyContext = new PriceStrategyContext('P');
             $priceTemp= $priceStrategyContext->discount($priceTemp);
