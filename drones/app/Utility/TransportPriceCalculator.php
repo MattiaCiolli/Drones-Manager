@@ -13,12 +13,12 @@ use App\Models\TransportOrder;
 
 class TransportPriceCalculator extends PriceCalculator
 {
-    public function calculatePrice()
+    public function calculatePrice($order_in)
     {
         //initialize price
         $priceTemp=0;
         $i=0;
-        $order_in=\App\Models\TransportOrder::find(1);
+        $order_in=TransportOrder::find(1);
         //analyze products and update price
         foreach ($order_in->carriers as &$carr) {
 
@@ -40,9 +40,9 @@ class TransportPriceCalculator extends PriceCalculator
             $priceTemp= $priceStrategyContext->discount($priceTemp);
         }
 
-        $pathLengthPrice = config('path.pricePerKm') * $order_in->getPath()->getLength();
+        $pathLengthPrice = config('path.pricePerKm') * $order_in->path->path_length;
 
-        if($order_in->getPath()->getLength())
+        if($order_in->path->path_length)
         {
             $priceStrategyContext = new PriceStrategyContext('P');
             $priceTemp= $priceStrategyContext->discount($priceTemp);

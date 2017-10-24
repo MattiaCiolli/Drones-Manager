@@ -20,9 +20,9 @@ return  [
 
     'carrierType' => [
 
-        'hot' => 2,
-        'normal' => 1,
-        'cold' => 3,
+        'Hot' => 2,
+        'Normal' => 1,
+        'Cold' => 3,
     ],
 
     'packet' =>[
