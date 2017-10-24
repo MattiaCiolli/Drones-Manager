@@ -18,6 +18,8 @@ class CreatePricesTable extends Migration
             $table->float('value');
             $table->integer('currency_id');
             $table->foreign('currency_id')->references('id')->on('currencies');
+            $table->integer('transport_order_id')->nullable();//null per test
+            $table->foreign('transport_order_id')->references('id')->on('transports_orders');
             $table->timestamps();
         });
     }

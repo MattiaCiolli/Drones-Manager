@@ -13,9 +13,9 @@ class RealDeleteForeignPriceTable extends Migration
      */
     public function up()
     {
-        /*Schema::table('prices', function (Blueprint $table) {
+        Schema::table('prices', function (Blueprint $table) {
             $table->dropColumn('transport_order_id');
-        });*/
+        });
     }
 
     /**
