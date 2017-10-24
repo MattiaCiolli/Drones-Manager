@@ -10,6 +10,7 @@ namespace App\Services;
 
 use App\Models\Price;
 use App\Models\Currency;
+use App\Models\TransportOrder;
 use App\Utility\PriceContext;
 use App\Utility\TransportPriceCalculator;
 
@@ -26,11 +27,10 @@ class PriceService
         $price->setCurrency($curr);
         $price->setValue($priceValue);
         $price->save();
-        /*
-        $order_in.setPrice($price);
-        $price->save();
+        $order_in=TransportOrder::find(1);
+        $order_in->setPrice($price);
         $order_in->save();
-        */
+
         return $price;
     }
 }

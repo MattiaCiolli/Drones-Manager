@@ -14,7 +14,7 @@ class TransportOrder extends Order
 
     public function setPrice($price)
     {
-        $this->maitre()->associate($price);
+        $this->price()->associate($price);
     }
 
 	public function address()
@@ -34,7 +34,7 @@ class TransportOrder extends Order
 
     public function price()
     {
-        return $this->hasOne('App\Models\Price');
+        return $this->belongsTo('App\Models\Price');
     }
 
 	public function path()

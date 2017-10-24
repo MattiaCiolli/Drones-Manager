@@ -26,7 +26,7 @@ class Price extends Model
 
     public function ordTransport()
     {
-        return $this->belongsTo(TransportOrder::class);
+        return $this->hasOne(TransportOrder::class);
     }
 
     public function currency()

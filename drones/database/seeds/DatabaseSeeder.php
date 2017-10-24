@@ -24,7 +24,6 @@ class DatabaseSeeder extends Seeder
 		$this->call(PathServiceUDFs::class);
 		$this->call(NoFlyZoneTableSeeder::class);
         $this->call(CurrencyTableSeeder::class);
-        $this->call(PriceTableSeeder::class);
 		$this->call(PathServiceUDFs::class);
     }
 }

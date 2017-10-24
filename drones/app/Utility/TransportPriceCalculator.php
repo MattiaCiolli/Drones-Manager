@@ -20,7 +20,7 @@ class TransportPriceCalculator extends PriceCalculator
         $i=0;
         $order_in=TransportOrder::find(1);
         //analyze products and update price
-        foreach ($order_in->carriers as &$carr) {
+        foreach ($order_in->carrier as &$carr) {
 
              //carrier price
              $priceTemp=$priceTemp+config('carrier.carrierPrice');
@@ -40,15 +40,17 @@ class TransportPriceCalculator extends PriceCalculator
             $priceTemp= $priceStrategyContext->discount($priceTemp);
         }
 
-        $pathLengthPrice = config('path.pricePerKm') * $order_in->path->path_length;
+        //echo($order_in->path->path_length);
+        $pathLengthPrice = config('path.pricePerKm') * ($order_in->path->path_length/1000);
+        $priceTemp=$priceTemp+$pathLengthPrice;
 
-        if($order_in->path->path_length)
+        if($order_in->path->path_length>10)
         {
             $priceStrategyContext = new PriceStrategyContext('P');
             $priceTemp= $priceStrategyContext->discount($priceTemp);
         }
 
-        if(//summer)
+        /*if(//summer)
         {
             $priceStrategyContext = new PriceStrategyContext('S');
             $priceTemp= $priceStrategyContext->discount($priceTemp);
@@ -58,7 +60,7 @@ class TransportPriceCalculator extends PriceCalculator
         {
             $priceStrategyContext = new PriceStrategyContext('F');
             $priceTemp= $priceStrategyContext->discount($priceTemp);
-        }
+        }*/
 
 
 //TEST----------------------------------------------------------------------------------
