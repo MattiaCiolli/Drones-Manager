@@ -61,7 +61,7 @@ class TransportPriceCalculator extends PriceCalculator
         }
 
 
-//TEST-----------------------------------------------------------------------------------
+//TEST----------------------------------------------------------------------------------
  /*       for($i=0; $i<4; $i++)
         {
             $priceTemp=$priceTemp+config('carrier.carrierPrice');
@@ -80,7 +80,7 @@ class TransportPriceCalculator extends PriceCalculator
         $priceTemp = $priceTemp+$pathLengthPrice;
         $priceStrategyContext = new PriceStrategyContext('Q');
         $priceTemp= $priceStrategyContext->discount($priceTemp);
-//FINE TEST-----------------------------------------------------------------------------------
+//FINE TEST----------------------------------------------------------------------------------
 */
         //set final price
         return $priceTemp;
