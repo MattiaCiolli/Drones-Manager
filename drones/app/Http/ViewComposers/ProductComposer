@@ -1,0 +1,40 @@
+<?php
+
+namespace App\Http\ViewComposers;
+
+use Illuminate\View\View;
+use App\Services\ProductService;
+
+class ProductComposer
+{
+    private $products;
+    //private $ciao;
+    /**
+     * Create a movie composer.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $transportEnterprise= \App\Models\TransportEnterprise::find(1);
+        $catalog = \App\Models\Catalog::find($transportEnterprise->catalog_id);
+        $productList = \App\Models\ProductDescription::where('catalog_id', $catalog->id)->get();
+        $this->products= $productList;
+    }
+
+    /**
+     * Bind data to the view.
+     *
+     * @param  View  $view
+     * @return void
+     */
+    public function compose(View $view)
+    {
+        //$transportEnterprise= \App\Models\TransportEnterprise::find(1);
+        //$catalog = \App\Models\Catalog::find($transportEnterprise->catalog_id);
+        //$products = \App\Models\ProductDescription::where('catalog_id', $catalog->id)->get();
+        dd($$this->products);
+        $view->with('products', $this->products);
+
+    }
+}

@@ -105,8 +105,6 @@ class TransportOrderController extends Controller
 
     public function insertProduct()
     {
-        $productService = new ProductService();
-        $products = $productService->productForView();
-        return view('insertProduct', compact('products'));
+        return view('insertProduct');
     }
 }
