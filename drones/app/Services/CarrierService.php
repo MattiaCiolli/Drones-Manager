@@ -36,7 +36,7 @@ class CarrierService
 
             $sizeOfProduct = $productList[$indexProduct]->description->size;
             $slotOfProduct = config('carrier.packet.defaultSize.'.$sizeOfProduct);
-            for($indexProduct; $slotOfProduct <= $freeSlot ;$indexProduct++){
+            for($indexProduct; $slotOfProduct <= $freeSlot && $indexProduct<$numberOfProduct; $indexProduct++){
 
                 $productList[$indexProduct]->setCarrier($carrier[$indexCarrier]);
                 $productList[$indexProduct]->save();

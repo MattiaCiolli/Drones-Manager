@@ -83,17 +83,17 @@ $("#insertProductsButton").click(function() {
 
     $.ajax({
         type: "POST",
-        url:'/insertProduct',
+        url:'/Drones-Manager/drones/public/insertProduct',
         data: {
             products: JSON.stringify(dati)
         },
         dataType: "html",
         success: function(msg)
         {
-            //console.log(msg);
-            document.location.href="calculatePrice";
+            console.log(msg);
+            document.location.href="/Drones-Manager/drones/public/";
         },
-        error: function()
+        error: function(msg)
         {
             console.log(msg);
             alert("Invio ordine fallito, si prega di riprovare...");
