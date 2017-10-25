@@ -18,7 +18,7 @@ class PriceService
 {
     public function CalculateTransportPrice($order_in)
     {
-        $priceContext = new PriceContext(null, new TransportPriceCalculator());
+        $priceContext = new PriceContext($order_in, new TransportPriceCalculator());
         $priceValue=$priceContext->preventive();
         //read currency
         $currencyConf = config('currency.currency.defaultCurrency');
@@ -27,7 +27,7 @@ class PriceService
         $price->setCurrency($curr);
         $price->setValue($priceValue);
         $price->save();
-        $order_in=TransportOrder::find(1);
+        //$order_in=TransportOrder::find(1);
         $order_in->setPrice($price);
         $order_in->save();
 
