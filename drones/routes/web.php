@@ -33,7 +33,7 @@ Route::get('/insertProduct', 'TransportOrderController@insertProduct');
 
 
 
-Route::get('/calculatePrice', 'TransportOrderController@calculatePrice');
+//Route::get('/p', 'TransportOrderController@productAnalysis');
 
 
 
