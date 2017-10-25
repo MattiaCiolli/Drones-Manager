@@ -30,11 +30,6 @@ class ProductComposer
      */
     public function compose(View $view)
     {
-        //$transportEnterprise= \App\Models\TransportEnterprise::find(1);
-        //$catalog = \App\Models\Catalog::find($transportEnterprise->catalog_id);
-        //$products = \App\Models\ProductDescription::where('catalog_id', $catalog->id)->get();
-        dd($$this->products);
         $view->with('products', $this->products);
-
     }
 }

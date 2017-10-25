@@ -11,9 +11,11 @@ class ComposerServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot() {
-        View::composer('\insertProduct', '\App\Http\ViewComposers\ProductComposer');
-/*
+    public function boot()
+	{
+		view()->composer('insertProduct', 'App\Htpp\ViewComposers\ProductComposer');
+
+		/*
         View::composer('insertProduct',  function($view)
         {
             $transportEnterprise = \App\Models\TransportEnterprise::find(1);
@@ -22,7 +24,7 @@ class ComposerServiceProvider extends ServiceProvider
             //$view->with(compact('products'));
             $view->with(compact('ciao', 'Hello World'));
         });
-*/
+		*/
     }
 
     /**
