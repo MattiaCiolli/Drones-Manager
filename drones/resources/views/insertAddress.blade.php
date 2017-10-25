@@ -154,7 +154,7 @@
                             console.log(destinationAddress);
                             $.ajax({
                                 type: "POST",
-                                url: '/Drones-Manager/drones/public//insertAddress',
+                                url: '/insertAddress',
                                 //data:JSON.stringify(destinationAddress),
                                 data:{
                                     address: JSON.stringify(destinationAddress)

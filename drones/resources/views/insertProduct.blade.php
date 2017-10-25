@@ -83,7 +83,7 @@ $("#insertProductsButton").click(function() {
 
     $.ajax({
         type: "POST",
-        url:'/Drones-Manager/drones/public/insertProduct',
+        url:'/insertProduct',
         data: {
             products: JSON.stringify(dati)
         },
@@ -91,7 +91,7 @@ $("#insertProductsButton").click(function() {
         success: function(msg)
         {
             console.log(msg);
-            document.location.href="/Drones-Manager/drones/public/";
+            document.location.href="/";
         },
         error: function(msg)
         {
