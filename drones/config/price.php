@@ -17,4 +17,10 @@ return  [
 	'fidelity' => 0.8,
 	'pathLength' => 2,
     ],
+
+    'strategyParameters' => [
+
+        'quantity' => 5,
+        'pathLength' => 5000,
+    ],
 ];

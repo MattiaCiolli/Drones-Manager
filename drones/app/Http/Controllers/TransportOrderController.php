@@ -12,6 +12,7 @@ use App\Services\ProductService;
 use App\Services\OrderService;
 use App\Services\AddressService;
 use App\Services\PathService;
+use App\Models\TransportOrder;
 
 class TransportOrderController extends Controller
 {
@@ -42,6 +43,7 @@ class TransportOrderController extends Controller
         $carriersList = $carrierService->handleProduct($productList);
 
         $orderService->consignCarriers($carriersList);
+        $this->calculatePrice();
 
     }
 
@@ -86,19 +88,10 @@ class TransportOrderController extends Controller
     }
 
 
-    /*public function calculatePrice($order_in)
-    {
-        $priceContext = new PriceContext($order_in, new TransportPriceCalculator());;
-        return $priceContext->preventive();
-    }*/
-
-//test
     public function calculatePrice()
     {
-        /*$s = ConfigurationService::getInstance();
-        $s->loadConfig();*/
         $priceServ = new PriceService();
-        $finalPrice = $priceServ->CalculateTransportPrice(null);
+        $finalPrice = $priceServ->CalculateTransportPrice(TransportOrder::find(1));
         return $finalPrice;
     }
 

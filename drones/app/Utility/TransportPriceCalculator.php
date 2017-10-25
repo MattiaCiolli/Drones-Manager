@@ -18,7 +18,6 @@ class TransportPriceCalculator extends PriceCalculator
         //initialize price
         $priceTemp=0;
         $i=0;
-        $order_in=TransportOrder::find(1);
         //analyze products and update price
         foreach ($order_in->carrier as &$carr) {
 
@@ -34,7 +33,7 @@ class TransportPriceCalculator extends PriceCalculator
             }
         }
 
-        if($i>=5)//conf
+        if($i>=config('price.strategyParameters.quantity'))
         {
             $priceStrategyContext = new PriceStrategyContext('Q');
             $priceTemp= $priceStrategyContext->discount($priceTemp);
@@ -43,7 +42,7 @@ class TransportPriceCalculator extends PriceCalculator
         $pathLengthPrice = config('path.pricePerKm') * ($order_in->path->path_length/1000);
         $priceTemp=$priceTemp+$pathLengthPrice;
 
-        if($order_in->path->path_length>5000)//conf
+        if($order_in->path->path_length>config('price.strategyParameters.pathLength'))
         {
             $priceStrategyContext = new PriceStrategyContext('P');
             $priceTemp= $priceStrategyContext->discount($priceTemp);
@@ -61,28 +60,6 @@ class TransportPriceCalculator extends PriceCalculator
             $priceTemp= $priceStrategyContext->discount($priceTemp);
         }*/
 
-
-//TEST----------------------------------------------------------------------------------
-        /*       for($i=0; $i<4; $i++)
-               {
-                   $priceTemp=$priceTemp+config('carrier.carrierPrice');
-
-                   for($j=0; $j<4; $j++)
-                   {
-                       //product price
-                       $priceTemp=$priceTemp+1;
-                       //transport type
-                       $priceTemp=$priceTemp+config('carrier.carrierType.normal');
-                   }
-
-               }
-
-               $pathLengthPrice = config('path.pricePerKm')*1;
-               $priceTemp = $priceTemp+$pathLengthPrice;
-               $priceStrategyContext = new PriceStrategyContext('Q');
-               $priceTemp= $priceStrategyContext->discount($priceTemp);
-       //FINE TEST----------------------------------------------------------------------------------
-       */
         //set final price
         return round($priceTemp, 2);
     }
