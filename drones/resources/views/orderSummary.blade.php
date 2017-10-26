@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-brau
 <tbody>
 Numero carriers: {{count($order->carrier)}}
+@php($i=1)
+@php($d="")
 @foreach ($order->carrier as $c)
+    Prodotti carrier #{{$i++}}:
         <div>
             @foreach ($c->product as $p)
             <th>
@@ -21,7 +23,8 @@ Numero carriers: {{count($order->carrier)}}
             @endforeach
         </div>
 @endforeach
-<div>{{$order->price->value}}</div>
+Prezzo: <div>{{$order->price->value}}{{$order->price->currency->currency_symbol}}</div>
+Sconti applicati: @if(strpos($order->price->discount, 'P') !== false){{$d.="Sconto lunghezza percorso"}} @elseif(strpos($order->price->discount, 'Q') !== false){{$d.="Sconto quantità"}}@endif
 </tbody>
 </body>
 </html>

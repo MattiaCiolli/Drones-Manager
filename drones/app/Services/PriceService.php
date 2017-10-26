@@ -19,13 +19,14 @@ class PriceService
     public function CalculateTransportPrice($order_in)
     {
         $priceContext = new PriceContext($order_in, new TransportPriceCalculator());
-        $priceValue=$priceContext->preventive();
+        $priceDiscountId=$priceContext->preventive();
         //read currency
         $currencyConf = config('currency.currency.defaultCurrency');
         $curr = Currency::where('currency_symbol', $currencyConf)->first();
         $price = new Price();
         $price->setCurrency($curr);
-        $price->setValue($priceValue);
+        $price->setValue($priceDiscountId[0]);
+        $price->setDiscount($priceDiscountId[1]);
         $price->save();
         //$order_in=TransportOrder::find(1);
         $order_in->setPrice($price);

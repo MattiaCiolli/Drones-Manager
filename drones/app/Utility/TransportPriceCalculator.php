@@ -15,6 +15,7 @@ class TransportPriceCalculator extends PriceCalculator
 {
     public function calculatePrice($order_in)
     {
+        $discountId="";
         //initialize price
         $priceTemp=0;
         $i=0;
@@ -37,6 +38,7 @@ class TransportPriceCalculator extends PriceCalculator
         {
             $priceStrategyContext = new PriceStrategyContext('Q');
             $priceTemp= $priceStrategyContext->discount($priceTemp);
+            $discountId.="Q";
         }
 
         $pathLengthPrice = config('path.pricePerKm') * ($order_in->path->path_length/1000);
@@ -46,6 +48,7 @@ class TransportPriceCalculator extends PriceCalculator
         {
             $priceStrategyContext = new PriceStrategyContext('P');
             $priceTemp= $priceStrategyContext->discount($priceTemp);
+            $discountId.="P";
         }
 
         /*if(//summer)
@@ -61,6 +64,6 @@ class TransportPriceCalculator extends PriceCalculator
         }*/
 
         //set final price
-        return round($priceTemp, 2);
+        return array (round($priceTemp, 2), $discountId);
     }
 }

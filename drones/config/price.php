@@ -20,7 +20,7 @@ return  [
 
     'strategyParameters' => [
 
-        'quantity' => 5,
+        'quantity' => 2,
         'pathLength' => 5000,
     ],
 ];
