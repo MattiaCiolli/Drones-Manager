@@ -133,4 +133,9 @@ class TransportOrderController extends Controller
     }
 
 
+    public function orderSummary()
+    {
+        return view('orderSummary');
+    }
+
 }
