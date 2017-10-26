@@ -110,15 +110,22 @@ class TransportOrderController extends Controller
     }
 
 
-    public function deleteTemporaryOrderData($carriers){
+
+    public function deleteTemporaryOrderData($carriers)
+    {
 
         //ordine da recuperare da sessione
         $transportOrder = TransportOrder::find(1);
         //$carriers = \App\Models\Carrier::where('transport_order_id', $transportOrder->id)->get();
-        foreach ($carriers as $carrier){
+        foreach ($carriers as $carrier) {
             $carrier->delete();
         }
         $transportOrder->price()->delete();
+    }
+
+    public function orderSummary()
+    {
+        return view('orderSummary');
 
     }
 }
