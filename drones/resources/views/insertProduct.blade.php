@@ -43,7 +43,7 @@
         </table>
     </div>
     <div class="row">
-        <a href="#"><button id="orderConfirmedBtn" class="btn btn-danger btn-lg btn-product">Conferma ordine</button></a>
+        <a href="#"><button id="orderConfirmedBtn" class="btn btn-danger btn-lg btn-product">Invia ordine</button></a>
     </div>
 </div>
 
@@ -92,7 +92,6 @@ $("#orderConfirmedBtn").click(function() {
             dataType: "html",
             success: function (msg) {
                 console.log(msg);
-                document.location.href = "/orderSummary";
             },
             error: function (msg) {
                 console.log(msg);
