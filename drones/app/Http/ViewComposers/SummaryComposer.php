@@ -16,7 +16,10 @@ class SummaryComposer
     public function __construct()
     {
         $transportOrder= \App\Models\TransportOrder::find(1);
-        $this->order= $transportOrder;
+        //accedere a config
+        $this->order[0]= $transportOrder;
+        //fare parse per controllare valore dello sconto
+        $this->order[1]= config('price.discountStrategies.quantity');
     }
 
     /**
