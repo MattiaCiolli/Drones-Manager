@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Price;
 use Illuminate\Http\Request;
 use App\Utility\PriceContext;
 use App\Utility\TransportPriceCalculator;
@@ -40,7 +41,7 @@ class TransportOrderController extends Controller
         $orderService = new OrderService();
 
         //ordine da recuperare da sessione
-        $transportOrder = TransportOrder::find(1);
+        $transportOrder = \App\Models\TransportOrder::find(1);
         $carriers = \App\Models\Carrier::where('transport_order_id', $transportOrder->id)->get();
         if(count($carriers) && count($transportOrder->price())){
             $this->deleteTemporaryOrderData($carriers);
@@ -52,6 +53,10 @@ class TransportOrderController extends Controller
         $orderService->consignCarriers($carriersList);
         $this->calculatePrice();
 
+        $transportOrder = $transportOrder->fresh();
+        return $transportOrder->price->value;
+
+        //ritornare un json con i dati da vedere in msg della chaiamat ajax
 
 
     }
@@ -99,8 +104,12 @@ class TransportOrderController extends Controller
 
     public function calculatePrice()
     {
+        //$transportOrder da prendere da sessione
+        $transportOrder=\App\Models\TransportOrder::find(1);
         $priceServ = new PriceService();
-        $priceServ->CalculateTransportPrice(TransportOrder::find(1));
+        $priceServ->CalculateTransportPrice($transportOrder);
+        $transportOrder->save();
+
     }
 
 
@@ -123,9 +132,5 @@ class TransportOrderController extends Controller
         $transportOrder->price()->delete();
     }
 
-    public function orderSummary()
-    {
-        return view('orderSummary');
 
-    }
 }

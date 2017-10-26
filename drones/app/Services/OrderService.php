@@ -27,5 +27,6 @@ class OrderService
             $carri->setTransportOrder($transportOrder);
             $carri->save();
         }
+        $transportOrder->save();
     }
 }

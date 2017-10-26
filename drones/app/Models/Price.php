@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Price extends Model
 {
+    private $value;
     protected $table = 'prices';
     protected $fillable = ['value'];
 

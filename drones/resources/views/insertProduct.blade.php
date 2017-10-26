@@ -42,6 +42,12 @@
             </tbody>
         </table>
     </div>
+
+    <div class="row">
+        <h3>Dati:</h3>
+        Prezzo Totale: <p id="prezzoOrdine"></p>
+    </div>
+
     <div class="row">
         <a href="#"><button id="orderConfirmedBtn" class="btn btn-danger btn-lg btn-product">Invia ordine</button></a>
     </div>
@@ -92,6 +98,8 @@ $("#orderConfirmedBtn").click(function() {
             dataType: "html",
             success: function (msg) {
                 console.log(msg);
+                $("#prezzoOrdine").text(msg)
+                //estrarre dal json i dati e metterli nel value tramite jquery
             },
             error: function (msg) {
                 console.log(msg);
