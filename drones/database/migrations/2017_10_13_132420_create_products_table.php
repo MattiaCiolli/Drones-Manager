@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             $table->timestamps();
 
             $table->foreign('description_id')->references('id')->on('product_descriptions');
-            $table->foreign('carrier_id')->references('id')->on('carriers');
+            $table->foreign('carrier_id')->references('id')->on('carriers')->onDelete('cascade');
         });
     }
 

@@ -16,7 +16,7 @@ class AddForeignPriceTransportsOrdersTable extends Migration
         Schema::table('transports_orders', function (Blueprint $table) {
             $table->dropColumn('price');
             $table->integer('price_id')->unsigned()->nullable();
-            $table->foreign('price_id')->references('id')->on('prices');
+            $table->foreign('price_id')->references('id')->on('prices')->onDelete('set null');
         });
     }
 

@@ -39,11 +39,20 @@ class TransportOrderController extends Controller
         $carrierService = new CarrierService();
         $orderService = new OrderService();
 
+        //ordine da recuperare da sessione
+        $transportOrder = TransportOrder::find(1);
+        $carriers = \App\Models\Carrier::where('transport_order_id', $transportOrder->id)->get();
+        if(count($carriers) && count($transportOrder->price())){
+            $this->deleteTemporaryOrderData($carriers);
+        }
+
         $productList = $productService->generateProducts($stringProductList);
         $carriersList = $carrierService->handleProduct($productList);
 
         $orderService->consignCarriers($carriersList);
         $this->calculatePrice();
+
+
 
     }
 
@@ -91,13 +100,25 @@ class TransportOrderController extends Controller
     public function calculatePrice()
     {
         $priceServ = new PriceService();
-        $finalPrice = $priceServ->CalculateTransportPrice(TransportOrder::find(1));
-        return $finalPrice;
+        $priceServ->CalculateTransportPrice(TransportOrder::find(1));
     }
 
 
     public function insertProduct()
     {
         return view('insertProduct');
+    }
+
+
+    public function deleteTemporaryOrderData($carriers){
+
+        //ordine da recuperare da sessione
+        $transportOrder = TransportOrder::find(1);
+        //$carriers = \App\Models\Carrier::where('transport_order_id', $transportOrder->id)->get();
+        foreach ($carriers as $carrier){
+            $carrier->delete();
+        }
+        $transportOrder->price()->delete();
+
     }
 }

@@ -30,7 +30,5 @@ class PriceService
         //$order_in=TransportOrder::find(1);
         $order_in->setPrice($price);
         $order_in->save();
-
-        return $price;
     }
 }
