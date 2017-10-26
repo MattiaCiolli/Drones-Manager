@@ -100,4 +100,9 @@ class TransportOrderController extends Controller
     {
         return view('insertProduct');
     }
+
+    public function orderSummary()
+    {
+        return view('orderSummary');
+    }
 }

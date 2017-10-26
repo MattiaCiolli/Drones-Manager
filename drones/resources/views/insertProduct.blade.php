@@ -30,7 +30,7 @@
                         <th>
                             <div>
                                 <input type="hidden" value="{{$p->id}}" class="id-products">
-                                <input type="number" class=" form-control quantity-products"  min="0" value="0" step="1" >
+                                <input type="number" class=" form-control quantity-products"  min="0" value="0" step="1" onchange="getOrderPrice()">
                             </div>
                         </th>
                         <th>{{ $p->size }}</th>
@@ -43,7 +43,7 @@
         </table>
     </div>
     <div class="row">
-        <a href="#"><button id="insertProductsButton" class="btn btn-danger btn-lg btn-product">Invia ordine</button></a>
+        <a href="#"><button id="orderConfirmedBtn" class="btn btn-danger btn-lg btn-product">Conferma ordine</button></a>
     </div>
 </div>
 
@@ -51,55 +51,55 @@
 
 <script>
 
-$("#insertProductsButton").click(function() {
-
-    var quantità_prodotti = $("div").children( ".quantity-products" ).length;
-    var product_list_chiave = [];
-    var product_list_descr = [];
-
-    for (i = 0; i < quantità_prodotti; i++) {
-        valore = $("div").children(".quantity-products")[i].value;
-
-        if (valore != '0') {
-            product_list_chiave.push(parseInt($("div").children(".id-products")[i].value));
-            product_list_descr.push(parseInt($("div").children(".quantity-products")[i].value));
-        }
-    }
-
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    });
-
-    var dati= {
-        productDescriptionID: product_list_chiave,
-        productQuantity: product_list_descr,
-        _token: $('input[name=csrf-token]').attr('content')
-    };
-
-    console.log(JSON.stringify(dati));
-    console.log(product_list_chiave);
-
-    $.ajax({
-        type: "POST",
-        url:'/insertProduct',
-        data: {
-            products: JSON.stringify(dati)
-        },
-        dataType: "html",
-        success: function(msg)
-        {
-            console.log(msg);
-            document.location.href="/";
-        },
-        error: function(msg)
-        {
-            console.log(msg);
-            alert("Invio ordine fallito, si prega di riprovare...");
-        }
-    });
+$("#orderConfirmedBtn").click(function() {
+    document.location.href = "/orderSummary";
 });
+    function getOrderPrice() {
+        var quantità_prodotti = $("div").children(".quantity-products").length;
+        var product_list_chiave = [];
+        var product_list_descr = [];
+
+        for (i = 0; i < quantità_prodotti; i++) {
+            valore = $("div").children(".quantity-products")[i].value;
+
+            if (valore != '0') {
+                product_list_chiave.push(parseInt($("div").children(".id-products")[i].value));
+                product_list_descr.push(parseInt($("div").children(".quantity-products")[i].value));
+            }
+        }
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        var dati = {
+            productDescriptionID: product_list_chiave,
+            productQuantity: product_list_descr,
+            _token: $('input[name=csrf-token]').attr('content')
+        };
+
+        console.log(JSON.stringify(dati));
+        console.log(product_list_chiave);
+
+        $.ajax({
+            type: "POST",
+            url: '/insertProduct',
+            data: {
+                products: JSON.stringify(dati)
+            },
+            dataType: "html",
+            success: function (msg) {
+                console.log(msg);
+                document.location.href = "/";
+            },
+            error: function (msg) {
+                console.log(msg);
+                alert("Invio ordine fallito, si prega di riprovare...");
+            }
+        });
+    }
 
 </script>
 @endsection

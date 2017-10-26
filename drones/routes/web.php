@@ -31,7 +31,7 @@ Route::get('/insertProduct', function () {
 
 Route::get('/insertProduct', 'TransportOrderController@insertProduct');
 
-
+Route::get('/orderSummary', 'TransportOrderController@orderSummary');
 
 //Route::get('/p', 'TransportOrderController@productAnalysis');
 
