@@ -13,8 +13,10 @@
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <link rel="stylesheet" href="/css/app.css">
-    <script src="/js/app.js"></script>
+	<link rel="stylesheet" href="/css/app.css">
+
+	<script src="/js/app.js"></script>
+
     <!--
    {{--
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
