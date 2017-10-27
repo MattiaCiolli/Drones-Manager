@@ -9,121 +9,38 @@
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
-
-body {
-  background: url('../images/2.jpg') no-repeat center center fixed;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height:100%;
-}
-
-
-
-.home-content{
-
-  margin-top: 90px;
-  background-color:#1e1d1d;
-  opacity: 0.8;
-  border-radius: 15px;
-  height: 550px;
-  width: 380px;
-  padding-top: 80px;
-  padding-right: 50px;
-  padding-left: 50px;
-}
-
-.home-content h1{
-  position: relative;
-  color:white;
-  text-align: center;
-  font-size: 60px;
-  font-style: italic;
-}
-
-.home-content p{
-  position: relative;
-  color: white;
-  font-size: 20px;
-  text-align: center;
-  font-style: italic;
-}
-
 .btn{
-  position: relative;
-  margin-left: 15%;
-  font-size: 28px;
-  width: 200px;
-  height: 80px;
+  margin-top:40%;
+  font-size: 32px;
+  width: 250px;
+  height: 120px;
   font-style: italic;
 }
 
-/* VIEW insertAddress  */
-
-.address-content{
-
-  margin-top: 60px;
-  background-color:#1e1d1d;
-  opacity: 0.9;
-  border-radius: 10px;
-  height: 650px;
-  width: 700px;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
-  padding-bottom: 10px;
+.logo{
+  color: #337ab7;
 }
 
-.address-content h3{
-  color: white;
-  font-size:30px;
-  margin-top: 0px;
+.sfondo{
+  //background-image: url('../img/sfondo.png');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: bottom;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  min-height: 700px;
 }
-
-.address-content p{
-  position: relative;
-  color: white;
-  margin-top: 0px;
-  font-size: 15px;
-  font-style: italic;
-  float: left;
-}
-
-
-.btn-address{
-  position: relative;
-  font-size: 18px;
-  width: 110px;
-  height: 40px;
-  font-style: italic;
-  margin-right: 10px;
-  margin-top: 20px;
-}
-
-
-#text_via{
-  color: #f9f2f4;
-}
-
-#spanCheckOk{
-  //margin-left: 20px;
-  visibility: hidden;
-}
-#spanCheckNo{
-  //margin-left: 20px;
-  visibility: hidden;
-}
-
 
 /* mappa */
 
 #map {
   position: relative;
-  height: 460px;
+  min-height: 490px;
   width: 100%;
-  margin-top: -30px;
-  margin-bottom: 10px;
+  margin-button:30px;
+
 }
 
 #description {
@@ -181,6 +98,7 @@ body {
   text-overflow: ellipsis;
   width: 400px;
   margin-top: 10px;
+  float:center;
 }
 
 #pac-input:focus {
@@ -198,154 +116,100 @@ body {
   width: 345px;
 }
 
-
-
-
-
-/* VIEW insertProduct  */
-
-.btn-product{
-  position: relative;
-  float: right;
-  margin-top: 2px;
-  margin-left: 30px;
-  font-size: 18px;
-  width: 110px;
-  height: 40px;
-  font-style: italic;
-  padding-left: 5px;
+#spanCheckOk{
+  visibility: hidden;
+}
+#spanCheckNo{
+  visibility: hidden;
 }
 
-
-.products-content-external{
-  position: relative;
-  background-color:#1e1d1d;
-  opacity: 0.8;
-  border-radius: 10px;
-  padding: 20px;
-  margin-top: 5%;
-}
-
-.testo-top-product{
-  height: 80px;
-}
-
-.testo-top-product h3 {
-  color: #e5dede;
-}
-
-.testo-top-product p {
-  color: #e5dede;
-}
-
-.products-content-internal{
-  position: relative;
-  background-color:#1e1d1d;
-  opacity: 0.9;
-  height: 80%;
-  overflow-y: scroll;
-  min-height: 300px;
-  max-height: 400px;
-  padding-top: 20px ;
+a.bottone{
+  visibility: hidden;
 }
 
 .quantity-products{
-  width: 70px;
-  background-color: #2F3133;
+  width: 80px;
 }
-
-.table{
-  color:#d6cfcf;
-}
-
-/***** Media queries *****/
 /*
-@media (min-width: 992px) and (max-width: 1199px) {
-  .home-content{
-
-    margin-top: 100px;
-    background-color:#1e1d1d;
-    opacity: 0.8;
-    border-radius: 15px;
-    height: 500px;
-    width: 380px;
-    padding-top: 120px;
-    padding-right: 50px;
-    padding-left: 50px;
-  }
-
-  .home-content h1{
-    position: relative;
-    color:white;
-    text-align: center;
-    font-size: 60px;
-    font-style: italic;
-  }
-
-  .home-content p{
-    position: relative;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    font-style: italic;
-  }
-
-  .btn{
-    position: relative;
-    margin-left: 15%;
-    font-size: 28px;
-    width: 200px;
-    height: 80px;
-    font-style: italic;
-  }
-
-}
-
-@media  (max-width: 991px) {
-  body {
-    background: url('../images/2_medio.jpg') no-repeat center center;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  .home-content{
-
-    margin-top: 100px;
-    background-color:#1e1d1d;
-    opacity: 0.8;
-    border-radius: 15px;
-    height: 500px;
-    width: 380px;
-    padding-top: 50px;
-    padding-right: 50px;
-    padding-left: 50px;
-  }
-
-  .home-content h1{
-    position: relative;
-    color:white;
-    text-align: center;
-    font-size: 50px;
-    font-style: italic;
-  }
-
-  .home-content p{
-    position: relative;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    font-style: italic;
-  }
-
-  .btn{
-    position: relative;
-    margin-left: 15%;
-    font-size: 28px;
-    width: 200px;
-    height: 80px;
-    font-style: italic;
-  }
+a.bottoneProd{
+  visibility: hidden;
 }
 */
+.tabella{
+  max-height: 420px;
+  overflow-y: scroll;
+  border: #dbdbdb 1px solid;
+  border-radius: 5px;
+}
 
+.total{
+  float: right;
+  margin-right: 130px;
+}
+
+.bread-total ol{
+  margin-top: 3%;
+  height: 40px;
+}
+
+.total-drone{
+  //background-color: url('../img/drone-ico.png');
+  height: 20px;
+  width: 20px;
+}
+.drones{
+  float: left;
+}
+
+/* menu laterale */
+
+.menu li{
+  height: 100px;
+  width: 100%;
+}
+
+.menu p{
+  font-size: 20px;
+  text-align: center;
+  color: #bababa;
+}
+
+.menu span{
+  height: 50px;
+  width: 50px;
+  margin-left: 40%;
+  color:#bababa;
+}
+
+.primo-li li{
+  padding-top: 20%;
+}
+
+.ombra li{
+  background-color: #111111;
+
+}
+
+.ombra p{
+  text-shadow: 0 0 25px #bababa;
+  color: #337ab7;
+}
+
+.ombra span{
+  text-shadow: 0 0 25px #337ab7;
+  color: #337ab7;
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .menu span{
+    height: 50px;
+    width: 50px;
+    margin-left: 48%;
+    color:#bababa;
+  }
+  .primo-li li{
+    padding-top: 25px;
+  }
+}
