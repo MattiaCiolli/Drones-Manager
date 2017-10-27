@@ -40,7 +40,7 @@
                     </h3>
                 </div>
                 <div class="col-lg-2 col-offset-lg-2  col-md-2 col-offset-md-2 col-xs-2 col-offset-xs-2">
-                    <h3><a id="insertAddressButton" href="#" class=" bottone">Avanti <span class="glyphicon glyphicon-menu-right"></span> </a> </h3>
+                    <h3><a id="insertAddressButton" href="{{ url("/insertProduct") }}" class=" bottone">Avanti <span class="glyphicon glyphicon-menu-right"></span> </a> </h3>
                 </div>
             </div>
             <div class="row">
@@ -54,6 +54,8 @@
                         </li>
                         <li class="active " id="text_via" class="">
                             <i class="fa fa-home"></i>
+                        </li>
+                        <li>
                             <span id="spanCheckOk" class=" glyphicon glyphicon-ok text-success"></span>
                             <span id="spanCheckNo" class="glyphicon glyphicon-remove text-danger"></span>
                         </li>
@@ -182,20 +184,31 @@
                                     dataType: "html",
                                     success: function(msg)
                                     {
-                                        alert(msg);
-                                        document.getElementById("spanCheckOk").style.visibility = "visible";
-                                        document.getElementById("insertAddressButton").style.visibility = "visible";
+                                        var data = jQuery.parseJSON(msg);
+                                       alert(data.msg);
+                                       if ( data.addressIsValid == true){
+                                           document.getElementById("spanCheckOk").style.visibility = "visible";
+                                           document.getElementById("spanCheckNo").style.visibility = "hidden";
+                                           document.getElementById("insertAddressButton").style.visibility = "visible";
+                                       }else{
+                                           document.getElementById("spanCheckNo").style.visibility = "visible";
+                                           document.getElementById("spanCheckOk").style.visibility = "hidden";
+                                           document.getElementById("insertAddressButton").style.visibility = "hidden";
+                                       }
                                     },
                                     error: function(error)
                                     {
                                         alert(error);
                                         document.getElementById("spanCheckNo").style.visibility = "visible";
-
+                                        document.getElementById("spanCheckOk").style.visibility = "hidden";
+                                        document.getElementById("insertAddressButton").style.visibility = "hidden";
                                     }
                                 });
 
                             } else {
                                 testo_via.innerHTML = 'Indirizzo non valido, riprova!';
+                                document.getElementById("spanCheckNo").style.visibility = "visible";
+                                document.getElementById("insertAddressButton").style.visibility = "hidden";
                             }
                         } else {
                             testo_via.innerHTML = 'Geocoder failed due to: ' + status;

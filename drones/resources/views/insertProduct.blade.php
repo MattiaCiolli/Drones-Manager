@@ -72,110 +72,6 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>
-                                    <div>
-                                        <input type="number" class=" form-control quantity-products"  min="0" value="0" step="1" >
-                                    </div>
-                                </td>
-                                <td>1265</td>
-                                <td>32.3%</td>
-                                <td>ciaoxdcjrezghwes</td>
-                                <td>$321.33</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div>
-                                        <input type="number" class=" form-control quantity-products"  min="0" value="0" step="1" >
-                                    </div>
-                                </td>
-                                <td>1265</td>
-                                <td>32.3%</td>
-                                <td>ciao</td>
-                                <td>$321.33</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div>
-                                        <input type="number" class=" form-control quantity-products"  min="0" value="0" step="1" >
-                                    </div>
-                                </td>
-                                <td>1265</td>
-                                <td>32.3%</td>
-                                <td>ciao</td>
-                                <td>$321.33</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div>
-                                        <input type="number" class=" form-control quantity-products"  min="0" value="0" step="1" >
-                                    </div>
-                                </td>
-                                <td>1265</td>
-                                <td>32.3%</td>
-                                <td>ciao</td>
-                                <td>$321.33</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div>
-                                        <input type="number" class=" form-control quantity-products"  min="0" value="0" step="1" >
-                                    </div>
-                                </td>
-                                <td>1265</td>
-                                <td>32.3%</td>
-                                <td>ciao</td>
-                                <td>$321.33</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div>
-                                        <input type="number" class=" form-control quantity-products"  min="0" value="0" step="1" >
-                                    </div>
-                                </td>
-                                <td>1265</td>
-                                <td>32.3%</td>
-                                <td>ciao</td>
-                                <td>$321.33</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div>
-                                        <input type="number" class=" form-control quantity-products"  min="0" value="0" step="1" >
-                                    </div>
-                                </td>
-                                <td>1265</td>
-                                <td>32.3%</td>
-                                <td>ciao</td>
-                                <td>$321.33</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div>
-                                        <input type="number" class=" form-control quantity-products"  min="0" value="0" step="1" >
-                                    </div>
-                                </td>
-                                <td>1265</td>
-                                <td>32.3%</td>
-                                <td>ciao</td>
-                                <td>$321.33</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div>
-                                        <input type="number" class=" form-control quantity-products"  min="0" value="0" step="1" >
-                                    </div>
-                                </td>
-                                <td>1265</td>
-                                <td>32.3%</td>
-                                <td>ciao</td>
-                                <td>$321.33</td>
-                            </tr>
-
-
-
-
-                            <!--
 	                         @foreach ($products as $p)
                                 <tr>
                                     <div>
@@ -195,8 +91,6 @@
 	                            </tr>
 	                            @endforeach
 
-                                    -->
-
                             </tbody>
                         </table>
                     </div>
@@ -210,16 +104,7 @@
 
     </div>
     <!-- /#page-wrapper -->
-
-
-
-<<<<<<< Updated upstream
 @endsection
-=======
-    <div class="row">
-        <a href="#"><button id="orderConfirmedBtn" class="btn btn-danger btn-lg btn-product">Invia ordine</button></a>
-    </div>
-</div>
 
-@endsection
->>>>>>> Stashed changes
+
+

@@ -92,13 +92,25 @@ class TransportOrderController extends Controller
 				$order->address_id = $addressDestination->id;
 				$order->save();
 				
-				return response()->json("L'indirizzo e' valido");
+				return response()->json([
+                'msg' => 'Indirizzo valido!',
+                'addressIsValid' => $addressIsValid
+                ]);
 			}
 			else
 			{
-				return response()->json("L'indirizzo non e' valido");
+				return response()->json([
+                'error' => 'Indirizzo non valido!',
+                'addressIsValid' => $addressIsValid
+            ]);
 			}
 		}
+		else{
+            return response()->json([
+                'msg' => 'Indirizzo non valido!',
+                'addressIsValid' => $addressIsValid
+            ]);
+        }
     }
 
 
