@@ -9,6 +9,7 @@
 <tbody>
 Numero carriers: {{count($order[0]->carrier)}}
 @php($i=1)
+@php($rawPrice=0)
 @foreach ($order[0]->carrier as $c)
     Prodotti carrier #{{$i++}}:
     <div>
@@ -17,13 +18,18 @@ Numero carriers: {{count($order[0]->carrier)}}
                 <div>
                     {{$p->description->description}}
                     {{$p->description->price}}
+                    @php($rawPrice+=$p->description->price)
                 </div>
             </th>
         @endforeach
     </div>
 @endforeach
-Prezzo:
+Prezzo totale:
 <div>{{$order[0]->price->value}}{{$order[0]->price->currency->currency_symbol}}</div>
+Prezzo prodotti:
+<div>{{$rawPrice}}{{$order[0]->price->currency->currency_symbol}}</div>
+Prezzo trasporto:
+<div>{{$order[0]->price->value-$rawPrice}}{{$order[0]->price->currency->currency_symbol}}</div>
 Sconti applicati:
 
 @foreach ($order[1] as $o)

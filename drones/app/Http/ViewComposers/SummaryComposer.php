@@ -33,7 +33,9 @@ class SummaryComposer
             }
             $this->order[1] = $d;
         } else {
-            $this->order[1] = "Nessuno sconto applicato";
+            $d[0][0] = "Nessuno sconto applicato";
+            $d[0][1] = "";
+            $this->order[1] = $d;
         }
     }
 
