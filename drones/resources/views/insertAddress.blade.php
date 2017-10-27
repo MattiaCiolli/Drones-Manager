@@ -227,4 +227,4 @@
 
     </script>
 
-@endsection
+@endsectionèpoiuyt

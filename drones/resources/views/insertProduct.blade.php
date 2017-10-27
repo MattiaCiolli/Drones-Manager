@@ -75,20 +75,17 @@
                 
 	                         @foreach ($products as $p)
                                 <tr>
-                                    <div>
-                                        <th>
-                                            <td>
-                                                <div>
-                                                    <input type="hidden" value="{{$p->id}}" class="id-products">
-	                                                <input type="number" class=" form-control quantity-products"  min="0" value="0" step="1" >
-	                                            </div>
-	                                        </td>
-	                                    </th>
-	                                    <th>{{ $p->size }}</th>
-	                                    <th>{{ $p->type }}</th>
-	                                    <th>{{ $p->description }}</th>
-	                                    <th>{{ $p->value }}</th>
-	                                </div>
+                                    <th>
+                                        <div>
+                                            <input type="hidden" value="{{$p->id}}" class="id-products">
+                                            <input type="number" class=" form-control quantity-products"  min="0" value="0" step="1" >
+                                        </div>
+                                    </th>
+                                    <th>{{ $p->size }}</th>
+                                    <th>{{ $p->type }}</th>
+                                    <th>{{ $p->description }}</th>
+                                    <th>{{ $p->price }}</th>
+
 	                            </tr>
 	                            @endforeach
 

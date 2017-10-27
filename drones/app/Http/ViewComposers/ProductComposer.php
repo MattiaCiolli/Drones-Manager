@@ -3,7 +3,6 @@
 namespace App\Http\ViewComposers;
 
 use Illuminate\View\View;
-use App\Services\ProductService;
 
 class ProductComposer
 {
