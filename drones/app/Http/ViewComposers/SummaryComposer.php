@@ -24,7 +24,7 @@ class SummaryComposer
             for ($i = 0; $i < strlen($transportOrder->price->discount); $i++) {
                 $char = substr($transportOrder->price->discount, $i, 1);
                 if (strpos($char, 'P') !== false) {
-                    $d[$i][0] = "Sconto lunghezza percorso:";
+                    $d[$i][0] = "Tassa lunghezza percorso:";
                     $d[$i][1] = config('price.discountStrategies.pathLength') . "€";
                 } elseif (strpos($char, 'Q') !== false) {
                     $d[$i][0] = "Sconto quantità:";
