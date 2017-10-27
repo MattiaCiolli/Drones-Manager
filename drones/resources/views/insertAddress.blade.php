@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Inser address')
+@section('title', 'Insert address')
 
 @section('sidebar')
     @parent
@@ -23,6 +23,12 @@
                 <p><i class="fa fa-fw fa-home"></i> Products</p>
             </li>
         </div>
+        <div >
+            <li>
+                <span class="glyphicon glyphicon-arrow-down btn-lg"></span>
+                <p><i class="fa fa-fw fa-usd"></i> Summary </p>
+            </li>
+        </div>
     </ul>
 @endsection
 
@@ -34,13 +40,13 @@
 
             <!-- Page Heading -->
             <div class="row page-header">
-                <div class="col-lg-10 col-md-10">
+                <div class="col-lg-9 col-md-9">
                     <h3 >
                         Destination address
                     </h3>
                 </div>
-                <div class="col-lg-2 col-offset-lg-2  col-md-2 col-offset-md-2 col-xs-2 col-offset-xs-2">
-                    <h3><a id="insertAddressButton" href="{{ url("/insertProduct") }}" class=" bottone">Avanti <span class="glyphicon glyphicon-menu-right"></span> </a> </h3>
+                <div class="col-lg-2 col-offset-lg-1  col-md-2 col-offset-md-1 col-xs-2 col-offset-xs-1">
+                    <a id="insertAddressButton" href="{{ url("/insertProduct") }}" class="btn btn-primary bottone">Avanti <span class="glyphicon glyphicon-menu-right"></span> </a>
                 </div>
             </div>
             <div class="row">
@@ -185,7 +191,6 @@
                                     success: function(msg)
                                     {
                                         var data = jQuery.parseJSON(msg);
-                                       alert(data.msg);
                                        if ( data.addressIsValid == true){
                                            document.getElementById("spanCheckOk").style.visibility = "visible";
                                            document.getElementById("spanCheckNo").style.visibility = "hidden";
@@ -227,4 +232,4 @@
 
     </script>
 
-@endsectionèpoiuyt
+@endsection

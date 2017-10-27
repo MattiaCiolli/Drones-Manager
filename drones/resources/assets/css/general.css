@@ -1,4 +1,4 @@
-.btn{
+.btnOrder{
   margin-top:40%;
   font-size: 32px;
   width: 250px;
@@ -117,14 +117,23 @@ a.bottone{
   visibility: hidden;
 }
 
+#insertAddressButton{
+  width: 120px;
+  height:50px;
+  font-size: 23px;
+}
+
 .quantity-products{
   width: 80px;
 }
-/*
+
 a.bottoneProd{
-  visibility: hidden;
+  /*visibility: hidden; */
+  width: 120px;
+  height:50px;
+  font-size: 23px;
 }
-*/
+
 .tabella{
   max-height: 420px;
   overflow-y: scroll;
@@ -133,23 +142,27 @@ a.bottoneProd{
 }
 
 .total{
-  float: right;
-  margin-right: 130px;
+  background-color: #f5f5f5;
+  padding: 5px;
+  margin: 30px;
+  border-radius: 2px;
 }
-
+/*
 .bread-total ol{
   margin-top: 3%;
   height: 40px;
 }
-
+*/
+/*
 .total-drone{
-  //background-color: url('../images/drone-ico.png');
+  //background-color: url('/images/drone-ico.png');
   height: 20px;
   width: 20px;
 }
 .drones{
   float: left;
 }
+*/
 
 /* menu laterale */
 

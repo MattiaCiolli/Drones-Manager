@@ -23,6 +23,12 @@
                 <p><i class="fa fa-fw fa-home"></i> Products</p>
             </li>
         </div>
+        <div >
+            <li>
+                <span class="glyphicon glyphicon-arrow-down btn-lg"></span>
+                <p><i class="fa fa-fw fa-usd"></i> Summary </p>
+            </li>
+        </div>
     </ul>
 @endsection
 
@@ -44,7 +50,7 @@
             </div>
             <div class="row">
                 <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-3 col-xs-4 col-xs-offset-3">
-                    <a href="{{ url("/insertAddress") }}"><button class="btn btn-primary ">Nuovo ordine</button></a>
+                    <a href="{{ url("/insertAddress") }}"><button class="btn btn-primary btnOrder">Nuovo ordine</button></a>
                 </div>
             </div>
         </div>

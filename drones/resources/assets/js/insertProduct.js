@@ -1,7 +1,8 @@
+/*
 $("#orderConfirmedBtn").click(function() {
     document.location.href = "/orderSummary";
 });
-
+*/
 $(document).ready(function () {
 
     $('.quantity-products').change(function () {
@@ -44,9 +45,15 @@ $(document).ready(function () {
             success: function (msg) {
                 console.log(msg);
                 var obj = JSON.parse(msg);
+                $("#prezzoOrdine").innerHTML('Preventivo: € '+obj.totaleOrdine);
+                $("#numeroCarrier").innerHTML(obj.numeroCarrier);
+                $("#totaleProdotti").innerHTML('Totale prodotti: € '+obj.totaleProdotti);
+
+                /*
                 $("#prezzoOrdine").text(obj['totaleOrdine']);
                 $("#numeroCarrier").text(obj['numeroCarrier']);
                 $("#totaleProdotti").text(obj['totaleProdotti']);
+                */
             },
             error: function (msg) {
                 console.log(msg);

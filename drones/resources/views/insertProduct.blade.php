@@ -24,6 +24,12 @@
                 <p><i class="fa fa-fw fa-home"></i> Products</p>
             </li>
         </div>
+        <div >
+            <li>
+                <span class="glyphicon glyphicon-arrow-down btn-lg"></span>
+                <p><i class="fa fa-fw fa-usd"></i> Summary </p>
+            </li>
+        </div>
     </ul>
 @endsection
 
@@ -42,7 +48,7 @@
                     </h3>
                 </div>
                 <div class="col-lg-2 col-offset-lg-2  col-md-2 col-offset-md-2 col-xs-2 col-offset-xs-2">
-                    <h3><a id="insertProductButton" href="#" class=" bottoneProd">Avanti <span class="glyphicon glyphicon-menu-right"></span> </a> </h3>
+                    <a  id="orderConfirmedBtn" href="{{ url("/orderSummary") }}" class=" btn btn-primary bottoneProd">Avanti <span class="glyphicon glyphicon-menu-right"></span> </a>
                 </div>
             </div>
             <div class="row">
@@ -96,7 +102,23 @@
             </div>
             <!-- /.row -->
 
-            <div class="row">
+            <div class="row total">
+                <div class="col-lg-offset-2 col-lg-2 col-md-offset-2 col-md-2">
+                    <h5 id="prezzoOrdine"><i class="fa fa-usd"> Preventivo: € 0  </i></h5>
+                </div>
+                <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
+                    <h5 id="totaleProdotti"><i class="fa fa-calculator"> Totale prodotti: € 0</i></h5>
+                </div>
+                <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
+                    <h5 id="numeroCarrier"> Numero di droni: 0 </h5>
+                </div>
+
+
+
+                <!--
+                    <div> Numero di droni: <h5 id="numeroCarrier">0</h5></div>
+                </div>
+
                 <div class="col-lg-12 bread-total">
                     <ol class="breadcrumb">
                         <li class="total">
@@ -106,17 +128,14 @@
                             <div class="fa fa-calculator"> Totale prodotti: € <h7 id="totaleProdotti">0</h7></div>
                         </li>
                         <li class="total">
-                            <div class="fa fa-calculator"> Preventivo: € <h7 id="prezzoOrdine">0</h7></div>
+                            <div class="fa fa-usd"> Preventivo: € <h7 id="prezzoOrdine">0</h7></div>
                         </li>
                     </ol>
                 </div>
+            -->
             </div>
             <!-- /.row -->
 
-            <div class="row">
-                <a href="#"><button id="orderConfirmedBtn" class="btn btn-danger btn-lg btn-product">Invia ordine</button></a>
-            </div>
-            <!-- /.row -->
 
         </div>
         <!-- /.container-fluid -->
