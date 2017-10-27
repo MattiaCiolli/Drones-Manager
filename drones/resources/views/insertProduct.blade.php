@@ -210,16 +210,10 @@
 
     </div>
     <!-- /#page-wrapper -->
-
-
-
-<<<<<<< Updated upstream
 @endsection
-=======
     <div class="row">
         <a href="#"><button id="orderConfirmedBtn" class="btn btn-danger btn-lg btn-product">Invia ordine</button></a>
     </div>
 </div>
 
 @endsection
->>>>>>> Stashed changes
