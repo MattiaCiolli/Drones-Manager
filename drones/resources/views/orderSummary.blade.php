@@ -9,23 +9,31 @@
 <tbody>
 Numero carriers: {{count($order[0]->carrier)}}
 @php($i=1)
-@php($d="")
 @foreach ($order[0]->carrier as $c)
     Prodotti carrier #{{$i++}}:
-        <div>
-            @foreach ($c->product as $p)
+    <div>
+        @foreach ($c->product as $p)
             <th>
                 <div>
-                {{$p->description->description}}
-                {{$p->description->price}}
+                    {{$p->description->description}}
+                    {{$p->description->price}}
                 </div>
             </th>
-            @endforeach
-        </div>
+        @endforeach
+    </div>
 @endforeach
-Prezzo: <div>{{$order[0]->price->value}}{{$order[0]->price->currency->currency_symbol}}</div>
-Sconti applicati: @if(strpos($order[0]->price->discount, 'P') !== false){{$d.="Sconto lunghezza percorso"}} @elseif(strpos($order[0]->price->discount, 'Q') !== false){{$d.="Sconto quantità"}}@endif
-{{$order[1]}}
+Prezzo:
+<div>{{$order[0]->price->value}}{{$order[0]->price->currency->currency_symbol}}</div>
+Sconti applicati:
+
+@foreach ($order[1] as $o)
+    <th>
+        <div>
+            {{$o[0]}}
+            {{$o[1]}}
+        </div>
+    </th>
+@endforeach
 </tbody>
 </body>
 </html>
