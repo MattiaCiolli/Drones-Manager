@@ -51,12 +51,13 @@ class TransportOrderController extends Controller
         $carriersList = $carrierService->handleProduct($productList);
 
         $orderService->consignCarriers($carriersList);
-        $this->calculatePrice();
+        $totaleProdotti = $this->calculatePrice();
 
         $transportOrder = $transportOrder->fresh();
 
-        $json[] = $transportOrder->price->value;
-        $json[] = "".count($transportOrder->carrier)."";
+        $json['totaleOrdine'] = $transportOrder->price->value;
+        $json['numeroCarrier'] = count($transportOrder->carrier);
+        $json['totaleProdotti']= $totaleProdotti;
         //$json=$totalCost." ".$numberOfCarrier;
         $json = json_encode($json);
         return $json;
@@ -124,9 +125,9 @@ class TransportOrderController extends Controller
         //$transportOrder da prendere da sessione
         $transportOrder=\App\Models\TransportOrder::find(1);
         $priceServ = new PriceService();
-        $priceServ->CalculateTransportPrice($transportOrder);
+        $totaleProdotti = $priceServ->CalculateTransportPrice($transportOrder);
         $transportOrder->save();
-
+        return $totaleProdotti;
     }
 
 

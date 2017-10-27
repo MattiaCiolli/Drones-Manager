@@ -44,8 +44,9 @@ $(document).ready(function () {
             success: function (msg) {
                 console.log(msg);
                 var obj = JSON.parse(msg);
-                $("#prezzoOrdine").text(obj[0]);
-                $("#numeroCarrier").text(obj[1]);
+                $("#prezzoOrdine").text(obj['totaleOrdine']);
+                $("#numeroCarrier").text(obj['numeroCarrier']);
+                $("#totaleProdotti").text(obj['totaleProdotti']);
             },
             error: function (msg) {
                 console.log(msg);

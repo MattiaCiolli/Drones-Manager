@@ -103,7 +103,10 @@
                             <div> Numero di droni: <h7 id="numeroCarrier">0</h7></div>
                         </li>
                         <li class="total">
-                            <div class="fa fa-calculator"> Totale: € <h7 id="prezzoOrdine">0</h7></div>
+                            <div class="fa fa-calculator"> Totale prodotti: € <h7 id="totaleProdotti">0</h7></div>
+                        </li>
+                        <li class="total">
+                            <div class="fa fa-calculator"> Preventivo: € <h7 id="prezzoOrdine">0</h7></div>
                         </li>
                     </ol>
                 </div>

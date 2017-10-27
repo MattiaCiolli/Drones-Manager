@@ -31,5 +31,14 @@ class PriceService
         //$order_in=TransportOrder::find(1);
         $order_in->setPrice($price);
         $order_in->save();
+
+        $order_in->fresh();
+        $totaleProdotti = 0;
+        foreach ($order_in->carrier as $carri){
+            foreach ($carri->product as $prod){
+                $totaleProdotti = $totaleProdotti + $prod->description->price;
+            }
+        }
+        return $totaleProdotti;
     }
 }
