@@ -23,10 +23,11 @@ mix.js(['node_modules/jquery/dist/jquery.min.js',
 		'resources/assets/js/insertProduct.js'],
     	'public/js/app.js');
 
-mix.sass('node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss', 'public/css/all')
-	.styles([	'resources/assets/css/general.css',
+mix.sass('node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss', 'public/css/bootstrap.css');
+
+mix.styles([	'resources/assets/css/general.css',
 				'resources/assets/css/sb-admin.css',
 				'node_modules/morris.js.so/morris.css',
 				'node_modules/font-awesome/css/font-awesome.min.css',
 			],
-        	'public/css/all.css');
+        	'public/css/app.css');
