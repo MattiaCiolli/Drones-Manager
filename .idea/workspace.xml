@@ -1,0 +1,1198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f990a24e-ba29-4d81-9139-20d08499580f" name="Default" comment="insertAddress Problem" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="general.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drones/resources/assets/css/general.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="429">
+              <caret line="118" column="0" lean-forward="true" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+              <folding>
+                <marker date="1509123915938" expanded="true" signature="1761:1779" ph="{...}" />
+                <marker date="1509123915938" expanded="true" signature="1780:1824" ph="/*...*/" />
+                <marker date="1509123915938" expanded="true" signature="1833:1930" ph="{...}" />
+                <marker date="1509123915938" expanded="true" signature="1938:1980" ph="{...}" />
+                <marker date="1509123915938" expanded="true" signature="2048:2136" ph="{...}" />
+                <marker date="1509123915938" expanded="true" signature="2193:2228" ph="{...}" />
+                <marker date="1509123915938" expanded="true" signature="2237:2299" ph="{...}" />
+                <marker date="1509123915938" expanded="true" signature="2396:2419" ph="{...}" />
+                <marker date="1509123915938" expanded="true" signature="2430:2463" ph="{...}" />
+                <marker date="1509123915938" expanded="true" signature="2473:2527" ph="{...}" />
+                <marker date="1509123915938" expanded="true" signature="2540:2594" ph="{...}" />
+                <marker date="1509123915938" expanded="true" signature="2669:2809" ph="{...}" />
+                <marker date="1509123915938" expanded="true" signature="2683:2764" ph="{...}" />
+                <marker date="1509123915938" expanded="true" signature="2779:2807" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="orderSummary.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drones/resources/views/orderSummary.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-860">
+              <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+              <folding>
+                <marker date="1509123915949" expanded="true" signature="242:1195" ph="..." />
+                <marker date="1509123915949" expanded="true" signature="395:703" ph="..." />
+                <marker date="1509123915949" expanded="true" signature="449:672" ph="..." />
+                <marker date="1509123915949" expanded="true" signature="471:654" ph="..." />
+                <marker date="1509123915949" expanded="true" signature="1074:1157" ph="..." />
+                <marker date="1509123915949" expanded="true" signature="1088:1147" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="insertAddress.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/drones/resources/views/insertAddress.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="38" column="43" lean-forward="true" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductDescription.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drones/app/Models/ProductDescription.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-482">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="insertProduct.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drones/resources/views/insertProduct.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="546">
+              <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+              <folding>
+                <marker date="1509123915944" expanded="true" signature="1035:4489" ph="..." />
+                <marker date="1509123915944" expanded="true" signature="1075:4443" ph="..." />
+                <marker date="1509123915944" expanded="true" signature="1152:1624" ph="..." />
+                <marker date="1509123915944" expanded="true" signature="1202:1323" ph="..." />
+                <marker date="1509123915944" expanded="true" signature="1227:1300" ph="..." />
+                <marker date="1509123915944" expanded="true" signature="1429:1605" ph="..." />
+                <marker date="1509123915944" expanded="true" signature="1654:2008" ph="..." />
+                <marker date="1509123915944" expanded="true" signature="1694:1989" ph="..." />
+                <marker date="1509123915944" expanded="true" signature="1738:1966" ph="..." />
+                <marker date="1509123915944" expanded="true" signature="1782:1939" ph="..." />
+                <marker date="1509123915944" expanded="true" signature="2066:3637" ph="..." />
+                <marker date="1509123915944" expanded="true" signature="2107:3618" ph="..." />
+                <marker date="1509123915944" expanded="true" signature="2158:3595" ph="..." />
+                <marker date="1509123915944" expanded="true" signature="2231:3568" ph="..." />
+                <marker date="1509123915944" expanded="true" signature="2267:2613" ph="..." />
+                <marker date="1509123915944" expanded="true" signature="2300:2576" ph="..." />
+                <marker date="1509123915944" expanded="true" signature="2649:3535" ph="..." />
+                <marker date="1509123915944" expanded="true" signature="2756:3456" ph="..." />
+                <marker date="1509123915944" expanded="true" signature="2797:3172" ph="..." />
+                <marker date="1509123915944" expanded="true" signature="2843:3130" ph="..." />
+                <marker date="1509123915944" expanded="true" signature="3695:4196" ph="..." />
+                <marker date="1509123915944" expanded="true" signature="3747:4177" ph="..." />
+                <marker date="1509123915944" expanded="true" signature="3791:4154" ph="..." />
+                <marker date="1509123915944" expanded="true" signature="3834:3951" ph="..." />
+                <marker date="1509123915944" expanded="true" signature="3994:4128" ph="..." />
+                <marker date="1509123915944" expanded="true" signature="4254:4400" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SummaryComposer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drones/app/Http/ViewComposers/SummaryComposer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="36" column="26" lean-forward="true" selection-start-line="35" selection-start-column="50" selection-end-line="36" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="newOrder.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drones/resources/views/newOrder.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="546">
+              <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+              <folding>
+                <marker date="1509123915947" expanded="true" signature="1866:1915" ph="..." />
+                <marker date="1509123915947" expanded="true" signature="1866:1934" ph="..." />
+                <marker date="1509123915947" expanded="true" signature="1866:1949" ph="..." />
+                <marker date="1509123915947" expanded="true" signature="1866:1960" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransportOrderController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drones/app/Http/Controllers/TransportOrderController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="610">
+              <caret line="154" column="36" lean-forward="false" selection-start-line="154" selection-start-column="36" selection-end-line="154" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>controls</find>
+      <find>pac-input</find>
+      <find>map-input</find>
+      <find>btn-a</find>
+      <find>label</find>
+      <find>address</find>
+      <find>products-content</find>
+      <find>address-content</find>
+      <find>product</find>
+      <find>testo-</find>
+      <find>btn-product</find>
+      <find>text_via</find>
+      <find>testo</find>
+      <find>testo-down</find>
+      <find>provider</find>
+      <find>fin</find>
+      <find>prod</find>
+      <find>view</find>
+      <find>botto</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/drones/.env.example" />
+        <option value="$PROJECT_DIR$/drones/app/OrderTransport.php" />
+        <option value="$PROJECT_DIR$/drones/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/drones/database/seeds/MaitreTransportSeeder.php" />
+        <option value="$PROJECT_DIR$/drones/.env" />
+        <option value="$PROJECT_DIR$/drones/resources/views/welcome.blade.php" />
+        <option value="$PROJECT_DIR$/drones/database/seeds/AddressesPathSeeder.php" />
+        <option value="$PROJECT_DIR$/drones/database/seeds/AddressesPathsSeeder.php" />
+        <option value="$PROJECT_DIR$/drones/database/seeds/AddressesPathsTableSeeder.php" />
+        <option value="$PROJECT_DIR$/drones/app/Models/TransportOrder.php" />
+        <option value="$PROJECT_DIR$/drones/resources/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/drones/resources/assets/js/insertAddress.js" />
+        <option value="$PROJECT_DIR$/drones/resources/views/productAnalysis.blade.php" />
+        <option value="$PROJECT_DIR$/drones/resources/views/insertProducts.blade.php" />
+        <option value="$PROJECT_DIR$/drones/resources/views/empty.blade.php" />
+        <option value="$PROJECT_DIR$/drones/app/Services/ProductService.php" />
+        <option value="$PROJECT_DIR$/drones/app/DataMappers/RegulationMapper.php" />
+        <option value="$PROJECT_DIR$/drones/database/foundation/RegulationFoundation.php" />
+        <option value="$PROJECT_DIR$/drones/app/Services/AddressService.php" />
+        <option value="$PROJECT_DIR$/drones/resources/views/prova.blade.php" />
+        <option value="$PROJECT_DIR$/drones/routes/web.php" />
+        <option value="$PROJECT_DIR$/drones/config/app.php" />
+        <option value="$PROJECT_DIR$/drones/app/Http/ViewComposers/ProductComposer" />
+        <option value="$PROJECT_DIR$/drones/package.json" />
+        <option value="$PROJECT_DIR$/drones/resources/assets/sass/app.scss" />
+        <option value="$PROJECT_DIR$/drones/webpack.mix.js" />
+        <option value="$PROJECT_DIR$/drones/resources/views/layout/app.blade.php" />
+        <option value="$PROJECT_DIR$/drones/resources/assets/js/app.js" />
+        <option value="$PROJECT_DIR$/drones/app/Providers/ComposerServiceProvider.php" />
+        <option value="$PROJECT_DIR$/drones/app/Http/ViewComposers/ProductComposer.php" />
+        <option value="$PROJECT_DIR$/drones/app/Http/Controllers/TransportOrderController.php" />
+        <option value="$PROJECT_DIR$/drones/resources/assets/css/general.css" />
+        <option value="$PROJECT_DIR$/drones/resources/views/newOrder.blade.php" />
+        <option value="$PROJECT_DIR$/drones/resources/views/insertProduct.blade.php" />
+        <option value="$PROJECT_DIR$/drones/resources/views/orderSummary.blade.php" />
+        <option value="$PROJECT_DIR$/drones/resources/views/insertAddress.blade.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/drones/node_modules" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-822" />
+    <option name="y" value="24" />
+    <option name="width" value="1942" />
+    <option name="height" value="1038" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Drones-Manager-sw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drones-Manager-sw" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Drones-Manager-sw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drones-Manager-sw" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="drones" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Drones-Manager-sw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drones-Manager-sw" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="drones" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Drones-Manager-sw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drones-Manager-sw" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="drones" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Drones-Manager-sw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drones-Manager-sw" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="drones" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Drones-Manager-sw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drones-Manager-sw" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="drones" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ViewComposers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Drones-Manager-sw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drones-Manager-sw" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="drones" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Providers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Drones-Manager-sw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drones-Manager-sw" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="drones" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Drones-Manager-sw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drones-Manager-sw" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="drones" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Drones-Manager-sw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drones-Manager-sw" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="drones" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Drones-Manager-sw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drones-Manager-sw" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="drones" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Drones-Manager-sw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drones-Manager-sw" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="drones" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Drones-Manager-sw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drones-Manager-sw" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="drones" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Drones-Manager-sw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drones-Manager-sw" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="drones" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Drones-Manager-sw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drones-Manager-sw" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="drones" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Drones-Manager-sw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drones-Manager-sw" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="drones" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="storage" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Drones-Manager-sw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drones-Manager-sw" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="drones" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="storage" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="framework" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Drones-Manager-sw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drones-Manager-sw" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="drones" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="storage" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="framework" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="cache" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Drones-Manager-sw\drones\resources\assets\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Drones-Manager-sw\drones\public\images" />
+      <recent name="C:\xampp\htdocs\Drones-Manager-sw\drones\public" />
+      <recent name="C:\xampp\htdocs\Drones-Manager-sw\drones\resources\assets\css" />
+    </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/drones/app/Http/ViewComposers/SummaryComposer.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/drones/config/price.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/drones/resources/views/orderSummary.blade.php</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f990a24e-ba29-4d81-9139-20d08499580f" name="Default" comment="" />
+      <created>1507223705312</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1507223705312</updated>
+      <workItem from="1507223707078" duration="829000" />
+      <workItem from="1507278404978" duration="9632000" />
+      <workItem from="1507293123028" duration="7756000" />
+      <workItem from="1507645187623" duration="6341000" />
+      <workItem from="1507798260977" duration="979000" />
+      <workItem from="1507809091697" duration="15000" />
+      <workItem from="1507813384949" duration="11959000" />
+      <workItem from="1507830883894" duration="2078000" />
+      <workItem from="1507890077308" duration="8353000" />
+      <workItem from="1507990536962" duration="7505000" />
+      <workItem from="1508077671652" duration="21441000" />
+      <workItem from="1508156708400" duration="8414000" />
+      <workItem from="1508315611158" duration="19454000" />
+      <workItem from="1508407391364" duration="2006000" />
+      <workItem from="1508417140845" duration="8035000" />
+      <workItem from="1508488844791" duration="17503000" />
+      <workItem from="1508517002205" duration="7624000" />
+      <workItem from="1508588762640" duration="7063000" />
+      <workItem from="1508611878770" duration="14983000" />
+      <workItem from="1508746705884" duration="7453000" />
+      <workItem from="1508836402855" duration="15224000" />
+      <workItem from="1508859630208" duration="3023000" />
+      <workItem from="1508917050090" duration="10252000" />
+      <workItem from="1508932893019" duration="4300000" />
+      <workItem from="1508943057756" duration="3315000" />
+      <workItem from="1509025103995" duration="7612000" />
+      <workItem from="1509091320088" duration="21694000" />
+    </task>
+    <task id="LOCAL-00001" summary="mario rossi">
+      <created>1507286030844</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1507286030845</updated>
+    </task>
+    <task id="LOCAL-00002" summary="mario rossi2">
+      <created>1507286254303</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1507286254303</updated>
+    </task>
+    <task id="LOCAL-00003" summary="mario rossi2">
+      <created>1507286431599</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1507286431600</updated>
+    </task>
+    <task id="LOCAL-00004" summary="mario rossi2">
+      <created>1507286693776</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1507286693776</updated>
+    </task>
+    <task id="LOCAL-00005" summary="view new order">
+      <created>1507293040655</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1507293040655</updated>
+    </task>
+    <task id="LOCAL-00006" summary="addresses paths seeder">
+      <created>1507652001847</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1507652001847</updated>
+    </task>
+    <task id="LOCAL-00007" summary="views">
+      <created>1507653071921</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1507653071921</updated>
+    </task>
+    <task id="LOCAL-00008" summary="views">
+      <created>1507653178520</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1507653178520</updated>
+    </task>
+    <task id="LOCAL-00009" summary="views">
+      <created>1507653273329</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1507653273329</updated>
+    </task>
+    <task id="LOCAL-00010" summary="route">
+      <created>1507819668131</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1507819668131</updated>
+    </task>
+    <task id="LOCAL-00011" summary="route">
+      <created>1507819836289</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1507819836289</updated>
+    </task>
+    <task id="LOCAL-00012" summary="view order e address... per il momento il js sta nell'html...">
+      <created>1508087979417</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1508087979417</updated>
+    </task>
+    <task id="LOCAL-00013" summary="view insertProduct">
+      <created>1508340226119</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1508340226119</updated>
+    </task>
+    <task id="LOCAL-00014" summary="prettify">
+      <created>1508490050644</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1508490050644</updated>
+    </task>
+    <task id="LOCAL-00015" summary="comunicazione client server per insertAddress">
+      <created>1508542495699</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1508542495699</updated>
+    </task>
+    <task id="LOCAL-00016" summary="comunicazione client server per insertProduct">
+      <created>1508629246981</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1508629246981</updated>
+    </task>
+    <task id="LOCAL-00017" summary="insertAddress Problem">
+      <created>1508751431924</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1508751431924</updated>
+    </task>
+    <task id="LOCAL-00018" summary="prova view composer">
+      <created>1508924835608</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1508924835608</updated>
+    </task>
+    <task id="LOCAL-00019" summary="view 2.0">
+      <created>1509094601844</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1509094601844</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fix insertAddress">
+      <created>1509119009311</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1509119009311</updated>
+    </task>
+    <task id="LOCAL-00021" summary="insertAddress Problem">
+      <created>1509120986567</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1509120986567</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="234843000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22663802" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18678816" sideWeight="0.5042965" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20273349" sideWeight="0.4935553" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18906605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5284738" sideWeight="0.49570355" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18906605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18678816" sideWeight="0.5042965" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20273349" sideWeight="0.4935553" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22663802" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5284738" sideWeight="0.49570355" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="mario rossi" />
+    <MESSAGE value="mario rossi2" />
+    <MESSAGE value="view new order" />
+    <MESSAGE value="addresses paths seeder" />
+    <MESSAGE value="views" />
+    <MESSAGE value="route" />
+    <MESSAGE value="view order e address... per il momento il js sta nell'html..." />
+    <MESSAGE value="view insertProduct" />
+    <MESSAGE value="prettify" />
+    <MESSAGE value="comunicazione client server per insertAddress" />
+    <MESSAGE value="comunicazione client server per insertProduct" />
+    <MESSAGE value="prova view composer" />
+    <MESSAGE value="view 2.0" />
+    <MESSAGE value="fix insertAddress" />
+    <MESSAGE value="insertAddress Problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="insertAddress Problem" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/drones/resources/assets/js/insertAddress.js" />
+    <entry file="file://$PROJECT_DIR$/drones/resources/views/insertProducts.blade.php" />
+    <entry file="file://$PROJECT_DIR$/drones/database/seeds/ProductsDescriptionsTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="49" lean-forward="false" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/database/seeds/RegulationUDF.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/vendor/filp/whoops/src/Whoops/Handler/PrettyPageHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1554">
+          <caret line="140" column="16" lean-forward="true" selection-start-line="140" selection-start-column="16" selection-end-line="140" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/resources/assets/js/components/Example.vue" />
+    <entry file="file://$PROJECT_DIR$/drones/resources/assets/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/public/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/public/mix-manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/resources/views/empty.blade.php" />
+    <entry file="file://$PROJECT_DIR$/drones/app/Http/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/app/Services/CarrierService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/app/Services/OrderService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/app/Models/TransportOrder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/app/DataMappers/RegulationMapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/database/foundation/RegulationFoundation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="3" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/app/Models/Address.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/database/seeds/AddressTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="34" column="32" lean-forward="false" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/app/Services/AddressService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/app/Models/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/app/Http/ViewComposers/ProductComposer.php" />
+    <entry file="file://$PROJECT_DIR$/drones/resources/views/prova.blade.php" />
+    <entry file="file://$PROJECT_DIR$/drones/resources/assets/vendor/datatables/dataTables.bootstrap4.js" />
+    <entry file="file://$PROJECT_DIR$/drones/app/Services/ProductService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="25" column="42" lean-forward="true" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/public/web.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-635">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/resources/assets/js/plugins/morris/raphael.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/node_modules/webpack/bin/webpack.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/node_modules/webpack/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="69" column="26" lean-forward="true" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/public/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-840">
+          <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/resources/assets/sass/app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-188">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/resources/views/layout/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <marker date="1509109360495" expanded="true" signature="531:766" ph="..." />
+            <marker date="1509109360495" expanded="true" signature="945:1145" ph="..." />
+            <marker date="1509109360495" expanded="true" signature="1164:2485" ph="..." />
+            <marker date="1509109360495" expanded="true" signature="1184:2456" ph="..." />
+            <marker date="1509109360495" expanded="true" signature="1284:2372" ph="..." />
+            <marker date="1509109360495" expanded="true" signature="1392:1869" ph="..." />
+            <marker date="1509109360495" expanded="true" signature="1507:1733" ph="..." />
+            <marker date="1509109360495" expanded="true" signature="1983:2074" ph="..." />
+            <marker date="1509109360495" expanded="true" signature="2259:2326" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/resources/assets/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/webpack.mix.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="28" lean-forward="false" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/app/Providers/AppServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="743">
+          <caret line="179" column="0" lean-forward="false" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/app/Providers/ComposerServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="7" lean-forward="false" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-42">
+          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/app/Http/ViewComposers/ProductComposer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="31" column="49" lean-forward="true" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/app/Http/Controllers/TransportOrderController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="610">
+          <caret line="154" column="36" lean-forward="false" selection-start-line="154" selection-start-column="36" selection-end-line="154" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/app/Models/ProductDescription.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-482">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/resources/views/newOrder.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+          <folding>
+            <marker date="1509123915947" expanded="true" signature="1866:1915" ph="..." />
+            <marker date="1509123915947" expanded="true" signature="1866:1934" ph="..." />
+            <marker date="1509123915947" expanded="true" signature="1866:1949" ph="..." />
+            <marker date="1509123915947" expanded="true" signature="1866:1960" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/resources/assets/css/general.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="118" column="0" lean-forward="true" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+          <folding>
+            <marker date="1509123915938" expanded="true" signature="1761:1779" ph="{...}" />
+            <marker date="1509123915938" expanded="true" signature="1780:1824" ph="/*...*/" />
+            <marker date="1509123915938" expanded="true" signature="1833:1930" ph="{...}" />
+            <marker date="1509123915938" expanded="true" signature="1938:1980" ph="{...}" />
+            <marker date="1509123915938" expanded="true" signature="2048:2136" ph="{...}" />
+            <marker date="1509123915938" expanded="true" signature="2193:2228" ph="{...}" />
+            <marker date="1509123915938" expanded="true" signature="2237:2299" ph="{...}" />
+            <marker date="1509123915938" expanded="true" signature="2396:2419" ph="{...}" />
+            <marker date="1509123915938" expanded="true" signature="2430:2463" ph="{...}" />
+            <marker date="1509123915938" expanded="true" signature="2473:2527" ph="{...}" />
+            <marker date="1509123915938" expanded="true" signature="2540:2594" ph="{...}" />
+            <marker date="1509123915938" expanded="true" signature="2669:2809" ph="{...}" />
+            <marker date="1509123915938" expanded="true" signature="2683:2764" ph="{...}" />
+            <marker date="1509123915938" expanded="true" signature="2779:2807" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/resources/views/insertProduct.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+          <folding>
+            <marker date="1509123915944" expanded="true" signature="1035:4489" ph="..." />
+            <marker date="1509123915944" expanded="true" signature="1075:4443" ph="..." />
+            <marker date="1509123915944" expanded="true" signature="1152:1624" ph="..." />
+            <marker date="1509123915944" expanded="true" signature="1202:1323" ph="..." />
+            <marker date="1509123915944" expanded="true" signature="1227:1300" ph="..." />
+            <marker date="1509123915944" expanded="true" signature="1429:1605" ph="..." />
+            <marker date="1509123915944" expanded="true" signature="1654:2008" ph="..." />
+            <marker date="1509123915944" expanded="true" signature="1694:1989" ph="..." />
+            <marker date="1509123915944" expanded="true" signature="1738:1966" ph="..." />
+            <marker date="1509123915944" expanded="true" signature="1782:1939" ph="..." />
+            <marker date="1509123915944" expanded="true" signature="2066:3637" ph="..." />
+            <marker date="1509123915944" expanded="true" signature="2107:3618" ph="..." />
+            <marker date="1509123915944" expanded="true" signature="2158:3595" ph="..." />
+            <marker date="1509123915944" expanded="true" signature="2231:3568" ph="..." />
+            <marker date="1509123915944" expanded="true" signature="2267:2613" ph="..." />
+            <marker date="1509123915944" expanded="true" signature="2300:2576" ph="..." />
+            <marker date="1509123915944" expanded="true" signature="2649:3535" ph="..." />
+            <marker date="1509123915944" expanded="true" signature="2756:3456" ph="..." />
+            <marker date="1509123915944" expanded="true" signature="2797:3172" ph="..." />
+            <marker date="1509123915944" expanded="true" signature="2843:3130" ph="..." />
+            <marker date="1509123915944" expanded="true" signature="3695:4196" ph="..." />
+            <marker date="1509123915944" expanded="true" signature="3747:4177" ph="..." />
+            <marker date="1509123915944" expanded="true" signature="3791:4154" ph="..." />
+            <marker date="1509123915944" expanded="true" signature="3834:3951" ph="..." />
+            <marker date="1509123915944" expanded="true" signature="3994:4128" ph="..." />
+            <marker date="1509123915944" expanded="true" signature="4254:4400" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/app/Http/ViewComposers/SummaryComposer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="36" column="26" lean-forward="true" selection-start-line="35" selection-start-column="50" selection-end-line="36" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/resources/views/orderSummary.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-860">
+          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding>
+            <marker date="1509123915949" expanded="true" signature="242:1195" ph="..." />
+            <marker date="1509123915949" expanded="true" signature="395:703" ph="..." />
+            <marker date="1509123915949" expanded="true" signature="449:672" ph="..." />
+            <marker date="1509123915949" expanded="true" signature="471:654" ph="..." />
+            <marker date="1509123915949" expanded="true" signature="1074:1157" ph="..." />
+            <marker date="1509123915949" expanded="true" signature="1088:1147" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drones/resources/views/insertAddress.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="38" column="43" lean-forward="true" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
