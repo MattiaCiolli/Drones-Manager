@@ -34,14 +34,15 @@ class TransportPriceCalculator extends PriceCalculator
             }
         }
 
+        $pathLengthPrice = config('path.pricePerKm') * ($order_in->path->path_length / 1000);
+        $priceTemp = $priceTemp + $pathLengthPrice;
+        $priceFull=$priceTemp;
+
         if ($i >= config('price.strategyParameters.quantity')) {
             $priceStrategyContext = new PriceStrategyContext('Q');
             $priceTemp = $priceStrategyContext->discount($priceTemp);
             $discountId .= "Q";
         }
-
-        $pathLengthPrice = config('path.pricePerKm') * ($order_in->path->path_length / 1000);
-        $priceTemp = $priceTemp + $pathLengthPrice;
 
         if ($order_in->path->path_length > config('price.strategyParameters.pathLength')) {
             $priceStrategyContext = new PriceStrategyContext('P');
@@ -62,6 +63,6 @@ class TransportPriceCalculator extends PriceCalculator
         }*/
 
         //set final price
-        return array(round($priceTemp, 2), $discountId);
+        return array(round($priceFull, 2), round($priceTemp, 2), $discountId);
     }
 }

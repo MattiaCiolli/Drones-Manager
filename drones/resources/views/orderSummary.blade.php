@@ -24,6 +24,8 @@ Numero carriers: {{count($order[0]->carrier)}}
         @endforeach
     </div>
 @endforeach
+Prezzo originale:
+<div>{{$order[0]->price->fullValue}}{{$order[0]->price->currency->currency_symbol}}</div>
 Prezzo totale:
 <div>{{$order[0]->price->value}}{{$order[0]->price->currency->currency_symbol}}</div>
 Prezzo prodotti:

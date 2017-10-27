@@ -25,8 +25,9 @@ class PriceService
         $curr = Currency::where('currency_symbol', $currencyConf)->first();
         $price = new Price();
         $price->setCurrency($curr);
-        $price->setValue($priceDiscountId[0]);
-        $price->setDiscount($priceDiscountId[1]);
+        $price->setFullValue($priceDiscountId[0]);
+        $price->setValue($priceDiscountId[1]);
+        $price->setDiscount($priceDiscountId[2]);
         $price->save();
         //$order_in=TransportOrder::find(1);
         $order_in->setPrice($price);

@@ -8,7 +8,7 @@ class Price extends Model
 {
     private $value;
     protected $table = 'prices';
-    protected $fillable = ['value', 'discount'];
+    protected $fillable = ['value', 'fullValue', 'discount'];
 
     public function getValue()
     {
@@ -18,6 +18,16 @@ class Price extends Model
     public function setValue($value)
     {
         $this->fill(['value' => $value]);
+    }
+
+    public function getFullValue()
+    {
+        return $this->value;
+    }
+
+    public function setFullValue($value)
+    {
+        $this->fill(['fullValue' => $value]);
     }
 
     public function getDiscount()
