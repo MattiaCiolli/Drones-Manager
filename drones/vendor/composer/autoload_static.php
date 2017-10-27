@@ -382,6 +382,7 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\ViewComposers\\ProductComposer' => __DIR__ . '/../..' . '/app/Http/ViewComposers/ProductComposer.php',
+        'App\\Http\\ViewComposers\\SummaryComposer' => __DIR__ . '/../..' . '/app/Http/ViewComposers/SummaryComposer.php',
         'App\\Models\\Address' => __DIR__ . '/../..' . '/app/Models/Address.php',
         'App\\Models\\Carrier' => __DIR__ . '/../..' . '/app/Models/Carrier.php',
         'App\\Models\\Catalog' => __DIR__ . '/../..' . '/app/Models/Catalog.php',

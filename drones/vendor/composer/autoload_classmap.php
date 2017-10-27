@@ -25,6 +25,7 @@ return array(
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Http\\ViewComposers\\ProductComposer' => $baseDir . '/app/Http/ViewComposers/ProductComposer.php',
+    'App\\Http\\ViewComposers\\SummaryComposer' => $baseDir . '/app/Http/ViewComposers/SummaryComposer.php',
     'App\\Models\\Address' => $baseDir . '/app/Models/Address.php',
     'App\\Models\\Carrier' => $baseDir . '/app/Models/Carrier.php',
     'App\\Models\\Catalog' => $baseDir . '/app/Models/Catalog.php',
