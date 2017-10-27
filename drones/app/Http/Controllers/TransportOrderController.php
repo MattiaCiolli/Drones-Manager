@@ -54,7 +54,12 @@ class TransportOrderController extends Controller
         $this->calculatePrice();
 
         $transportOrder = $transportOrder->fresh();
-        return $transportOrder->price->value;
+
+        $json[] = $transportOrder->price->value;
+        $json[] = "".count($transportOrder->carrier)."";
+        //$json=$totalCost." ".$numberOfCarrier;
+        $json = json_encode($json);
+        return $json;
 
         //ritornare un json con i dati da vedere in msg della chaiamat ajax
 

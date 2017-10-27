@@ -1,7 +1,10 @@
 $("#orderConfirmedBtn").click(function() {
     document.location.href = "/orderSummary";
 });
-    function getOrderPrice() {
+
+$(document).ready(function () {
+
+    $('.quantity-products').change(function () {
         var quantità_prodotti = $("div").children(".quantity-products").length;
         var product_list_chiave = [];
         var product_list_descr = [];
@@ -14,6 +17,7 @@ $("#orderConfirmedBtn").click(function() {
                 product_list_descr.push(parseInt($("div").children(".quantity-products")[i].value));
             }
         }
+
 
         $.ajaxSetup({
             headers: {
@@ -39,12 +43,16 @@ $("#orderConfirmedBtn").click(function() {
             dataType: "html",
             success: function (msg) {
                 console.log(msg);
-                $("#prezzoOrdine").text(msg)
-                //estrarre dal json i dati e metterli nel value tramite jquery
+                var obj = JSON.parse(msg);
+                $("#prezzoOrdine").text(obj[0]);
+                $("#numeroCarrier").text(obj[1]);
             },
             error: function (msg) {
                 console.log(msg);
                 alert("Invio ordine fallito, si prega di riprovare...");
             }
         });
-    }
+    });
+
+});
+

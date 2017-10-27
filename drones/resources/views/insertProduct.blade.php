@@ -99,14 +99,29 @@
             </div>
             <!-- /.row -->
 
+            <div class="row">
+                <div class="col-lg-12 bread-total">
+                    <ol class="breadcrumb">
+                        <li class="total">
+                            <div> Numero di droni: <h7 id="numeroCarrier">0</h7></div>
+                        </li>
+                        <li class="total">
+                            <div class="fa fa-calculator"> Totale: € <h7 id="prezzoOrdine">0</h7></div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <div class="row">
+                <a href="#"><button id="orderConfirmedBtn" class="btn btn-danger btn-lg btn-product">Invia ordine</button></a>
+            </div>
+            <!-- /.row -->
 
         </div>
         <!-- /.container-fluid -->
-
     </div>
     <!-- /#page-wrapper -->
 @endsection
-    <div class="row">
-        <a href="#"><button id="orderConfirmedBtn" class="btn btn-danger btn-lg btn-product">Invia ordine</button></a>
-    </div>
-</div>
+
+
