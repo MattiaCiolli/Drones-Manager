@@ -10,8 +10,9 @@ namespace App\Utility;
 
 class FidelityStrategy implements PriceStrategy
 {
-    public function discount($value_in) {
-        $value_in = $value_in*config('price.discountStrategies.fidelity');
+    public function discount($value_in)
+    {
+        $value_in = $value_in * config('price.discountStrategies.fidelity');
         return $value_in;
     }
 }

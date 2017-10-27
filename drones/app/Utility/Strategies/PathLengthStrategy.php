@@ -11,8 +11,9 @@ namespace App\Utility;
 
 class PathLengthStrategy implements PriceStrategy
 {
-    public function discount($value_in) {
-        $value_in = $value_in+config('price.discountStrategies.pathLength');
+    public function discount($value_in)
+    {
+        $value_in = $value_in + config('price.discountStrategies.pathLength');
         return $value_in;
     }
 }

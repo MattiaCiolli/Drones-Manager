@@ -11,8 +11,9 @@ namespace App\Utility;
 
 class SummerStrategy implements PriceStrategy
 {
-    public function discount($value_in) {
-        $value_in = $value_in*config('price.discountStrategies.summer');
+    public function discount($value_in)
+    {
+        $value_in = $value_in * config('price.discountStrategies.summer');
         return $value_in;
     }
 }

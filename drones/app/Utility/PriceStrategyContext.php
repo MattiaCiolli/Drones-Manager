@@ -11,8 +11,10 @@ namespace App\Utility;
 class PriceStrategyContext
 {
     private $strategy = NULL;
+
     //bookList is not instantiated at construct time
-    public function __construct($strategy_ind_id) {
+    public function __construct($strategy_ind_id)
+    {
         switch ($strategy_ind_id) {
             case "S":
                 $this->strategy = new SummerStrategy();
@@ -27,7 +29,9 @@ class PriceStrategyContext
                 $this->strategy = new FidelityStrategy();
         }
     }
-    public function discount($value_in) {
+
+    public function discount($value_in)
+    {
         return $this->strategy->discount($value_in);
     }
 }
