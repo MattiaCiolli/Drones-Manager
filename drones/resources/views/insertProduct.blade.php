@@ -72,6 +72,7 @@
                             </tr>
                             </thead>
                             <tbody>
+                
 	                         @foreach ($products as $p)
                                 <tr>
                                     <div>
@@ -105,6 +106,7 @@
     </div>
     <!-- /#page-wrapper -->
 @endsection
-
-
-
+    <div class="row">
+        <a href="#"><button id="orderConfirmedBtn" class="btn btn-danger btn-lg btn-product">Invia ordine</button></a>
+    </div>
+</div>
