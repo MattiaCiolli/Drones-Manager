@@ -21,6 +21,6 @@ return  [
     'strategyParameters' => [
 
         'quantity' => 2,
-        'pathLength' => 1000,
+        'pathLength' => 5000,
     ],
 ];
