@@ -104,7 +104,7 @@
 
             <div class="row total">
                 <div class="col-lg-offset-2 col-lg-2 col-md-offset-2 col-md-2">
-                    <h5 id="prezzoOrdine"><i class="fa fa-usd"> Preventivo: € 0  </i></h5>
+                    <h5 id="prezzoOrdine"><i class="fa fa-money"> Preventivo: € 0  </i></h5>
                 </div>
                 <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
                     <h5 id="totaleProdotti"><i class="fa fa-calculator"> Totale prodotti: € 0</i></h5>
@@ -114,25 +114,6 @@
                 </div>
 
 
-
-                <!--
-                    <div> Numero di droni: <h5 id="numeroCarrier">0</h5></div>
-                </div>
-
-                <div class="col-lg-12 bread-total">
-                    <ol class="breadcrumb">
-                        <li class="total">
-                            <div> Numero di droni: <h7 id="numeroCarrier">0</h7></div>
-                        </li>
-                        <li class="total">
-                            <div class="fa fa-calculator"> Totale prodotti: € <h7 id="totaleProdotti">0</h7></div>
-                        </li>
-                        <li class="total">
-                            <div class="fa fa-usd"> Preventivo: € <h7 id="prezzoOrdine">0</h7></div>
-                        </li>
-                    </ol>
-                </div>
-            -->
             </div>
             <!-- /.row -->
 

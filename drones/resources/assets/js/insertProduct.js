@@ -45,15 +45,10 @@ $(document).ready(function () {
             success: function (msg) {
                 console.log(msg);
                 var obj = JSON.parse(msg);
-                $("#prezzoOrdine").innerHTML('Preventivo: € '+obj.totaleOrdine);
-                $("#numeroCarrier").innerHTML(obj.numeroCarrier);
-                $("#totaleProdotti").innerHTML('Totale prodotti: € '+obj.totaleProdotti);
-
-                /*
-                $("#prezzoOrdine").text(obj['totaleOrdine']);
-                $("#numeroCarrier").text(obj['numeroCarrier']);
-                $("#totaleProdotti").text(obj['totaleProdotti']);
-                */
+                $("#prezzoOrdine").text('Preventivo: € '.concat(+obj.totaleOrdine));
+                $("#numeroCarrier").text('Numero di droni: '.concat(obj.numeroCarrier));
+                $("#totaleProdotti").text('Totale prodotti: € '.concat(obj.totaleProdotti));
+                
             },
             error: function (msg) {
                 console.log(msg);
