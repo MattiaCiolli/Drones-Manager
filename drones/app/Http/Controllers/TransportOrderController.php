@@ -54,13 +54,13 @@ class TransportOrderController extends Controller
         $totaleProdotti = $this->calculatePrice();
 
         $transportOrder = $transportOrder->fresh();
-
+        dd($transportOrder->price->value);
         $json['totaleOrdine'] = $transportOrder->price->value;
         $json['numeroCarrier'] = count($transportOrder->carrier);
         $json['totaleProdotti']= $totaleProdotti;
         //$json=$totalCost." ".$numberOfCarrier;
         $json = json_encode($json);
-        return $json;
+        return response()->json($json);
 
         //ritornare un json con i dati da vedere in msg della chaiamat ajax
 
@@ -85,7 +85,6 @@ class TransportOrderController extends Controller
 		{
 			//queste cose poi vanno spostate
 			$order = \App\Models\TransportOrder::find(1);
-
 			$pathService = new PathService();
 			$path = $pathService->generatePath($addressDestination, $order->maitre->enterprise->address, $order->maitre->enterprise->hangar->address);
 
@@ -97,9 +96,9 @@ class TransportOrderController extends Controller
 				$order->path_id = $path->id;
 				$order->address_id = $addressDestination->id;
 				$order->save();
-				
-				return response()->json([
-                'msg' => 'Indirizzo valido!',
+
+                return response()->json([
+                'msg' => "Indirizzo valido!",
                 'addressIsValid' => $addressIsValid
                 ]);
 			}
