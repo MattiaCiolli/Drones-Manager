@@ -24,8 +24,8 @@ class SummaryComposer
             for ($i = 0; $i < strlen($transportOrder->price->discount); $i++) {
                 $char = substr($transportOrder->price->discount, $i, 1);
                 if (strpos($char, 'P') !== false) {
-                    $d[$i][0] = "Tassa lunghezza percorso:";
-                    $d[$i][1] = config('price.discountStrategies.pathLength') . "€";
+                    $d[$i][0] = "Sovrapprezzo lunghezza percorso:";
+                    $d[$i][1] = config('price.discountStrategies.pathLength') . " " . $transportOrder->price->currency->currency_symbol;
                 } elseif (strpos($char, 'Q') !== false) {
                     $d[$i][0] = "Sconto quantità:";
                     $d[$i][1] = $this->percentage(config('price.discountStrategies.quantity'));
@@ -33,7 +33,7 @@ class SummaryComposer
             }
             $this->order[1] = $d;
         } else {
-            $d[0][0] = "Nessuno sconto applicato";
+            $d[0][0] = "Nessuno sconto/sovrapprezzo applicato";
             $d[0][1] = "";
             $this->order[1] = $d;
         }

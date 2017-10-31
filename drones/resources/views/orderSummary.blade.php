@@ -90,18 +90,18 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-2"> <strong>Prezzo originale:</strong></div>
-                                <div class="col-md-4">{{$order[0]->price->fullValue}}{{$order[0]->price->currency->currency_symbol}}</div>
+                                <div class="col-md-4">{{$order[0]->price->fullValue}} {{$order[0]->price->currency->currency_symbol}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-md-2"> <strong>Prezzo prodotti:</strong></div>
-                                <div class="col-md-4">{{$rawPrice}}{{$order[0]->price->currency->currency_symbol}}</div>
+                                <div class="col-md-4">{{$rawPrice}} {{$order[0]->price->currency->currency_symbol}}</div>
                             </div>
                             <div class="row">
                                 <div class="col-md-2"> <strong>Prezzo trasporto:</strong></div>
-                                <div class="col-md-4">{{$order[0]->price->value-$rawPrice}}{{$order[0]->price->currency->currency_symbol}}</div>
+                                <div class="col-md-4">{{$order[0]->price->value-$rawPrice}} {{$order[0]->price->currency->currency_symbol}}</div>
                             </div>
                             <div class="row">
-                                <div class="col-md-2"> <strong>Sconti applicati:</strong></div>
+                                <div class="col-md-2"> <strong>Sconti/sovrapprezzi applicati:</strong></div>
                                 <div class="col-md-4">
                                     @foreach ($order[1] as $o)
                                         <th>
@@ -115,7 +115,7 @@
                             <hr>
                             <div class="row">
                                 <div class="col-md-2"> <strong>Prezzo totale:</strong></div>
-                                <div class="col-md-4">{{$order[0]->price->value}}{{$order[0]->price->currency->currency_symbol}}</div>
+                                <div class="col-md-4">{{$order[0]->price->value}} {{$order[0]->price->currency->currency_symbol}}</div>
                             </div>
 
                         </div>
