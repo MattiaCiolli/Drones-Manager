@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/newOrder', function () {
     return view('newOrder');
 });
 
@@ -37,3 +37,7 @@ Route::get('/orderSummary', 'TransportOrderController@orderSummary');
 
 
 
+
+Auth::routes();
+
+Route::get('/', 'HomeController@index');

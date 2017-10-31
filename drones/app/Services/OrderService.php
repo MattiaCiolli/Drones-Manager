@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Models\TransportOrder;
 use App\Models\TransportMaitre;
+use Illuminate\Support\Facades\Auth;
 
 class OrderService
 {
@@ -12,7 +13,7 @@ class OrderService
         //loggato. Dato che siamo nella prima iterazione queste funzionalità
         //non sono ancora state implementate. Per questo motivo scrivo un id, che
         //sicuramente esiste perché sono stati creati i seeds, direttametne a mano.
-        $transportMaitre = \App\Models\TransportMaitre::find(1);
+        $transportMaitre = \App\Models\TransportMaitre::find(Auth::user()->id_maitre);
         $transportOrder = new TransportOrder();
         $transportOrder->setMaitre($transportMaitre);
         $transportOrder->save();

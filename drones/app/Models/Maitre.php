@@ -19,6 +19,11 @@ abstract class Maitre extends Model
 		return $this->belongsTo('App\Models\TransportEnterprise');
 	}
 
+    public function user()
+    {
+        return $this->hasOne('App\User');
+    }
+
 	public function getName()
 	{
 		return $this->name;

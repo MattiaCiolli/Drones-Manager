@@ -25,5 +25,6 @@ class DatabaseSeeder extends Seeder
 		$this->call(NoFlyZoneTableSeeder::class);
         $this->call(CurrencyTableSeeder::class);
 		$this->call(PathServiceUDFs::class);
+        $this->call(users_table_seeder::class);
     }
 }
