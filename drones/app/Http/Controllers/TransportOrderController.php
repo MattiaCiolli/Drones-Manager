@@ -31,8 +31,8 @@ class TransportOrderController extends Controller
         $stringProductList = json_decode($jsonProductsList);
 
         $transportOrder = \App\Models\TransportOrder::find(1);
-        $carriers = $transportOrder->carrier;
-        if(count($carriers) && count($transportOrder->price())){
+        $carriers = \App\Models\Carrier::where('transport_order_id', $transportOrder->id)->get();
+		if(count($carriers) && count($transportOrder->price())){
             $this->deleteTemporaryOrderData($carriers);
         }
 
