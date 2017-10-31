@@ -18,16 +18,16 @@ use App\Models\TransportOrder;
 class TransportOrderController extends Controller
 {
 
-    public function newOrder() {
+    public function newOrder(OrderService $orderService)
+	{
 		//In questo momento sto creando l'oggetto ma in un futuro prossimo questo
 		//dovrà ripreso dal Singleton
-		$orderService = new OrderService();
+		//$orderService = new OrderService();
 		$orderService->newOrderTransport();
         return view('insertAddress');
 	}
 
-
-    public function productAnalysis(Request $request){
+    public function productAnalysis(ProductService $productService, CarrierService $carrierService, OrderService $orderService, PriceService $priceService, Request $request){
 
         //$jsonProductsList='{"productDescriptionID":[1], "productQuantity":[1]}';
         $jsonProductsList = $request->input('products');
@@ -36,13 +36,14 @@ class TransportOrderController extends Controller
 
         //In questo momento sto creando gli oggetti service ma in un futuro prossimo questo
         //dovrà ripreso dal Singleton
-        $productService = new ProductService();
-        $carrierService = new CarrierService();
-        $orderService = new OrderService();
+        //$productService = new ProductService();
+        //$carrierService = new CarrierService();
+        //$orderService = new OrderService();
 
         //ordine da recuperare da sessione
         $transportOrder = \App\Models\TransportOrder::find(1);
-        $carriers = \App\Models\Carrier::where('transport_order_id', $transportOrder->id)->get();
+        //$carriers = \App\Models\Carrier::where('transport_order_id', $transportOrder->id)->get();
+        $carriers = $transportOrder->carrier;
         if(count($carriers) && count($transportOrder->price())){
             $this->deleteTemporaryOrderData($carriers);
         }
@@ -51,7 +52,8 @@ class TransportOrderController extends Controller
         $carriersList = $carrierService->handleProduct($productList);
 
         $orderService->consignCarriers($carriersList);
-        $totaleProdotti = $this->calculatePrice();
+		$totaleProdotti = $priceService->CalculateTransportPrice($transportOrder);
+        $transportOrder->save();
 
         $transportOrder = $transportOrder->fresh();
         $json['totaleOrdine'] = $transportOrder->price->value;
@@ -63,11 +65,9 @@ class TransportOrderController extends Controller
         return $json;
 
         //ritornare un json con i dati da vedere in msg della chaiamat ajax
-
-
     }
 
-	public function insertAddress()
+	public function insertAddress(AddressService $addressService, PathService $pathService)
     {
         //In questo momento sto creando l'oggetto ma in un futuro prossimo questo
         //dovrà ripreso dal Singleton
@@ -75,7 +75,7 @@ class TransportOrderController extends Controller
         //MODIFICHE: i valori che ritornano da ajax vengono ripresi singolarmente e passati alla funzione che adesso
         // accetta 3 parametri e non più un JSON
 
-		$addressService = new AddressService();
+		//$addressService = new AddressService();
 		$jsonAddressInit = request()->input('address');
 		$jsonAddress = json_decode($jsonAddressInit);
         $addressDestination = $addressService->parseAddress($jsonAddress);
@@ -85,7 +85,7 @@ class TransportOrderController extends Controller
 		{
 			//queste cose poi vanno spostate
 			$order = \App\Models\TransportOrder::find(1);
-			$pathService = new PathService();
+			//$pathService = new PathService();
 			$path = $pathService->generatePath($addressDestination, $order->maitre->enterprise->address, $order->maitre->enterprise->hangar->address);
 
 			if($path)
@@ -118,24 +118,10 @@ class TransportOrderController extends Controller
         }
     }
 
-
-    public function calculatePrice()
-    {
-        //$transportOrder da prendere da sessione
-        $transportOrder=\App\Models\TransportOrder::find(1);
-        $priceServ = new PriceService();
-        $totaleProdotti = $priceServ->CalculateTransportPrice($transportOrder);
-        $transportOrder->save();
-        return $totaleProdotti;
-    }
-
-
     public function insertProduct()
     {
         return view('insertProduct');
     }
-
-
 
     public function deleteTemporaryOrderData($carriers)
     {
@@ -148,7 +134,6 @@ class TransportOrderController extends Controller
         }
         $transportOrder->price()->delete();
     }
-
 
     public function orderSummary()
     {
