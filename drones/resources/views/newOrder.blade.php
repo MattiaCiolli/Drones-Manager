@@ -40,7 +40,7 @@
                     <h3 class="page-header">New order </h3>
                     <ol class="breadcrumb">
                         <li class="active">
-                            <i class="fa fa-codepen"></i> Drone manager
+                            <i class="fa fa-codepen"></i> Drones manager
                         </li>
                         <li class="active">
                             <i class="fa fa-plus"></i> Clicca sul bottone per iniziare un nuovo ordine
