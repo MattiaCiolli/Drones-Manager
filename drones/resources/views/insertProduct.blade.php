@@ -104,10 +104,10 @@
 
             <div class="row total">
                 <div class="col-lg-offset-2 col-lg-2 col-md-offset-2 col-md-2">
-                    <h5 class="fa fa-money" id="prezzoOrdine"> Preventivo: € 0 </h5>
+                    <h5 class="fa fa-money" id="prezzoOrdine"> Preventivo: 0 </h5>
                 </div>
                 <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
-                    <h5 class="fa fa-calculator" id="totaleProdotti"> Totale prodotti: € 0 </h5>
+                    <h5 class="fa fa-calculator" id="totaleProdotti"> Totale prodotti: 0 </h5>
                 </div>
                 <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
                     <h5 id="numeroCarrier"> Numero di droni: 0 </h5>
