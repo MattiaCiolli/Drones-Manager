@@ -17,6 +17,16 @@ class TransportOrder extends Order
         $this->price()->associate($price);
     }
 
+	public function setPath($path)
+	{
+		$this->path()->associate($path);
+	}
+
+	public function setAddress($address)
+	{
+		$this->address()->associate($address);
+	}
+
 	public function address()
 	{
 		return $this->belongsTo('App\Models\Address');

@@ -93,27 +93,27 @@ class TransportOrderController extends Controller
 				$addressDestination->save();
 				$path->save();
 
-				$order->path_id = $path->id;
-				$order->address_id = $addressDestination->id;
+				$order->setPath($path);
+				$order->setAddress($addressDestination);
 				$order->save();
 
                 return response()->json([
                 'msg' => "Indirizzo valido!",
-                'addressIsValid' => $addressIsValid
+                'addressIsValid' => true
                 ]);
 			}
 			else
 			{
 				return response()->json([
                 'error' => 'Indirizzo non valido!',
-                'addressIsValid' => $addressIsValid
+                'addressIsValid' => false
             ]);
 			}
 		}
 		else{
             return response()->json([
                 'msg' => 'Indirizzo non valido!',
-                'addressIsValid' => $addressIsValid
+                'addressIsValid' => false
             ]);
         }
     }

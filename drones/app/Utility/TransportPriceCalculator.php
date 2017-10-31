@@ -33,7 +33,6 @@ class TransportPriceCalculator extends PriceCalculator
                 $priceTemp = $priceTemp + config('carrier.carrierType.' . $prod->description->type);
             }
         }
-
         $pathLengthPrice = config('path.pricePerKm') * ($order_in->path->path_length / 1000);
         $priceTemp = $priceTemp + $pathLengthPrice;
         $priceFull=$priceTemp;
