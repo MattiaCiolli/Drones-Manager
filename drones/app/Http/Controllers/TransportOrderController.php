@@ -57,6 +57,7 @@ class TransportOrderController extends Controller
         $json['totaleOrdine'] = $transportOrder->price->value;
         $json['numeroCarrier'] = count($transportOrder->carrier);
         $json['totaleProdotti']= $totaleProdotti;
+        $json['simbolo']= $transportOrder->price->currency->currency_symbol;
         //$json=$totalCost." ".$numberOfCarrier;
         $json = json_encode($json);
         return $json;
