@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Drone Manager - @yield('title')</title>
+    <title>Drones Manager - @yield('title')</title>
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -50,7 +50,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand logo" ><span class="fa-stack "><i class="fa fa-codepen "></i></span>DRONE MANAGER</a>
+            <a class="navbar-brand logo" ><span class="fa-stack "><i class="fa fa-codepen "></i></span>DRONES MANAGER</a>
         </div>
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">
