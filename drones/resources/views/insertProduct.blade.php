@@ -47,9 +47,6 @@
                         Catalogo dei prodotti
                     </h3>
                 </div>
-                <div class="col-lg-2 col-offset-lg-2  col-md-2 col-offset-md-2 col-xs-2 col-offset-xs-2">
-                    <a  id="orderConfirmedBtn" href="{{ url("/orderSummary") }}" class=" btn btn-primary bottoneProd">Avanti <span class="glyphicon glyphicon-menu-right"></span> </a>
-                </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
@@ -103,20 +100,26 @@
             <!-- /.row -->
 
             <div class="row total">
-                <div class="col-lg-offset-2 col-lg-2 col-md-offset-2 col-md-2">
+                <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
                     <h5 class="fa fa-money" id="prezzoOrdine"> Preventivo: 0 </h5>
                 </div>
-                <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
+                <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
                     <h5 class="fa fa-calculator" id="totaleProdotti"> Totale prodotti: 0 </h5>
                 </div>
-                <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
-                    <h5 id="numeroCarrier"> Numero di droni: 0 </h5>
+                <div id="drone" class="col-lg-offset-1 col-lg-1 col-md-offset-1 col-md-1">
+                      <img src="/images/drone-ico2.png" class="img-responsive"  >
                 </div>
-
-
+                <div class=" col-lg-1  col-md-1">
+                    <h5 id="numeroCarrier"> </h5>
+                </div>
             </div>
             <!-- /.row -->
 
+            <div class="row">
+                <div class="col-offset-lg-8 col-lg-2   col-md-2 col-offset-md-8 col-xs-2 col-offset-xs-8">
+                    <a  id="orderConfirmedBtn" href="{{ url("/orderSummary") }}" class=" btn btn-primary bottoneProd">Avanti <span class="glyphicon glyphicon-menu-right"></span> </a>
+                </div>
+            </div>
 
         </div>
         <!-- /.container-fluid -->

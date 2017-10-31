@@ -123,6 +123,7 @@ a.bottone{
   width: 120px;
   height:50px;
   font-size: 23px;
+  margin-top: 20px;
 }
 
 .quantity-products{
@@ -149,22 +150,10 @@ a.bottoneProd{
   margin: 30px;
   border-radius: 2px;
 }
-/*
-.bread-total ol{
-  margin-top: 3%;
-  height: 40px;
+
+#drone {
+  visibility: hidden;
 }
-*/
-/*
-.total-drone{
-  //background-color: url('/images/drone-ico.png');
-  height: 20px;
-  width: 20px;
-}
-.drones{
-  float: left;
-}
-*/
 
 /* menu laterale */
 

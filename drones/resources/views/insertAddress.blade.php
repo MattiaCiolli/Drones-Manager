@@ -45,9 +45,6 @@
                         Destination address
                     </h3>
                 </div>
-                <div class="col-lg-2 col-offset-lg-1  col-md-2 col-offset-md-1 col-xs-2 col-offset-xs-1">
-                    <a id="insertAddressButton" href="{{ url("/insertProduct") }}" class="btn btn-primary bottone">Avanti <span class="glyphicon glyphicon-menu-right"></span> </a>
-                </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
@@ -74,6 +71,11 @@
                 <div class="col-md-12 col-sm-12  col-xs-12 ">
                     <input id="pac-input" class="controls" type="text" placeholder="Ricerca"></input>
                     <div id="map"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 col-offset-lg-8  col-md-2 col-offset-md-8 col-xs-2 col-offset-xs-8">
+                    <a id="insertAddressButton" href="{{ url("/insertProduct") }}" class="btn btn-primary bottone">Avanti <span class="glyphicon glyphicon-menu-right"></span> </a>
                 </div>
             </div>
         </div>

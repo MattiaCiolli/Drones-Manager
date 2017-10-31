@@ -45,9 +45,6 @@
                         Order summary
                     </h3>
                 </div>
-                <div class="col-lg-2 col-offset-lg-2  col-md-2 col-offset-md-2 col-xs-2 col-offset-xs-2">
-                    <h3><a id="orderSummaryButton" href="{{ url("#") }}" class="btn btn-primary">Conferma <span class="glyphicon glyphicon-menu-right"></span> </a> </h3>
-                </div>
             </div>
 
             <div class="row">
@@ -120,6 +117,11 @@
 
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 col-offset-lg-8  col-md-2 col-offset-md-8 col-xs-2 col-offset-xs-8">
+                    <h3><a id="orderSummaryButton" href="{{ url("#") }}" class="btn btn-primary">Conferma <span class="glyphicon glyphicon-menu-right"></span> </a> </h3>
                 </div>
             </div>
         </div>
