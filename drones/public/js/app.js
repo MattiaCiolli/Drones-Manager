@@ -10451,9 +10451,9 @@ $(document).ready(function () {
             success: function success(msg) {
                 console.log(msg);
                 var obj = JSON.parse(msg);
-                $("#prezzoOrdine").text('Preventivo: € '.concat(+obj.totaleOrdine));
-                $("#numeroCarrier").text('Numero di droni: '.concat(obj.numeroCarrier));
-                $("#totaleProdotti").text('Totale prodotti: € '.concat(obj.totaleProdotti));
+                $("#prezzoOrdine").text(' Preventivo: € '.concat(+obj.totaleOrdine));
+                $("#numeroCarrier").text(' Numero di droni: '.concat(obj.numeroCarrier));
+                $("#totaleProdotti").text(' Totale prodotti: € '.concat(obj.totaleProdotti));
             },
             error: function error(msg) {
                 console.log(msg);
