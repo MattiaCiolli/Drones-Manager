@@ -29,4 +29,13 @@ class OrderService
         }
         $transportOrder->save();
     }
+
+	public function shortOrderBill($transportOrder, $totaleProdotti)
+	{
+		$json['totaleOrdine'] = $transportOrder->price->value;
+        $json['numeroCarrier'] = count($transportOrder->carrier);
+        $json['totaleProdotti']= $totaleProdotti;
+        $json['simbolo']= $transportOrder->price->currency->currency_symbol;
+        return json_encode($json);
+	}
 }
