@@ -79,7 +79,7 @@
                             </thead>
                             <tbody>
                 
-	                         @foreach ($products as $p)
+	                         @foreach ($products[0] as $p)
                                 <tr>
                                     <th>
                                         <div>
@@ -90,7 +90,7 @@
                                     <th>{{ $p->size }}</th>
                                     <th>{{ $p->type }}</th>
                                     <th>{{ $p->description }}</th>
-                                    <th>{{ $p->price }}</th>
+                                    <th>{{ $p->price }} {{ $products[1] }}</th>
 
 	                            </tr>
 	                            @endforeach

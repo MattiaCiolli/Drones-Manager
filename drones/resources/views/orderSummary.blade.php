@@ -73,7 +73,7 @@
                             <div class="row">
                                 <div class="col-md-1 col-md-offset-1">{{$j}}</div>
                                 <div class="col-md-4">{{$p->description->description}}</div>
-                                <div class="col-md-4">{{$p->description->price}}</div>
+                                <div class="col-md-4">{{$p->description->price}} {{$order[0]->price->currency->currency_symbol}}</div>
                                 @php($rawPrice+=$p->description->price)
                             </div>
                         @php($j++)

@@ -17,8 +17,9 @@ class ProductComposer
     {
         $transportEnterprise= \App\Models\TransportEnterprise::find(1);
         $catalog = \App\Models\Catalog::find($transportEnterprise->catalog_id);
-        $productList = \App\Models\ProductDescription::where('catalog_id', $catalog->id)->get();
-        $this->products= $productList;
+        $productList[0] = \App\Models\ProductDescription::where('catalog_id', $catalog->id)->get();
+        $productList[1] = config('currency.currency.defaultCurrency');
+        $this->products = $productList;
     }
 
     /**
