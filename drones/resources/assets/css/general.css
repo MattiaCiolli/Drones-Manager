@@ -194,7 +194,71 @@ a.bottoneProd{
   color: #337ab7;
 }
 
+.panel-login{
+   margin-top: 20%;
+   background-color: #2e3436;
+   opacity:0.8;
+   border-color: #2e3436;
+ }
 
+.panel-login label{
+  color: #ccd0d2;
+}
+
+
+.panel-heading-login{
+  background-color: #2e3436;
+  opacity:0.9;
+}
+
+.panel-register{
+  margin-top: 20%;
+  background-color: #2e3436;
+  opacity:0.8;
+  border-color: #2e3436;
+
+}
+.panel-register label{
+  color: #ccd0d2;
+}
+
+
+.panel-heading-register{
+  background-color: #2e3436;
+  opacity:0.9;
+}
+.lock{
+   background-image: url('/images/lock.png');
+   background-repeat: no-repeat;
+   background-attachment: scroll;
+   background-position: bottom;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   background-size: cover;
+   -o-background-size: cover;
+   min-height: 700px;
+ }
+
+.register{
+  background-image: url('/images/registration.png');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: bottom;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  min-height: 700px;
+}
+
+.continued{
+  margin-top: 20%;
+
+}
+
+h1.continued{
+  color: #222222;
+}
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {

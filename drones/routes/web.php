@@ -33,10 +33,13 @@ Route::get('/insertProduct', 'TransportOrderController@insertProduct');
 
 Route::get('/orderSummary', 'TransportOrderController@orderSummary');
 
+
 //Route::get('/p', 'TransportOrderController@productAnalysis');
 
 
-
+Route::get('/continued', function () {
+    return view('continued');
+});
 
 Auth::routes();
 

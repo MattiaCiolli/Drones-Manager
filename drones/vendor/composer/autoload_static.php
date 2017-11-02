@@ -375,6 +375,7 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\TransportOrderController' => __DIR__ . '/../..' . '/app/Http/Controllers/TransportOrderController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -400,7 +401,6 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         'App\\Models\\TransportEnterprise' => __DIR__ . '/../..' . '/app/Models/TransportEnterprise.php',
         'App\\Models\\TransportMaitre' => __DIR__ . '/../..' . '/app/Models/TransportMaitre.php',
         'App\\Models\\TransportOrder' => __DIR__ . '/../..' . '/app/Models/TransportOrder.php',
-        'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -414,6 +414,7 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         'App\\Services\\PathService' => __DIR__ . '/../..' . '/app/Services/PathService.php',
         'App\\Services\\PriceService' => __DIR__ . '/../..' . '/app/Services/PriceService.php',
         'App\\Services\\ProductService' => __DIR__ . '/../..' . '/app/Services/ProductService.php',
+        'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'App\\Utility\\FidelityStrategy' => __DIR__ . '/../..' . '/app/Utility/Strategies/FidelityStrategy.php',
         'App\\Utility\\PathLengthStrategy' => __DIR__ . '/../..' . '/app/Utility/Strategies/PathLengthStrategy.php',
         'App\\Utility\\PriceCalculator' => __DIR__ . '/../..' . '/app/Utility/PriceCalculator.php',
@@ -4073,6 +4074,7 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         'phpDocumentor\\Reflection\\Types\\This' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/This.php',
         'phpDocumentor\\Reflection\\Types\\Void_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Void_.php',
         'transport_enterpriseTableSeeder' => __DIR__ . '/../..' . '/database/seeds/transport_enterpriseTableSeeder.php',
+        'users_table_seeder' => __DIR__ . '/../..' . '/database/seeds/users_table_seeder.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

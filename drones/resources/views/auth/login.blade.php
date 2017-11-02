@@ -1,11 +1,25 @@
-@extends('layouts.app')
+@extends('layout.app')
+
+@section('title', 'Login')
+
+@section('sidebar')
+    @parent
+    <!--the sidebar section is utilizing the @parent directive to append (rather than overwriting) content to the layout's sidebar. The @parent directive will be replaced by the content of the layout when the view is rendered.  ???????   -->
+        <div class=" nav navbar-nav side-nav lock ">
+
+        </div>
+  
+@endsection
+
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
+    <div id="page-wrapper ">
+
+        <div class="container-fluid sfondo">
+    <div class="row ">
+        <div class="col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-2">
+            <div class="panel panel-default panel-login">
+                <div class="panel-heading panel-heading-login">Login</div>
 
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
@@ -66,4 +80,5 @@
         </div>
     </div>
 </div>
+    </div>
 @endsection

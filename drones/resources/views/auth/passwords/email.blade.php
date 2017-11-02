@@ -1,11 +1,25 @@
-@extends('layouts.app')
+@extends('layout.app')
+
+@section('title', 'Email')
+
+@section('sidebar')
+    @parent
+    <!--the sidebar section is utilizing the @parent directive to append (rather than overwriting) content to the layout's sidebar. The @parent directive will be replaced by the content of the layout when the view is rendered.  ???????   -->
+    <div class=" nav navbar-nav side-nav lock ">
+
+    </div>
+
+@endsection
+
 
 @section('content')
-<div class="container">
-    <div class="row">
+    <div id="page-wrapper ">
+
+        <div class="container-fluid sfondo">
+    <div class="row ">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Reset Password</div>
+            <div class="panel panel-default panel-login">
+                <div class="panel-heading panel-heading-login">Reset Password</div>
 
                 <div class="panel-body">
                     @if (session('status'))
@@ -44,4 +58,5 @@
         </div>
     </div>
 </div>
+    </div>
 @endsection
