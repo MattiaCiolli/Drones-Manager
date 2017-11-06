@@ -44,14 +44,4 @@ class ProductService
 
     }
 
-    public function productForView(){
-        // In questo momento sto prendendo l'id dell'enterprise fisso, ma in futuro dovrà
-        //  essere recuperato da sessione
-        $transportEnterprise=\App\Models\TransportEnterprise::find(1);
-
-        $catalog = \App\Models\Catalog::find($transportEnterprise->catalog_id);
-        $productCatalog = \App\Models\ProductDescription::where('catalog_id', $catalog->id)->get();
-        return $productCatalog;
-    }
-
 }
