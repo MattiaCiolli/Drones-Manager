@@ -4,8 +4,7 @@ namespace App\DataMappers;
 
 use database\foundation\InterfaceFoundation;
 
-use App\DataMappers\PathMapper;
-use database\foundation\PathFoundation;
+
 use App\Models\Path;
 
 class PathMapper
