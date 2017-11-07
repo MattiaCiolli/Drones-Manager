@@ -33,7 +33,7 @@ class TransportOrderController extends Controller
         $transportOrder = \App\Models\TransportOrder::find(1);
         $carriers = \App\Models\Carrier::where('transport_order_id', $transportOrder->id)->get();
 		if(count($carriers) && count($transportOrder->price())){
-            $this->deleteTemporaryOrderData($carriers);
+            $carrierService->deleteTemporaryOrderData($carriers);
         }
 
         $productList = $productService->generateProducts($stringProductList);
@@ -96,15 +96,7 @@ class TransportOrderController extends Controller
         return view('insertProduct');
     }
 
-    public function deleteTemporaryOrderData($carriers)
-    {
-        $transportOrder = TransportOrder::find(1);
-        foreach ($carriers as $carrier) {
-            $carrier->delete();
-        }
 
-		$transportOrder->price()->delete();
-    }
 
     public function orderSummary()
     {

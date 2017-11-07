@@ -61,4 +61,15 @@ class CarrierService
         return -1*(strcmp($a->description->size, $b->description->size));
     }
 
+
+    public function deleteTemporaryOrderData($carriers)
+    {
+        $transportOrder = \App\Models\TransportOrder::find(1);
+        foreach ($carriers as $carrier) {
+            $carrier->delete();
+        }
+
+        $transportOrder->price()->delete();
+    }
+
 }
