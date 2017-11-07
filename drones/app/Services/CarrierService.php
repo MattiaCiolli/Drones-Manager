@@ -72,4 +72,10 @@ class CarrierService
         $transportOrder->price()->delete();
     }
 
+
+    public function allCarrierOF($id){
+        $carriers = \App\Models\Carrier::where('transport_order_id', $id)->get();
+        return $carriers;
+    }
+
 }

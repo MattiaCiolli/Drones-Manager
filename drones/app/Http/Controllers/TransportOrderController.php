@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Carrier;
 use App\Models\Price;
 use Illuminate\Http\Request;
 use App\Utility\PriceContext;
@@ -31,7 +32,8 @@ class TransportOrderController extends Controller
         $stringProductList = json_decode($jsonProductsList);
 
         $transportOrder = \App\Models\TransportOrder::find(1);
-        $carriers = \App\Models\Carrier::where('transport_order_id', $transportOrder->id)->get();
+        //$carriers = $transportOrder->carrier;
+        $carriers = $carrierService->allCarrierOF($transportOrder->id);
 		if(count($carriers) && count($transportOrder->price())){
             $carrierService->deleteTemporaryOrderData($carriers);
         }
@@ -40,7 +42,10 @@ class TransportOrderController extends Controller
         $carriersList = $carrierService->handleProduct($productList);
 
         $orderService->consignCarriers($carriersList);
-		$totaleProdotti = $priceService->CalculateTransportPrice($transportOrder);
+
+
+
+        $totaleProdotti = $priceService->CalculateTransportPrice($transportOrder);
         $transportOrder->save();
 
         $transportOrder = $transportOrder->fresh();
