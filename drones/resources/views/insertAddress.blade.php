@@ -59,8 +59,8 @@
                             <i class="fa fa-home"></i>
                         </li>
                         <li>
-                            <span id="spanCheckOk" class=" glyphicon glyphicon-ok text-success"> Indirizzo corretto!</span>
-                            <span id="spanCheckNo" class="glyphicon glyphicon-remove text-danger"> Indirizzo errato! Riprovare! </span>
+                            <span id="spanCheckOk" class=" glyphicon glyphicon-ok text-success"> Indirizzo valido!</span>
+                            <span id="spanCheckNo" class="glyphicon glyphicon-remove text-danger"> Indirizzo non valido! Riprovare! </span>
                         </li>
                     </ol>
                 </div>

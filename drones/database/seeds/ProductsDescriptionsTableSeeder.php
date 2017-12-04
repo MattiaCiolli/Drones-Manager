@@ -14,67 +14,67 @@ class ProductsDescriptionsTableSeeder extends Seeder
         DB::table('product_descriptions')->insert([
             'size' => "S",
             'type' => "Normal",
-            'description' => "Prodotto normale, quasi",
+            'description' => "E-reader Kindle Paperwhite, schermo da 6'' ad alta risoluzione",
             'catalog_id' => 4,
             'created_at' => Carbon\Carbon::Now(),
             'updated_at' => Carbon\Carbon::Now(),
-            'price' => 3.00,
+            'price' => 53.00,
         ]);
 
         DB::table('product_descriptions')->insert([
             'size' => "S",
             'type' => "Hot",
-            'description' => "Piccolo e caldo",
+            'description' => "Pizzetta calda al pomodoro",
             'catalog_id' => 1,
             'created_at' => Carbon\Carbon::Now(),
             'updated_at' => Carbon\Carbon::Now(),
-            'price' => 2.70,
+            'price' => 1.50,
         ]);
 
         DB::table('product_descriptions')->insert([
             'size' => "S",
             'type' => "Cold",
-            'description' => "Freeedo",
+            'description' => "Vaccino antinfluenzale",
             'catalog_id' => 1,
             'created_at' => Carbon\Carbon::Now(),
             'updated_at' => Carbon\Carbon::Now(),
-            'price' => 1.20,
+            'price' =>15,
         ]);
 
         DB::table('product_descriptions')->insert([
             'size' => "M",
             'type' => "Cold",
             'catalog_id' => 4,
-            'description' => "Gelato. Ahahaha come no",
+            'description' => "Carne surgelata, confezione famiglia",
             'created_at' => Carbon\Carbon::Now(),
             'updated_at' => Carbon\Carbon::Now(),
-            'price' => 5.50,
+            'price' => 9.50,
         ]);
 
         DB::table('product_descriptions')->insert([
             'size' => "M",
             'type' => "Normal",
-            'description' => "Un coso normale",
+            'description' => "Portatile 13'' Acer",
             'catalog_id' => 2,
             'created_at' => Carbon\Carbon::Now(),
             'updated_at' => Carbon\Carbon::Now(),
-            'price' => 3.30,
+            'price' => 400.00,
         ]);
 
         DB::table('product_descriptions')->insert([
             'size' => "L",
             'type' => "Hot",
             'catalog_id' => 4,
-            'description' => "Prodotto bollente, prendere con presine",
+            'description' => "Tacchino arrosto 7kg con patate al forno",
             'created_at' => Carbon\Carbon::Now(),
             'updated_at' => Carbon\Carbon::Now(),
-            'price' => 10.00,
+            'price' => 35.00,
         ]);
 
         DB::table('product_descriptions')->insert([
             'size' => "L",
             'type' => "Cold",
-            'description' => "Il grande freddo",
+            'description' => "Damigiana 5lt Montepulpiano",
             'catalog_id' => 3,
             'created_at' => Carbon\Carbon::Now(),
             'updated_at' => Carbon\Carbon::Now(),
