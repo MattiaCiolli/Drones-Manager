@@ -19,4 +19,13 @@ abstract class Resource extends Model
     {
         $this->slots()->associate($slots);
     }
+    public function isFree($slotIndex)
+    {
+        $idDrone = 0; //add qualcosa
+        return $idDrone;
+    }
+
+    public function reserve($idResource, $startIndexSlot, $journeySlot){
+
+    }
 }
