@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDiaryTable extends Migration
+class CreateResourceTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreateDiaryTable extends Migration
      */
     public function up()
     {
-        Schema::create('diary', function (Blueprint $table) {
+        Schema::create('resources', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('type')->nullable();
+            $table->integer('maxFreeConsSlots')->nullable();
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreateDiaryTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('diary');
+        Schema::dropIfExists('drone');
     }
 }

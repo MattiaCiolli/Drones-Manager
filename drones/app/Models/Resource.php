@@ -10,15 +10,16 @@ abstract class Resource extends Model
     private $diaryId;
     private $maxFreeConsSlots;
 
-    public function slots()
+    public function diary()
     {
-        return $this->hasMany('App\Models\Slot');
+        return $this->hasOne('App\Models\Diary');
     }
 
-    public function setSlots($slots)
+    public function setDiary($diary)
     {
-        $this->slots()->associate($slots);
+        $this->diary()->associate($diary);
     }
+
     public function isFree($slotIndex)
     {
         $idDrone = 0; //add qualcosa
