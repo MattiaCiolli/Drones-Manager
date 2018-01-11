@@ -15,9 +15,10 @@ class CreateDiaryTable extends Migration
     {
         Schema::create('diaries', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('resource_id');
             $table->timestamps();
 
-            $table->foreign('resource_id')->references('id')->on('resource')->onDelete('cascade');
+            $table->foreign('resource_id')->references('id')->on('resources')->onDelete('cascade');
         });
     }
 
@@ -28,6 +29,6 @@ class CreateDiaryTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('diary');
+        Schema::dropIfExists('diaries');
     }
 }

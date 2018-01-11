@@ -16,6 +16,7 @@ class CreateSlotTable extends Migration
         Schema::create('slots', function (Blueprint $table) {
             $table->increments('id');
             $table->string('state')->nullable();
+            $table->integer('diary_id');
             $table->timestamps();
 
             $table->foreign('diary_id')->references('id')->on('diaries')->onDelete('cascade');
@@ -29,6 +30,6 @@ class CreateSlotTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('slot');
+        Schema::dropIfExists('slots');
     }
 }
