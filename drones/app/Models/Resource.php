@@ -4,9 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Diary extends Model
+abstract class Resource extends Model
 {
-    protected $table = 'diaries';
+    private $id;
+    private $diaryId;
+    private $maxFreeConsSlots;
 
     public function slots()
     {

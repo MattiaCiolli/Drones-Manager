@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -8,23 +8,13 @@ class Slot extends Model
 {
     protected $table = 'slots';
 
-    public function description()
+    public function diary()
     {
-        return $this->belongsTo('App\Models\ProductDescription');
+        return $this->belongsTo('App\Models\Diary');
     }
 
-    public function carrier()
+    public function setDiary($diary)
     {
-        return $this->belongsTo('App\Models\Carrier');
-    }
-
-    public function setDescription($description)
-    {
-        $this->description()->associate($description);
-    }
-
-    public function setCarrier($carrier)
-    {
-        $this->carrier()->associate($carrier);
+        $this->diary()->associate($diary);
     }
 }
