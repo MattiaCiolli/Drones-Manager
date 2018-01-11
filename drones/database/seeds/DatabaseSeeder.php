@@ -26,5 +26,8 @@ class DatabaseSeeder extends Seeder
         $this->call(CurrencyTableSeeder::class);
 		$this->call(PathServiceUDFs::class);
         $this->call(users_table_seeder::class);
+        $this->call(ResourceTableSeeder::class);
+        $this->call(DiariesTableSeeder::class);
+        $this->call(SlotsTableSeeder::class);
     }
 }

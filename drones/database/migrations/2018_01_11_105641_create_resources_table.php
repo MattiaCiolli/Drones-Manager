@@ -15,7 +15,7 @@ class CreateResourceTable extends Migration
     {
         Schema::create('resources', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('type')->nullable();
+            $table->string('type')->nullable();
             $table->integer('maxFreeConsSlots')->nullable();
             $table->timestamps();
         });
