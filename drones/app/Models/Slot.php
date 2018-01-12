@@ -24,7 +24,7 @@ class Slot extends Model
         return ceil($journeyTime/15);
     }
 
-    public function slotFree()
+    public function slotFree($indexSlot)
     {
         return $this->state;
     }
