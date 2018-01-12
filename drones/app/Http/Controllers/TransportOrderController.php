@@ -97,9 +97,9 @@ class TransportOrderController extends Controller
     }
 
     public function insertProduct()
-    {
-        return view('insertProduct');
-    }
+{
+    return view('insertProduct');
+}
 
 
 

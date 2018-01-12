@@ -29,6 +29,12 @@
                 <p><i class="fa fa-fw fa-usd"></i> Summary </p>
             </li>
         </div>
+        <div>
+            <li>
+                <span class="glyphicon glyphicon-arrow-down btn-lg"></span>
+                <p><i class="fa fa-fw fa-usd"></i> Confirm </p>
+            </li>
+        </div>
     </ul>
 @endsection
 
@@ -121,7 +127,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-2 col-offset-lg-8  col-md-2 col-offset-md-8 col-xs-2 col-offset-xs-8">
-                    <h3><a id="orderSummaryButton" href="{{ url("/continued") }}" class="btn btn-primary">Avanti <span class="glyphicon glyphicon-menu-right"></span> </a> </h3>
+                    <h3><a id="orderSummaryButton" href="{{ url("/confirm") }}" class="btn btn-primary">Avanti <span class="glyphicon glyphicon-menu-right"></span> </a> </h3>
                 </div>
             </div>
         </div>

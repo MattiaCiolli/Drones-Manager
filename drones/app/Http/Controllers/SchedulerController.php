@@ -9,16 +9,21 @@ use Illuminate\Http\Request;
 
 class SchedulerController extends Controller
 {
-    public function getTimeDelivery($idOrder){
+    public function getTimeDelivery(){
+        $idOrder = 1;  //????
         $transportOrder = new TransportOrder();
         $transportOrder = \App\Models\TransportOrder::find($idOrder);
-        $path = $transportOrder->path();
+        $path = $transportOrder->path_id;
+        $path = \App\Models\Path::find($path);
         $journeyTime = $path->getJourneyTime();
         $slot = new Slot();
-        $journeySlots = $slot->convertTimeIntoSlots();
+        $journeySlots = $slot->convertTimeIntoSlots($journeyTime);
         $numCarriers = $transportOrder->getNumCarriers();
         $scheduler = new Scheduler();
-        $arrayListTime = $scheduler->getTimeDelivery($journeySlots, $numCarriers);
-        return $arrayListTime;
+        $timeDelivery = $scheduler->getTimeDelivery($journeySlots, $numCarriers);
+        return view('confirm', $timeDelivery);
+        //return $arrayListTime;
     }
+
+
 }

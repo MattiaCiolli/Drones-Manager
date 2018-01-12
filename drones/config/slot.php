@@ -10,6 +10,6 @@ return  [
 
 
     'size' => 15,   //durata di 15 minuti
-    'numberInADay' => config((24 * 60 ) / 'slot.size')        //96 slot in una giornata
+    'numberInADay' => (24 * 60 ) / 15        //96 slot in una giornata
 
 ];
