@@ -11,11 +11,11 @@ namespace App\Utility;
 
 abstract class ResourcesCollection
 {
-    public function reserve($idResource, $startIndexSlot, $journeySlot){
+    public function setState($idResource, $startIndexSlot, $journeySlot, $state){
 
     }
+
     public function getFreeResources($slot){
-        $idPilots = [];
-        return $idPilots;
+
     }
 }

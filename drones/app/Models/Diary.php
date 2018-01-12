@@ -28,8 +28,12 @@ class Diary extends Model
 
     }
 
-    public function reserveSlot($startIndexSlot, $journeySlot)
+    public function setStateSlot($startIndexSlot, $journeySlot, $state)
     {
 
+    }
+
+    public function checkAvailability($slot){
+        $this->slots()->slotFree();
     }
 }

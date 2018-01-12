@@ -11,5 +11,9 @@ namespace App\Utility;
 
 class PilotsCollection extends ResourcesCollection
 {
-
+    public function getFreeResources($slot)
+    {
+        $pilotsList = \App\Models\Resource::where('type', 'pilot');
+        return $pilotsList;
+    }
 }

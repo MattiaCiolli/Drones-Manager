@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Slot extends Model
 {
     protected $table = 'slots';
+    private $state;
 
     public function diary()
     {
@@ -25,16 +26,21 @@ class Slot extends Model
 
     public function slotFree()
     {
-
+        return $this->state;
     }
 
-    public function reserve()
+    public function setState($state)
     {
 
     }
 
     public function convertSlotsInTime($slotNumber)
     {
+        $minTot = $slotNumber * config('slot.size');
+        $hour = floor($minTot / 60);
+        $min = $minTot % 60;
+        $arrivalTime = "$hour:$min";
+        return $arrivalTime;
 
     }
 }

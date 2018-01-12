@@ -26,7 +26,7 @@ abstract class Resource extends Model
         return $idDrone;
     }
 
-    public function reserve($idResource, $startIndexSlot, $journeySlot){
+    public function setState($idResource, $startIndexSlot, $journeySlot, $state){
 
     }
 }
