@@ -51,4 +51,15 @@ class TransportOrder extends Order
 	{
 		return $this->belongsTo('App\Models\Path');
 	}
+
+    public function getNumCarriers()
+    {
+        $car = $this->carrier();
+        $i=0;
+        foreach ($car as &$c)
+        {
+            $i++;
+        }
+        return $i;
+    }
 }

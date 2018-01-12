@@ -20,7 +20,7 @@ class Slot extends Model
 
     public function convertTimeIntoSlots($journeyTime)
     {
-
+        return ceil($journeyTime/15);
     }
 
     public function slotFree()
