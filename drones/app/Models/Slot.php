@@ -1,13 +1,14 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Slot extends Model
 {
     protected $table = 'slots';
-    private $state;
+    //private $state;
+
 
     public function diary()
     {
@@ -24,7 +25,7 @@ class Slot extends Model
         return ceil($journeyTime/15);
     }
 
-    public function slotFree($indexSlot)
+    public function slotFree()
     {
         return $this->state;
     }

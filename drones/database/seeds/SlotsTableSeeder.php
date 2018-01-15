@@ -16,6 +16,7 @@ class SlotsTableSeeder extends Seeder
                 DB::table('slots')->insert([
                     'state' => 'free',
                     'diary_id' => $j,
+                    'index'=> $i,
                     'created_at' => Carbon\Carbon::now()->format('Y-m-d H:i:s'),
                     'updated_at' => Carbon\Carbon::now()->format('Y-m-d H:i:s'),
                 ]);

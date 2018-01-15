@@ -13,7 +13,16 @@ class PilotsCollection extends ResourcesCollection
 {
     public function getFreeResources($slot)
     {
-        $pilotsList = \App\Models\Pilot::where('type', 'pilot');
-        return $pilotsList;
+
+        $freePilotList = [];
+        $pilotsList = \App\Models\Pilot::where('type', 'pilot')->get();
+        foreach ($pilotsList as $pilot){
+            $statePilot = $pilot->isFree($slot);
+            if ($statePilot == 'free'){
+                array_push($freePilotList,$pilot);
+            }
+        }
+        return $freePilotList;
     }
+
 }

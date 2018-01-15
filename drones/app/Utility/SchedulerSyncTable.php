@@ -11,28 +11,27 @@ namespace App\Utility;
 
 class SchedulerSyncTable
 {
-    private $freeDronesIds = [];    //array di oggetti
-    private $freePilotsIds = [];
+    private $dronesIds = [];    //array di oggetti
+    private $pilotsIds = [];
     private $journeySlots;
     private $matrice;
     private $count = 0;      //è la variabile che si incrementa all'interno della matrice
-    public function __construct($freeDronesIds, $freePilotsIds, $journeySlots)
+    public function __construct($dronesIds, $pilotsIds, $journeySlots)
     {
-        $this->freeDronesIds = $freeDronesIds;
-        $this->freePilotsIds = $freePilotsIds;
+        $this->dronesIds = $dronesIds;
+        $this->pilotsIds = $pilotsIds;
         $this->journeySlots = $journeySlots;
-        foreach ($this->freeDronesIds as $drone){
-            foreach ($this->freePilotsIds as $pilot){
+        foreach ($this->dronesIds as $drone){
+            foreach ($this->pilotsIds as $pilot){
                 $this->matrice[$drone->id][$pilot->id] = 0; // oppure [False, 0]; ???
             }
         }
     }
 
-    public function updateSyncTable($freeDronesIds, $freePilotsIds){
-
-        foreach ($freeDronesIds as $drone){
-            foreach ($freePilotsIds as $pilot){
-                if ($drone->state == $pilot->state ){
+    public function updateSyncTable($freeDrones, $freePilots){
+        foreach ($this->dronesIds as $drone){
+            foreach ($this->pilotsIds as $pilot){
+                if (in_array($drone,$freeDrones) && in_array($pilot,$freePilots) ){
                     $this->matrice[$drone->id][$pilot->id] = $this->count + 1;
                 }else{
                     $this->matrice[$drone->id][$pilot->id] = 0;
@@ -46,8 +45,8 @@ class SchedulerSyncTable
 
     public function checkReachability(){
         $listResources = [];
-        foreach ($this->freeDronesIds as $drone) {
-            foreach ($this->freePilotsIds as $pilot) {
+        foreach ($this->dronesIds as $drone) {
+            foreach ($this->pilotsIds as $pilot) {
                 if ($this->matrice[$drone->id][$pilot->id] = $this->journeySlots){
                     $listResources = array($drone->id, $pilot->id);
                     return $listResources;

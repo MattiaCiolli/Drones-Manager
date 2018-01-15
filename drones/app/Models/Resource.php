@@ -12,7 +12,7 @@ abstract class Resource extends Model
 
     public function diary()
     {
-        return $this->hasOne('App\Models\Diary');
+        return $this->hasOne('App\Models\Diary', 'resource_id');
     }
 
     public function setDiary($diary)
@@ -22,9 +22,13 @@ abstract class Resource extends Model
 
     public function isFree($slotIndex)
     {
-        $idDrone = 0; //add qualcosa
-        return $idDrone;
+        $diary = $this->diary;
+        $state = $diary->checkAvailability($slotIndex);
+
+        return $state;
     }
+
+
 
     public function setState($idResource, $startIndexSlot, $journeySlot, $state){
 

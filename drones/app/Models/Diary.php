@@ -33,7 +33,12 @@ class Diary extends Model
 
     }
 
-    public function checkAvailability($slot){
-        $this->slots()->slotFree();
+    public function checkAvailability($slot)
+    {
+        $slots = $this->slots;
+        //dd($slot);
+
+        $state = $slots[$slot]->state;
+        return $state;
     }
 }

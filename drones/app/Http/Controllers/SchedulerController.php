@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\TransportOrder;
-use App\Slot;
+use App\Models\Slot;
 use App\Utility\Scheduler;
 use Illuminate\Http\Request;
 

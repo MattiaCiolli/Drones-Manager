@@ -11,14 +11,15 @@ namespace App\Utility;
 
 class DronesCollection extends ResourcesCollection
 {
+
     public function getFreeResources($slot)
     {
         $freeDronesList = [];
-        $dronesList = \App\Models\Drone::where('type', 'drone');
+        $dronesList = \App\Models\Drone::where('type', 'drone')->get();
         foreach ($dronesList as $drone){
             $stateDrone = $drone->isFree($slot);
             if ($stateDrone == 'free'){
-                $freeDronesList = $drone;
+                array_push($freeDronesList,$drone);
             }
         }
         return $freeDronesList;

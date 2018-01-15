@@ -17,6 +17,7 @@ class CreateSlotTable extends Migration
             $table->increments('id');
             $table->string('state')->nullable();
             $table->integer('diary_id');
+            $table->integer('index');
             $table->timestamps();
 
             $table->foreign('diary_id')->references('id')->on('diaries')->onDelete('cascade');

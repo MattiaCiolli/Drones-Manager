@@ -15,11 +15,9 @@ class Scheduler
 {
     public function getTimeDelivery($journeySlots, $numCarriers){
         for ($i = 0; $i< count($numCarriers); $i++){
-            $dronesList = \App\Models\Drone::select('id')->where('type', 'drone');
-            $pilotesList = \App\Models\Pilot::select('id')->where('type', 'pilot');
-            foreach ($dronesList as $i){
-                dd($dronesList);
-            }
+            $dronesList = \App\Models\Drone::select('id')->where('type', 'drone')->get();
+            //dd(typeOf($dronesList));
+            $pilotesList = \App\Models\Pilot::select('id')->where('type', 'pilot')->get();
 
             $schedulerSyncTable = new SchedulerSyncTable( $dronesList, $pilotesList, $journeySlots);
             $sizeOfDiary = config('slot.numberInADay');
@@ -30,22 +28,24 @@ class Scheduler
             $listResources = [];
             //cambiare l'indice di partenza in base all'orario in cui viene fatto l'ordine
             $j = 0;
-            while($j<$sizeOfDiary || $listResources != []) {
+
+            while($j<$sizeOfDiary || count($listResources)!= 0) {
                 $freeDronesIds = [];   //collezione di oggetti
                 $freePilotsIds = [];
 
-                $freeDronesIds = $droneCollection->getFreeResources($j);    //ritorna tutti gli oggetti
+                $freeDronesIds = $droneCollection->getFreeResources($j);
                 $freePilotsIds = $pilotCollection->getFreeResources($j);
                 $listResources = $schedulerSyncTable->updateSyncTable($freeDronesIds, $freePilotsIds);
 
                 $j++;
             }
-            if ($listResources != []){
+
+            if (count($listResources) != 0){
                 $startIndexSlot = $j - $journeySlots;
                 $freeTechniciansIds = $technicianCollection->getFreeResources($startIndexSlot);
             }
 
-            if($listResources != [] && $freeTechniciansIds != []){
+            if(count($listResources) != 0 && count($freeTechniciansIds) != 0){
                 $idDrone = $listResources[0];
                 $idPilot = $listResources[1];
                 $idTechnician = $freeTechniciansIds[0];
