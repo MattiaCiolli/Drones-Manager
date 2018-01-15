@@ -13,7 +13,7 @@ class PilotsCollection extends ResourcesCollection
 {
     public function getFreeResources($slot)
     {
-        $pilotsList = \App\Models\Resource::where('type', 'pilot');
+        $pilotsList = \App\Models\Pilot::where('type', 'pilot');
         return $pilotsList;
     }
 }

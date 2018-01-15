@@ -15,8 +15,12 @@ class Scheduler
 {
     public function getTimeDelivery($journeySlots, $numCarriers){
         for ($i = 0; $i< count($numCarriers); $i++){
-            $dronesList = \App\Models\Resource::select('id')->where('type', 'drone');
-            $pilotesList = \App\Models\Resource::select('id')->where('type', 'pilot');
+            $dronesList = \App\Models\Drone::select('id')->where('type', 'drone');
+            $pilotesList = \App\Models\Pilot::select('id')->where('type', 'pilot');
+            foreach ($dronesList as $i){
+                dd($dronesList);
+            }
+
             $schedulerSyncTable = new SchedulerSyncTable( $dronesList, $pilotesList, $journeySlots);
             $sizeOfDiary = config('slot.numberInADay');
             $droneCollection = new DronesCollection();

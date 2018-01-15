@@ -14,7 +14,7 @@ class DronesCollection extends ResourcesCollection
     public function getFreeResources($slot)
     {
         $freeDronesList = [];
-        $dronesList = \App\Models\Resource::where('type', 'drone');
+        $dronesList = \App\Models\Drone::where('type', 'drone');
         foreach ($dronesList as $drone){
             $stateDrone = $drone->isFree($slot);
             if ($stateDrone == 'free'){

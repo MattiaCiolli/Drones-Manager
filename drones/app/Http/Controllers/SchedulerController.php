@@ -21,7 +21,7 @@ class SchedulerController extends Controller
         $numCarriers = $transportOrder->getNumCarriers();
         $scheduler = new Scheduler();
         $timeDelivery = $scheduler->getTimeDelivery($journeySlots, $numCarriers);
-        return view('confirm', $timeDelivery);
+        return view('confirm', ['timeDelivery' => $timeDelivery]);
         //return $arrayListTime;
     }
 

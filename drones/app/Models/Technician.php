@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Technician extends Resource
 {
-    protected $table = 'technicians';
+    protected $table = 'resources';
 }

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Model;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Drone extends Resource
 {
-    protected $table = 'drones';
+    protected $table = 'resources';
 
     public function isfree($slot){
         $idDrone = $this->diary->checkAvailability($slot);
