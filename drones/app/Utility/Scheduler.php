@@ -9,17 +9,17 @@
 namespace App\Utility;
 
 
-use App\Slot;
+use App\Models\Slot;
 
 class Scheduler
 {
     public function getTimeDelivery($journeySlots, $numCarriers){
-        for ($i = 0; $i< count($numCarriers); $i++){
+        for ($i = 0; $i< count($numCarriers); $i++) {
             $dronesList = \App\Models\Drone::select('id')->where('type', 'drone')->get();
             //dd(typeOf($dronesList));
-            $pilotesList = \App\Models\Pilot::select('id')->where('type', 'pilot')->get();
+            $pilotsList = \App\Models\Pilot::select('id')->where('type', 'pilot')->get();
 
-            $schedulerSyncTable = new SchedulerSyncTable( $dronesList, $pilotesList, $journeySlots);
+            $schedulerSyncTable = new SchedulerSyncTable($dronesList, $pilotsList, $journeySlots);
             $sizeOfDiary = config('slot.numberInADay');
             $droneCollection = new DronesCollection();
             $pilotCollection = new PilotsCollection();
@@ -28,37 +28,54 @@ class Scheduler
             $listResources = [];
             //cambiare l'indice di partenza in base all'orario in cui viene fatto l'ordine
             $j = 0;
+            $freeDronesIds = [];   //collezione di oggetti
+            $freePilotsIds = [];
+            $freeTechniciansIds = [];
+            $startIndexSlot = 0;
+            $timeDelivery = null;
+            $trovatoTutto = false;
+            while ($trovatoTutto == false && $j < $sizeOfDiary) {
 
-            while($j<$sizeOfDiary || count($listResources)!= 0) {
-                $freeDronesIds = [];   //collezione di oggetti
-                $freePilotsIds = [];
+                $trovato = false;
+                while ($j < $sizeOfDiary && $trovato == false) {
 
-                $freeDronesIds = $droneCollection->getFreeResources($j);
-                $freePilotsIds = $pilotCollection->getFreeResources($j);
-                $listResources = $schedulerSyncTable->updateSyncTable($freeDronesIds, $freePilotsIds);
+                    $freeDronesIds = $droneCollection->getFreeResources($j);
+                    $freePilotsIds = $pilotCollection->getFreeResources($j);
 
-                $j++;
+                    if(count($freeDronesIds)>0 && count($freePilotsIds)>0) {
+                        //dd($freeDronesIds);
+                        $listResources = $schedulerSyncTable->updateSyncTable($freeDronesIds, $freePilotsIds);
+                    }
+                    if(count($listResources)>0 && $listResources[2] == $journeySlots)
+                    {
+                        $trovato = true;
+
+                        if (count($listResources) != 0) {
+                            $freeTechniciansIds = $technicianCollection->getFreeResources($j);
+                        }
+
+                        if (count($listResources) != 0 && count($freeTechniciansIds) != 0) {
+                            $idDrone = $listResources[0];
+                            $idPilot = $listResources[1];
+                            $idTechnician = $freeTechniciansIds[0];
+                            $state = 'reserved';
+                            $droneCollection->setState($idDrone, $startIndexSlot, $journeySlots, $state);
+                            $pilotCollection->setState($idPilot, $startIndexSlot, $journeySlots, $state);
+                            $technicianCollection->setState($idTechnician, $startIndexSlot, $journeySlots, $state);
+
+                            $slot = new Slot();
+                            //corrisponde allo slot finale, cioè l'orario di arrivo dell'ordine
+                            $slotNumber = $j;
+                            $timeDelivery = $slot->convertSlotsInTime($slotNumber);
+                            $trovatoTutto = true;
+                        }
+
+                    }
+
+                    $j++;
+                }
+
             }
-
-            if (count($listResources) != 0){
-                $startIndexSlot = $j - $journeySlots;
-                $freeTechniciansIds = $technicianCollection->getFreeResources($startIndexSlot);
-            }
-
-            if(count($listResources) != 0 && count($freeTechniciansIds) != 0){
-                $idDrone = $listResources[0];
-                $idPilot = $listResources[1];
-                $idTechnician = $freeTechniciansIds[0];
-                $state = 'reserved';
-                $droneCollection->setState($idDrone, $startIndexSlot, $journeySlots, $state);
-                $pilotCollection->setState($idPilot, $startIndexSlot, $journeySlots, $state);
-                $technicianCollection->setState($idTechnician, $startIndexSlot, $journeySlots, $state);
-            }
-
-            $slot = new Slot();
-            //corrisponde allo slot finale, cioè l'orario di arrivo dell'ordine
-            $slotNumber = $j;
-            $timeDelivery = $slot->convertSlotsInTime($slotNumber);
         }
 
         return $timeDelivery;

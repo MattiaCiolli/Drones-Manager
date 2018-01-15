@@ -30,35 +30,42 @@ class SchedulerSyncTable
 
     public function updateSyncTable($freeDrones, $freePilots){
         foreach ($this->dronesIds as $drone){
+
+            //IL PROBLEMA E' QUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+            //NON ENTRA MAI NELL'IF
             foreach ($this->pilotsIds as $pilot){
-                if (in_array($drone,$freeDrones) && in_array($pilot,$freePilots) ){
-                    $this->matrice[$drone->id][$pilot->id] = $this->count + 1;
+
+                if (in_array($d[0], $freeDrones) && in_array($p[0], $freePilots) ){
+                    $this->matrice[$drone->id][$pilot->id]++;
+                    dd("JHFH");
                 }else{
                     $this->matrice[$drone->id][$pilot->id] = 0;
                 }
             }
         }
+
         $listResources = $this->checkReachability();
 
         return $listResources;
     }
 
     public function checkReachability(){
-        $listResources = [];
+        $listResources = [0, 0, 0];
+
         foreach ($this->dronesIds as $drone) {
             foreach ($this->pilotsIds as $pilot) {
-                if ($this->matrice[$drone->id][$pilot->id] = $this->journeySlots){
-                    $listResources = array($drone->id, $pilot->id);
+                if ($this->matrice[$drone->id][$pilot->id] == $this->journeySlots){
+
+                    $listResources = array($drone->id, $pilot->id, $this->matrice[$drone->id][$pilot->id]);
                     return $listResources;
                 }
             }
         }
-        return$listResources;
+        return $listResources;
 
     }
 
     public function getSyncTable($idOrder){
-        $syncTable = [];
-        return $syncTable;
+        return $this->matrice;
     }
 }

@@ -10,7 +10,7 @@ class Path extends Model
 
     public function getJourneyTime()
     {
-        return $this->path_length * 5;
+        return $this->path_length * 0.01;
     }
 
 }

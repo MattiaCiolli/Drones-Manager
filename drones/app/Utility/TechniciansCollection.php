@@ -11,5 +11,17 @@ namespace App\Utility;
 
 class TechniciansCollection extends ResourcesCollection
 {
+    public function getFreeResources($slot)
+    {
+        $freeTechList = [];
+        $techList = \App\Models\Technician::where('type', 'technician')->get();
+        foreach ($techList as $tech){
+            $stateTech = $tech->isFree($slot);
+            if ($stateTech == 'free'){
+                array_push($freeTechList,$tech);
+            }
+        }
+        return $freeTechList;
+    }
 
 }

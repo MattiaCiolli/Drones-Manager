@@ -32,5 +32,7 @@ abstract class Resource extends Model
 
     public function setState($idResource, $startIndexSlot, $journeySlot, $state){
 
+
+
     }
 }
