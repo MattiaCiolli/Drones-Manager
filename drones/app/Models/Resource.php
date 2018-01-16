@@ -30,7 +30,7 @@ abstract class Resource extends Model
 
 
 
-    public function setState($idResource, $startIndexSlot, $journeySlot, $state){
+    public function setState($startIndexSlot, $journeySlot, $state){
         $diary = $this->diary;
         $diary->setStateSlot($startIndexSlot, $journeySlot, $state);
 
