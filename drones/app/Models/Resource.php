@@ -24,7 +24,6 @@ abstract class Resource extends Model
     {
         $diary = $this->diary;
         $state = $diary->checkAvailability($slotIndex);
-
         return $state;
     }
 

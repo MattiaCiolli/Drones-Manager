@@ -62,9 +62,10 @@ class Scheduler
                             $idPilot = $listResources[1];
                             $idTechnician = $freeTechniciansIds[0];
                             $state = 'reserved';
+                            $startIndexSlot = $j - $journeySlots;
                             $droneCollection->setState($idDrone, $startIndexSlot, $journeySlots, $state);
                             $pilotCollection->setState($idPilot, $startIndexSlot, $journeySlots, $state);
-                            $technicianCollection->setState($idTechnician, $startIndexSlot, $journeySlots, $state);
+                            $technicianCollection->setState($idTechnician->id, $startIndexSlot, $journeySlots, $state);
 
                             $slot = new Slot();
                             //corrisponde allo slot finale, cioè l'orario di arrivo dell'ordine

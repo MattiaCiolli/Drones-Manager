@@ -25,4 +25,11 @@ class PilotsCollection extends ResourcesCollection
         return $freePilotList;
     }
 
+    public function setState($idResource, $startIndexSlot, $journeySlot, $state)
+    {
+        $resource = \App\Models\Pilot::where('id',$idResource)->first();
+        //dd($journeySlot);
+        $resource->setState($startIndexSlot, $journeySlot, $state);
+    }
+
 }
