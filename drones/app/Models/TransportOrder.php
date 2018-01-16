@@ -54,7 +54,7 @@ class TransportOrder extends Order
 
     public function getNumCarriers()
     {
-        $car = $this->carrier();
+        $car = $this->carrier;
         $i=0;
         foreach ($car as &$c)
         {

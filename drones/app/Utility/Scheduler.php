@@ -14,7 +14,8 @@ use App\Models\Slot;
 class Scheduler
 {
     public function getTimeDelivery($journeySlots, $numCarriers){
-        for ($i = 0; $i< count($numCarriers); $i++) {
+
+        for ($i = 0; $i< $numCarriers; $i++) {
             $dronesList = \App\Models\Drone::select('id')->where('type', 'drone')->get();
             //dd(typeOf($dronesList));
             $pilotsList = \App\Models\Pilot::select('id')->where('type', 'pilot')->get();
