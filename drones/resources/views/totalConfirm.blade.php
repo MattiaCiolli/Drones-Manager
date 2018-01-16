@@ -34,8 +34,8 @@
             <div class="ombra">
                 <span class="glyphicon glyphicon-arrow-down btn-lg"></span>
                 <p><i class="fa fa-fw fa-usd"></i> Confirm </p>
-            </li>
-        </div>
+                </li>
+            </div>
     </ul>
 @endsection
 
@@ -58,25 +58,13 @@
 
             <div class="row ">
                 <div class="col-lg-8 col-lg-offset-1">
-                    @if(count($timeDelivery) == 0)
-                        <h3 class="continued">Il suo ordine non può essere spedito in giornata.</h3>
-                    @elseif(count($timeDelivery) == 1)
-                        <h3 class="continued">Il suo ordine arriverà alle ore {{$timeDelivery[0]}}</h3>
-                    @else
-                        <h3 class="continued">Il suo ordine arriverà nei seguenti orari:</h3>
-                        <ol>
-                            @for ($i = 0; $i < count($timeDelivery); $i++)
-                                <h3>Drone {{$i+1}}:  {{$timeDelivery[$i]}}</h3>
-                            @endfor
-                        </ol>
-                    @endif
+                    <h3 class="continued">Ordine confermato!</h3>
                 </div>
             </div>
             <hr>
             <div class="row ">
-                <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-4 col-xs-offset-1 botton-order">
-                    <a href="{{ url("/confirmation") }}"><button class="btn btn-success btn-lg btn-confirm ">Conferma</button></a>
-                    <a href="{{ url("/newOrder") }}"><button class="btn btn-danger btn-lg btn-confirm">Annulla</button></a>
+                <div class="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-1 col-xs-4 col-xs-offset-1 botton-order">
+                    <a href="{{ url("/newOrder") }}"><button class="btn btn-primary btn-lg btn-confirm-total ">New order</button></a>
                 </div>
             </div>
 

@@ -252,7 +252,7 @@ a.bottoneProd{
 }
 
 .continued{
-  margin-top: 20%;
+  margin-top: 5%;
 
 }
 
@@ -271,4 +271,22 @@ h1.continued{
   .primo-li li{
     padding-top: 25px;
   }
+}
+
+.btn-confirm{
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 120px;
+}
+
+.botton-order{
+  margin-top: 50px;
+}
+
+.btn-confirm-total{
+  margin-left: 10px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  width: 120px;
 }

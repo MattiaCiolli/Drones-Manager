@@ -37,11 +37,16 @@ Route::get('/orderSummary', 'TransportOrderController@orderSummary');
 //Route::get('/p', 'TransportOrderController@productAnalysis');
 
 Route::get('/confirm', 'SchedulerController@getTimeDelivery');
+
+
+Route::get('/confirmation', 'SchedulerController@confirmOrder');
+
 /*
-Route::get('/confirm', function () {
-    return view('confirm');
+Route::get('/confirmation', function () {
+    return view('totalConfirm');
 });
 */
+
 Auth::routes();
 
 Route::get('/', 'HomeController@index');

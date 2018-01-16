@@ -15,7 +15,7 @@ class SchedulerSyncTable
     private $pilotsIds = [];
     private $journeySlots;
     private $matrice;
-    private $count = 0;      //è la variabile che si incrementa all'interno della matrice
+
     public function __construct($dronesIds, $pilotsIds, $journeySlots)
     {
         $this->dronesIds = $dronesIds;

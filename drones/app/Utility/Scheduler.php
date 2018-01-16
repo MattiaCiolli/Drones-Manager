@@ -15,6 +15,7 @@ class Scheduler
 {
     public function getTimeDelivery($journeySlots, $numCarriers){
 
+        $timeDeliveryArray = [];
         for ($i = 0; $i< $numCarriers; $i++) {
             $dronesList = \App\Models\Drone::select('id')->where('type', 'drone')->get();
             //dd(typeOf($dronesList));
@@ -73,6 +74,7 @@ class Scheduler
                             //corrisponde allo slot finale, cioè l'orario di arrivo dell'ordine
                             $slotNumber = $j;
                             $timeDelivery = $slot->convertSlotsInTime($slotNumber);
+                            array_push($timeDeliveryArray, $timeDelivery);
                             $trovatoTutto = true;
                         }
 
@@ -84,7 +86,7 @@ class Scheduler
             }
         }
 
-        return $timeDelivery;
+        return $timeDeliveryArray;
     }
 
 }
