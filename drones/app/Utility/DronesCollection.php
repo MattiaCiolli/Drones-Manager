@@ -28,7 +28,7 @@ class DronesCollection extends ResourcesCollection
     public function setState($idResource, $startIndexSlot, $journeySlot, $state)
     {
         $resource = \App\Models\Drone::where('id',$idResource)->first();
-        dd($journeySlot);
+        //dd($journeySlot);
         $resource->setState($startIndexSlot, $journeySlot, $state);
     }
 }

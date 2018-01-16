@@ -32,10 +32,12 @@ class Diary extends Model
     {
         $slots = $this->slots;
         for ($i=$startIndexSlot; $i < $journeySlot; $i++){
-            //dd($this->slots[$i]);
+
             foreach ($slots as $s){
                 if($s->index == $i){
+
                     $s->state = $state;
+                    $s->save();
                 }
             }
 

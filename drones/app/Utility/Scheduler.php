@@ -18,7 +18,7 @@ class Scheduler
             $dronesList = \App\Models\Drone::select('id')->where('type', 'drone')->get();
             //dd(typeOf($dronesList));
             $pilotsList = \App\Models\Pilot::select('id')->where('type', 'pilot')->get();
-
+            $journeySlots = (int)$journeySlots;
             $schedulerSyncTable = new SchedulerSyncTable($dronesList, $pilotsList, $journeySlots);
             $sizeOfDiary = config('slot.numberInADay');
             $droneCollection = new DronesCollection();
