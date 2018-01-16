@@ -11,7 +11,7 @@ namespace App\Utility;
 
 abstract class ResourcesCollection
 {
-    public function setState($idResource, $startIndexSlot, $journeySlot, $state){
+    public function setState($idResource, $startIndexSlot, $journeySlot, $state,$orderId){
 
     }
 

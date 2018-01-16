@@ -13,7 +13,7 @@ use App\Models\Slot;
 
 class Scheduler
 {
-    public function getTimeDelivery($journeySlots, $numCarriers){
+    public function getTimeDelivery($journeySlots, $numCarriers, $orderId){
 
         for ($i = 0; $i< $numCarriers; $i++) {
             $dronesList = \App\Models\Drone::select('id')->where('type', 'drone')->get();
@@ -65,9 +65,9 @@ class Scheduler
                             $state = 'reserved';
                             $startIndexSlot = $j - $journeySlots;
 
-                            $droneCollection->setState($idDrone, $startIndexSlot, $journeySlots, $state);
-                            $pilotCollection->setState($idPilot, $startIndexSlot, $journeySlots, $state);
-                            $technicianCollection->setState($idTechnician->id, $startIndexSlot, $journeySlots, $state);
+                            $droneCollection->setState($idDrone, $startIndexSlot, $journeySlots, $state, $orderId);
+                            $pilotCollection->setState($idPilot, $startIndexSlot, $journeySlots, $state, $orderId);
+                            $technicianCollection->setState($idTechnician->id, $startIndexSlot, $journeySlots, $state, $orderId);
 
                             $slot = new Slot();
                             //corrisponde allo slot finale, cioè l'orario di arrivo dell'ordine

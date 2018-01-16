@@ -15,6 +15,11 @@ class Slot extends Model
         return $this->belongsTo('App\Models\Diary');
     }
 
+    public function transportOrder()
+    {
+        return $this->belongsTo('App\Models\TransportOrder');
+    }
+
     public function setDiary($diary)
     {
         $this->diary()->associate($diary);
