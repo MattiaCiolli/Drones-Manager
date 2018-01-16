@@ -20,10 +20,24 @@ class SchedulerController extends Controller
         $journeySlots = $slot->convertTimeIntoSlots($journeyTime);
         $numCarriers = $transportOrder->getNumCarriers();
         $scheduler = new Scheduler();
-        $timeDelivery = $scheduler->getTimeDelivery($journeySlots, $numCarriers);
+        $timeDelivery = $scheduler->getTimeDelivery($journeySlots, $numCarriers, $idOrder);
         return view('confirm', ['timeDelivery' => $timeDelivery]);
         //return $arrayListTime;
     }
 
+    public function confirmOrder(){
+        $idOrder = 1;  //????
+        $transportOrder = new TransportOrder();
+        $transportOrder = \App\Models\TransportOrder::find($idOrder);
+        $slots = $transportOrder->slots;
+
+        foreach ($slots as $s)
+        {
+            $s->state = "busy";
+            $s->save();
+        }
+        return view('confirm', ['timeDelivery' => $timeDelivery]);
+        //return $arrayListTime;
+    }
 
 }

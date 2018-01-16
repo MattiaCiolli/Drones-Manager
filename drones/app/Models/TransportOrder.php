@@ -42,6 +42,11 @@ class TransportOrder extends Order
         return $this->hasMany('App\Models\Carrier');
     }
 
+    public function slots()
+    {
+        return $this->hasMany('App\Models\Slot');
+    }
+
     public function price()
     {
         return $this->belongsTo('App\Models\Price');
