@@ -63,6 +63,7 @@ class Scheduler
                             $idTechnician = $freeTechniciansIds[0];
                             $state = 'reserved';
                             $startIndexSlot = $j - $journeySlots;
+
                             $droneCollection->setState($idDrone, $startIndexSlot, $journeySlots, $state);
                             $pilotCollection->setState($idPilot, $startIndexSlot, $journeySlots, $state);
                             $technicianCollection->setState($idTechnician->id, $startIndexSlot, $journeySlots, $state);
