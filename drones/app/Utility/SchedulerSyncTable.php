@@ -29,20 +29,27 @@ class SchedulerSyncTable
     }
 
     public function updateSyncTable($freeDrones, $freePilots){
+
+        $freeDronesIds = [];
+        for ($i = 0; $i < count($freeDrones); $i++){
+            array_push($freeDronesIds, (string)$freeDrones[$i]->id);
+        }
+
+        $freePilotsIds = [];
+        for ($i = 0; $i < count($freePilots); $i++){
+            array_push($freePilotsIds, (string)$freePilots[$i]->id);
+        }
+
         foreach ($this->dronesIds as $drone){
-
-            //IL PROBLEMA E' QUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
-            //NON ENTRA MAI NELL'IF
             foreach ($this->pilotsIds as $pilot){
-
-                if (in_array($d[0], $freeDrones) && in_array($p[0], $freePilots) ){
+                if (in_array($drone->id, $freeDronesIds) && in_array($pilot->id, $freePilotsIds) ){
                     $this->matrice[$drone->id][$pilot->id]++;
-                    dd("JHFH");
                 }else{
                     $this->matrice[$drone->id][$pilot->id] = 0;
                 }
             }
         }
+
 
         $listResources = $this->checkReachability();
 
@@ -50,17 +57,17 @@ class SchedulerSyncTable
     }
 
     public function checkReachability(){
-        $listResources = [0, 0, 0];
-
+        //$listResources = [0, 0, 0];
+        $listResources = [];
         foreach ($this->dronesIds as $drone) {
             foreach ($this->pilotsIds as $pilot) {
                 if ($this->matrice[$drone->id][$pilot->id] == $this->journeySlots){
-
                     $listResources = array($drone->id, $pilot->id, $this->matrice[$drone->id][$pilot->id]);
                     return $listResources;
                 }
             }
         }
+
         return $listResources;
 
     }

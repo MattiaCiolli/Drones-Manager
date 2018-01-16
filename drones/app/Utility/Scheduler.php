@@ -41,11 +41,13 @@ class Scheduler
 
                     $freeDronesIds = $droneCollection->getFreeResources($j);
                     $freePilotsIds = $pilotCollection->getFreeResources($j);
+                    $listResources = $schedulerSyncTable->updateSyncTable($freeDronesIds, $freePilotsIds);
 
+                    /*
                     if(count($freeDronesIds)>0 && count($freePilotsIds)>0) {
-                        //dd($freeDronesIds);
                         $listResources = $schedulerSyncTable->updateSyncTable($freeDronesIds, $freePilotsIds);
-                    }
+                    }*/
+
                     if(count($listResources)>0 && $listResources[2] == $journeySlots)
                     {
                         $trovato = true;
@@ -55,6 +57,7 @@ class Scheduler
                         }
 
                         if (count($listResources) != 0 && count($freeTechniciansIds) != 0) {
+                            //dd($listResources);
                             $idDrone = $listResources[0];
                             $idPilot = $listResources[1];
                             $idTechnician = $freeTechniciansIds[0];

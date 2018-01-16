@@ -30,7 +30,10 @@ class Diary extends Model
 
     public function setStateSlot($startIndexSlot, $journeySlot, $state)
     {
-
+        for ($i=$startIndexSlot; $i < $journeySlot; $i++){
+            dd($this->slots[$i]);
+            $this->slots[$i] = $state;
+        }
     }
 
     public function checkAvailability($slotIndex)
