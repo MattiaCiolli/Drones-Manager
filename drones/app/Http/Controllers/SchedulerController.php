@@ -36,7 +36,7 @@ class SchedulerController extends Controller
             $s->state = "busy";
             $s->save();
         }
-        return view('confirm', ['timeDelivery' => $timeDelivery]);
+        return view('totalConfirm');
         //return $arrayListTime;
     }
 

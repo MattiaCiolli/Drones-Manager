@@ -44,7 +44,7 @@ class TransportOrder extends Order
 
     public function slots()
     {
-        return $this->hasMany('App\Models\Slot');
+        return $this->hasMany('App\Models\Slot', 'order_id');
     }
 
     public function price()
