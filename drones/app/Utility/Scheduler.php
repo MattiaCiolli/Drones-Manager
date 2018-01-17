@@ -89,9 +89,5 @@ class Scheduler
         return $timeDeliveryArray;
     }
 
-    public function confirmOrder($idOrder){
-        $state='busy';
-
-    }
-
+    
 }
