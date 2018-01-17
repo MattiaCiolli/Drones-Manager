@@ -22,22 +22,23 @@ class SchedulerController extends Controller
         $scheduler = new Scheduler();
         $timeDelivery = $scheduler->getTimeDelivery($journeySlots, $numCarriers, $idOrder);
         return view('confirm', ['timeDelivery' => $timeDelivery]);
-        //return $arrayListTime;
     }
 
     public function confirmOrder(){
-        $idOrder = 1;  //????
-        $transportOrder = new TransportOrder();
-        $transportOrder = \App\Models\TransportOrder::find($idOrder);
-        $slots = $transportOrder->slots;
+        $idOrder = 1;  //????   DA SESSIONE
+        //$transportOrder = new TransportOrder();
+        //$transportOrder = \App\Models\TransportOrder::find($idOrder);   // SI PUO EVITARE DI RIPRENDERE L'ORDINE E PRENDERE DIRETTAMENTE LO SLOT
+        //$slots = $transportOrder->slots;
 
+        $slots = \App\Models\Slot::where('id_order',$idOrder);
+        //dd($slots);
         foreach ($slots as $s)
         {
             $s->state = "busy";
             $s->save();
         }
-        return view('confirm', ['timeDelivery' => $timeDelivery]);
-        //return $arrayListTime;
+
+        return view('totalConfirm');
     }
 
 }
