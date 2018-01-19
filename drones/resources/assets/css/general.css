@@ -290,3 +290,7 @@ h1.continued{
   margin-bottom: 10px;
   width: 150px;
 }
+
+.check{
+  color: green;
+}

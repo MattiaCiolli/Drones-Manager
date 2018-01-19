@@ -10,6 +10,8 @@ namespace App\Utility;
 
 
 use App\Models\Slot;
+use Carbon\Carbon;
+use Psy\Input\CodeArgument;
 
 class Scheduler
 {
@@ -29,7 +31,12 @@ class Scheduler
             $timeDelivery = [];
             $listResources = [];
             //cambiare l'indice di partenza in base all'orario in cui viene fatto l'ordine
-            $j = 0;
+            $time[0] = Carbon::Now()->hour +1;
+            $time[1] = Carbon::Now()->minute;
+            $slottino = new Slot();
+            $minutes = $time[0]*60 + $time[1] ;
+            $j = $slottino->convertTimeIntoSlots($minutes);
+            //$j = 0;
             $freeDronesIds = [];   //collezione di oggetti
             $freePilotsIds = [];
             $freeTechniciansIds = [];
@@ -89,5 +96,5 @@ class Scheduler
         return $timeDeliveryArray;
     }
 
-    
+
 }

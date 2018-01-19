@@ -33,7 +33,7 @@
         <div>
             <div class="ombra">
                 <span class="glyphicon glyphicon-arrow-down btn-lg"></span>
-                <p><i class="fa fa-fw fa-usd"></i> Confirm </p>
+                <p><i class="fa fa-fw fa-check"></i> Confirm </p>
                 </li>
             </div>
     </ul>
@@ -50,7 +50,7 @@
                             <i class="fa fa-codepen"></i> Drones manager
                         </li>
                         <li class="active">
-                            <i class="fa fa-plus"></i> Conferma il tuo ordine
+                            <i class="fa fa-check"></i> Conferma il tuo ordine
                         </li>
                     </ol>
                 </div>
@@ -58,13 +58,13 @@
 
             <div class="row ">
                 <div class="col-lg-8 col-lg-offset-1">
-                    <h3 class="continued">Ordine confermato!</h3>
+                    <h3 class="continued">Ordine confermato!  <i class="fa fa-check check"></i></h3>
                 </div>
             </div>
             <hr>
-            <div class="row ">
-                <div class="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-1 col-xs-4 col-xs-offset-1 botton-order">
-                    <a href="{{ url("/newOrder") }}"><button class="btn btn-primary btn-lg btn-confirm-total ">Nuovo ordine</button></a>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-3 col-xs-4 col-xs-offset-3">
+                    <a href="{{ url("/insertAddress") }}"><button class="btn btn-primary btnOrder">Nuovo ordine</button></a>
                 </div>
             </div>
 

@@ -32,7 +32,7 @@
         <div>
             <li>
                 <span class="glyphicon glyphicon-arrow-down btn-lg"></span>
-                <p><i class="fa fa-fw fa-usd"></i> Confirm </p>
+                <p><i class="fa fa-fw fa-check"></i> Confirm </p>
             </li>
         </div>
     </ul>

@@ -37,7 +37,7 @@ class SchedulerController extends Controller
             $s->save();
         }
         return view('totalConfirm');
-        //return $arrayListTime;
+
     }
 
 }

@@ -33,7 +33,7 @@
         <div>
             <div class="ombra">
                 <span class="glyphicon glyphicon-arrow-down btn-lg"></span>
-                <p><i class="fa fa-fw fa-usd"></i> Confirm </p>
+                <p><i class="fa fa-fw fa-check"></i> Confirm </p>
             </li>
         </div>
     </ul>
@@ -50,11 +50,12 @@
                             <i class="fa fa-codepen"></i> Drones manager
                         </li>
                         <li class="active">
-                            <i class="fa fa-plus"></i> Conferma il tuo ordine
+                            <i class="fa fa-question-circle-o"></i> Conferma il tuo ordine
                         </li>
                     </ol>
                 </div>
             </div>
+
 
             <div class="row ">
                 <div class="col-lg-8 col-lg-offset-1">
@@ -79,6 +80,7 @@
                     <a href="{{ url("/newOrder") }}"><button class="btn btn-danger btn-lg btn-confirm">Annulla</button></a>
                 </div>
             </div>
+
 
         </div>
     </div>
