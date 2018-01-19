@@ -35,10 +35,11 @@ class Diary extends Model
 
             foreach ($slots as $s){
                 if($s->index == $i){
-
-                    $s->state = $state;
-                    $s->order_id = $orderId;
-                    $s->save();
+                    if($s->state == "free") {
+                        $s->state = $state;
+                        $s->order_id = $orderId;
+                        $s->save();
+                    }
                 }
             }
 
