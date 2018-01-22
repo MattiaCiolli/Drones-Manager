@@ -38,4 +38,13 @@ class Carrier extends Model
         //$this->free_slots = $freeSlots;
     }
 
+    public function syncTable()
+    {
+        return $this->belongsTo('App\Models\SyncTable');
+    }
+
+    public function setSyncTable($syncTable){
+        $this->syncTable()->associate($syncTable);
+    }
+
 }

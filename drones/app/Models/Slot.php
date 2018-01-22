@@ -25,7 +25,7 @@ class Slot extends Model
         $this->diary()->associate($diary);
     }
 
-    public function convertTimeIntoSlots($journeyTime)
+    public static function convertTimeIntoSlots($journeyTime)
     {
         return ceil($journeyTime/15);
     }
@@ -40,7 +40,7 @@ class Slot extends Model
 
     }
 
-    public function convertSlotsInTime($slotNumber)
+    public static function convertSlotsInTime($slotNumber)
     {
         $minTot = $slotNumber * config('slot.size');
         $hour = floor($minTot / 60);

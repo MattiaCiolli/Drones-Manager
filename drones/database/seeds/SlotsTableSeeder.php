@@ -11,7 +11,7 @@ class SlotsTableSeeder extends Seeder
      */
     public function run()
     {
-        for($j = 1; $j < 4; $j++) {
+        for($j = 1; $j < 8; $j++) {
             for ($i = 0; $i < 96; $i++) {
                 DB::table('slots')->insert([
                     'state' => 'free',

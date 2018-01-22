@@ -40,6 +40,7 @@ class SchedulerSyncTable
             array_push($freePilotsIds, (string)$freePilots[$i]->id);
         }
 
+
         foreach ($this->dronesIds as $drone){
             foreach ($this->pilotsIds as $pilot){
                 if (in_array($drone->id, $freeDronesIds) && in_array($pilot->id, $freePilotsIds) ){

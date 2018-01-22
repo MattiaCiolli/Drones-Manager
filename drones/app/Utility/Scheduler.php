@@ -10,6 +10,7 @@ namespace App\Utility;
 
 
 use App\Models\Slot;
+use App\Models\TransportOrder;
 use Carbon\Carbon;
 use Psy\Input\CodeArgument;
 
@@ -17,28 +18,35 @@ class Scheduler
 {
     public function getTimeDelivery($journeySlots, $numCarriers, $orderId){
 
+        $transportOrder = \App\Models\TransportOrder::find($orderId);
+        $orderCarriers = $transportOrder->carrier;
         $timeDeliveryArray = [];
-        for ($i = 0; $i< $numCarriers; $i++) {
+        foreach ($orderCarriers as $carrier){
+        //for ($i = 0; $i< $numCarriers; $i++) {
             $dronesList = \App\Models\Drone::select('id')->where('type', 'drone')->get();
-            //dd(typeOf($dronesList));
             $pilotsList = \App\Models\Pilot::select('id')->where('type', 'pilot')->get();
             $journeySlots = (int)$journeySlots;
+
+
+            /******************/
+            $syncTable = new \App\Models\SyncTable();
+            $syncTable->inizializzaSyncTable($dronesList, $pilotsList, $journeySlots);
+            $carrier->setSyncTable($syncTable);
+            $carrier->save();
+            /******************/
+
             $schedulerSyncTable = new SchedulerSyncTable($dronesList, $pilotsList, $journeySlots);
+
+
             $sizeOfDiary = config('slot.numberInADay');
             $droneCollection = new DronesCollection();
             $pilotCollection = new PilotsCollection();
             $technicianCollection = new TechniciansCollection();
-            $timeDelivery = [];
-            $listResources = [];
-            //cambiare l'indice di partenza in base all'orario in cui viene fatto l'ordine
             $time[0] = Carbon::Now()->hour +1;
             $time[1] = Carbon::Now()->minute;
-            $slottino = new Slot();
             $minutes = $time[0]*60 + $time[1] ;
-            $j = $slottino->convertTimeIntoSlots($minutes);
-            //$j = 0;
-            $freeDronesIds = [];   //collezione di oggetti
-            $freePilotsIds = [];
+            $j = Slot::convertTimeIntoSlots($minutes);
+
             $freeTechniciansIds = [];
             $startIndexSlot = 0;
             $timeDelivery = null;
@@ -50,12 +58,12 @@ class Scheduler
 
                     $freeDronesIds = $droneCollection->getFreeResources($j);
                     $freePilotsIds = $pilotCollection->getFreeResources($j);
-                    $listResources = $schedulerSyncTable->updateSyncTable($freeDronesIds, $freePilotsIds);
 
-                    /*
-                    if(count($freeDronesIds)>0 && count($freePilotsIds)>0) {
-                        $listResources = $schedulerSyncTable->updateSyncTable($freeDronesIds, $freePilotsIds);
-                    }*/
+                    $listResources = $syncTable->updateSyncTable($freeDronesIds, $freePilotsIds);
+
+
+                    //$listResources = $schedulerSyncTable->updateSyncTable($freeDronesIds, $freePilotsIds);
+
 
                     if(count($listResources)>0 && $listResources[2] == $journeySlots)
                     {
@@ -66,7 +74,6 @@ class Scheduler
                         }
 
                         if (count($listResources) != 0 && count($freeTechniciansIds) != 0) {
-                            //dd($listResources);
                             $idDrone = $listResources[0];
                             $idPilot = $listResources[1];
                             $idTechnician = $freeTechniciansIds[0];
@@ -77,10 +84,9 @@ class Scheduler
                             $pilotCollection->setState($idPilot, $startIndexSlot, $journeySlots, $state, $orderId);
                             $technicianCollection->setState($idTechnician->id, $startIndexSlot, $journeySlots, $state, $orderId);
 
-                            $slot = new Slot();
                             //corrisponde allo slot finale, cioè l'orario di arrivo dell'ordine
                             $slotNumber = $j;
-                            $timeDelivery = $slot->convertSlotsInTime($slotNumber);
+                            $timeDelivery = Slot::convertSlotsInTime($slotNumber);
                             array_push($timeDeliveryArray, $timeDelivery);
                             $trovatoTutto = true;
                         }
@@ -92,6 +98,8 @@ class Scheduler
 
             }
         }
+
+
 
         return $timeDeliveryArray;
     }
