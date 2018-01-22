@@ -50,3 +50,5 @@ Route::get('/confirmation', function () {
 Auth::routes();
 
 Route::get('/', 'HomeController@index');
+
+Route::get('/diary', 'HomeController@getDiaries');

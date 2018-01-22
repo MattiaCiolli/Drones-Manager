@@ -20,7 +20,9 @@
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
+    "laravel-echo": "^1.3.3",
     "morris.js.so": "^0.5.1",
+    "pusher-js": "^4.2.2",
     "raphael": "^2.2.7"
   }
 }

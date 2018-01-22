@@ -11,6 +11,10 @@ return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\DataMappers\\PathMapper' => $baseDir . '/app/DataMappers/PathMapper.php',
     'App\\DataMappers\\RegulationMapper' => $baseDir . '/app/DataMappers/RegulationMapper.php',
+<<<<<<< HEAD
+=======
+    'App\\Events\\ResourcesReserved' => $baseDir . '/app/Events/ResourcesReserved.php',
+>>>>>>> cb9be58cd0da34788036f0b0c5fff54e155c1a16
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
@@ -29,6 +33,7 @@ return array(
     'App\\Http\\ViewComposers\\ConfirmComposer' => $baseDir . '/app/Http/ViewComposers/ConfirmComposer.php',
     'App\\Http\\ViewComposers\\ProductComposer' => $baseDir . '/app/Http/ViewComposers/ProductComposer.php',
     'App\\Http\\ViewComposers\\SummaryComposer' => $baseDir . '/app/Http/ViewComposers/SummaryComposer.php',
+    'App\\Listeners\\SendResourcesReservedNotification' => $baseDir . '/app/Listeners/SendResourcesReservedNotification.php',
     'App\\Models\\Address' => $baseDir . '/app/Models/Address.php',
     'App\\Models\\Carrier' => $baseDir . '/app/Models/Carrier.php',
     'App\\Models\\Catalog' => $baseDir . '/app/Models/Catalog.php',
@@ -47,7 +52,10 @@ return array(
     'App\\Models\\ProductDescription' => $baseDir . '/app/Models/ProductDescription.php',
     'App\\Models\\Resource' => $baseDir . '/app/Models/Resource.php',
     'App\\Models\\Slot' => $baseDir . '/app/Models/Slot.php',
+<<<<<<< HEAD
     'App\\Models\\SyncTable' => $baseDir . '/app/Models/SyncTable.php',
+=======
+>>>>>>> cb9be58cd0da34788036f0b0c5fff54e155c1a16
     'App\\Models\\Technician' => $baseDir . '/app/Models/Technician.php',
     'App\\Models\\TransportEnterprise' => $baseDir . '/app/Models/TransportEnterprise.php',
     'App\\Models\\TransportMaitre' => $baseDir . '/app/Models/TransportMaitre.php',
@@ -1018,6 +1026,9 @@ return array(
     'GeoJson\\Geometry\\Point' => $vendorDir . '/jmikola/geojson/src/GeoJson/Geometry/Point.php',
     'GeoJson\\Geometry\\Polygon' => $vendorDir . '/jmikola/geojson/src/GeoJson/Geometry/Polygon.php',
     'GeoJson\\JsonUnserializable' => $vendorDir . '/jmikola/geojson/src/GeoJson/JsonUnserializable.php',
+    'GrahamCampbell\\Manager\\AbstractManager' => $vendorDir . '/graham-campbell/manager/src/AbstractManager.php',
+    'GrahamCampbell\\Manager\\ConnectorInterface' => $vendorDir . '/graham-campbell/manager/src/ConnectorInterface.php',
+    'GrahamCampbell\\Manager\\ManagerInterface' => $vendorDir . '/graham-campbell/manager/src/ManagerInterface.php',
     'Hamcrest\\Arrays\\IsArray' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArray.php',
     'Hamcrest\\Arrays\\IsArrayContaining' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContaining.php',
     'Hamcrest\\Arrays\\IsArrayContainingInAnyOrder' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContainingInAnyOrder.php',
@@ -2972,6 +2983,13 @@ return array(
     'Psy\\VersionUpdater\\GitHubChecker' => $vendorDir . '/psy/psysh/src/Psy/VersionUpdater/GitHubChecker.php',
     'Psy\\VersionUpdater\\IntervalChecker' => $vendorDir . '/psy/psysh/src/Psy/VersionUpdater/IntervalChecker.php',
     'Psy\\VersionUpdater\\NoopChecker' => $vendorDir . '/psy/psysh/src/Psy/VersionUpdater/NoopChecker.php',
+    'Pusher\\Laravel\\Facades\\Pusher' => $vendorDir . '/vinkla/pusher/src/Facades/Pusher.php',
+    'Pusher\\Laravel\\PusherFactory' => $vendorDir . '/vinkla/pusher/src/PusherFactory.php',
+    'Pusher\\Laravel\\PusherManager' => $vendorDir . '/vinkla/pusher/src/PusherManager.php',
+    'Pusher\\Laravel\\PusherServiceProvider' => $vendorDir . '/vinkla/pusher/src/PusherServiceProvider.php',
+    'Pusher\\Pusher' => $vendorDir . '/pusher/pusher-php-server/src/Pusher.php',
+    'Pusher\\PusherException' => $vendorDir . '/pusher/pusher-php-server/src/PusherException.php',
+    'Pusher\\PusherInstance' => $vendorDir . '/pusher/pusher-php-server/src/PusherInstance.php',
     'Ramsey\\Uuid\\BinaryUtils' => $vendorDir . '/ramsey/uuid/src/BinaryUtils.php',
     'Ramsey\\Uuid\\Builder\\DefaultUuidBuilder' => $vendorDir . '/ramsey/uuid/src/Builder/DefaultUuidBuilder.php',
     'Ramsey\\Uuid\\Builder\\DegradedUuidBuilder' => $vendorDir . '/ramsey/uuid/src/Builder/DegradedUuidBuilder.php',

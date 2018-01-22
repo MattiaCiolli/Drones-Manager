@@ -60,6 +60,8 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         ),
         'P' => 
         array (
+            'Pusher\\Laravel\\' => 15,
+            'Pusher\\' => 7,
             'Psy\\' => 4,
             'Psr\\SimpleCache\\' => 16,
             'Psr\\Log\\' => 8,
@@ -82,6 +84,7 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         ),
         'G' => 
         array (
+            'GrahamCampbell\\Manager\\' => 23,
             'GeoIO\\WKB\\Parser\\' => 17,
             'GeoIO\\' => 6,
         ),
@@ -202,6 +205,14 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
         ),
+        'Pusher\\Laravel\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vinkla/pusher/src',
+        ),
+        'Pusher\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/pusher/pusher-php-server/src',
+        ),
         'Psy\\' => 
         array (
             0 => __DIR__ . '/..' . '/psy/psysh/src/Psy',
@@ -241,6 +252,10 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         'Illuminate\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate',
+        ),
+        'GrahamCampbell\\Manager\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/graham-campbell/manager/src',
         ),
         'GeoIO\\WKB\\Parser\\' => 
         array (
@@ -375,6 +390,10 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\DataMappers\\PathMapper' => __DIR__ . '/../..' . '/app/DataMappers/PathMapper.php',
         'App\\DataMappers\\RegulationMapper' => __DIR__ . '/../..' . '/app/DataMappers/RegulationMapper.php',
+<<<<<<< HEAD
+=======
+        'App\\Events\\ResourcesReserved' => __DIR__ . '/../..' . '/app/Events/ResourcesReserved.php',
+>>>>>>> cb9be58cd0da34788036f0b0c5fff54e155c1a16
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
@@ -393,6 +412,7 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         'App\\Http\\ViewComposers\\ConfirmComposer' => __DIR__ . '/../..' . '/app/Http/ViewComposers/ConfirmComposer.php',
         'App\\Http\\ViewComposers\\ProductComposer' => __DIR__ . '/../..' . '/app/Http/ViewComposers/ProductComposer.php',
         'App\\Http\\ViewComposers\\SummaryComposer' => __DIR__ . '/../..' . '/app/Http/ViewComposers/SummaryComposer.php',
+        'App\\Listeners\\SendResourcesReservedNotification' => __DIR__ . '/../..' . '/app/Listeners/SendResourcesReservedNotification.php',
         'App\\Models\\Address' => __DIR__ . '/../..' . '/app/Models/Address.php',
         'App\\Models\\Carrier' => __DIR__ . '/../..' . '/app/Models/Carrier.php',
         'App\\Models\\Catalog' => __DIR__ . '/../..' . '/app/Models/Catalog.php',
@@ -411,7 +431,10 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         'App\\Models\\ProductDescription' => __DIR__ . '/../..' . '/app/Models/ProductDescription.php',
         'App\\Models\\Resource' => __DIR__ . '/../..' . '/app/Models/Resource.php',
         'App\\Models\\Slot' => __DIR__ . '/../..' . '/app/Models/Slot.php',
+<<<<<<< HEAD
         'App\\Models\\SyncTable' => __DIR__ . '/../..' . '/app/Models/SyncTable.php',
+=======
+>>>>>>> cb9be58cd0da34788036f0b0c5fff54e155c1a16
         'App\\Models\\Technician' => __DIR__ . '/../..' . '/app/Models/Technician.php',
         'App\\Models\\TransportEnterprise' => __DIR__ . '/../..' . '/app/Models/TransportEnterprise.php',
         'App\\Models\\TransportMaitre' => __DIR__ . '/../..' . '/app/Models/TransportMaitre.php',
@@ -1382,6 +1405,9 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         'GeoJson\\Geometry\\Point' => __DIR__ . '/..' . '/jmikola/geojson/src/GeoJson/Geometry/Point.php',
         'GeoJson\\Geometry\\Polygon' => __DIR__ . '/..' . '/jmikola/geojson/src/GeoJson/Geometry/Polygon.php',
         'GeoJson\\JsonUnserializable' => __DIR__ . '/..' . '/jmikola/geojson/src/GeoJson/JsonUnserializable.php',
+        'GrahamCampbell\\Manager\\AbstractManager' => __DIR__ . '/..' . '/graham-campbell/manager/src/AbstractManager.php',
+        'GrahamCampbell\\Manager\\ConnectorInterface' => __DIR__ . '/..' . '/graham-campbell/manager/src/ConnectorInterface.php',
+        'GrahamCampbell\\Manager\\ManagerInterface' => __DIR__ . '/..' . '/graham-campbell/manager/src/ManagerInterface.php',
         'Hamcrest\\Arrays\\IsArray' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArray.php',
         'Hamcrest\\Arrays\\IsArrayContaining' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContaining.php',
         'Hamcrest\\Arrays\\IsArrayContainingInAnyOrder' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContainingInAnyOrder.php',
@@ -3336,6 +3362,13 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         'Psy\\VersionUpdater\\GitHubChecker' => __DIR__ . '/..' . '/psy/psysh/src/Psy/VersionUpdater/GitHubChecker.php',
         'Psy\\VersionUpdater\\IntervalChecker' => __DIR__ . '/..' . '/psy/psysh/src/Psy/VersionUpdater/IntervalChecker.php',
         'Psy\\VersionUpdater\\NoopChecker' => __DIR__ . '/..' . '/psy/psysh/src/Psy/VersionUpdater/NoopChecker.php',
+        'Pusher\\Laravel\\Facades\\Pusher' => __DIR__ . '/..' . '/vinkla/pusher/src/Facades/Pusher.php',
+        'Pusher\\Laravel\\PusherFactory' => __DIR__ . '/..' . '/vinkla/pusher/src/PusherFactory.php',
+        'Pusher\\Laravel\\PusherManager' => __DIR__ . '/..' . '/vinkla/pusher/src/PusherManager.php',
+        'Pusher\\Laravel\\PusherServiceProvider' => __DIR__ . '/..' . '/vinkla/pusher/src/PusherServiceProvider.php',
+        'Pusher\\Pusher' => __DIR__ . '/..' . '/pusher/pusher-php-server/src/Pusher.php',
+        'Pusher\\PusherException' => __DIR__ . '/..' . '/pusher/pusher-php-server/src/PusherException.php',
+        'Pusher\\PusherInstance' => __DIR__ . '/..' . '/pusher/pusher-php-server/src/PusherInstance.php',
         'Ramsey\\Uuid\\BinaryUtils' => __DIR__ . '/..' . '/ramsey/uuid/src/BinaryUtils.php',
         'Ramsey\\Uuid\\Builder\\DefaultUuidBuilder' => __DIR__ . '/..' . '/ramsey/uuid/src/Builder/DefaultUuidBuilder.php',
         'Ramsey\\Uuid\\Builder\\DegradedUuidBuilder' => __DIR__ . '/..' . '/ramsey/uuid/src/Builder/DegradedUuidBuilder.php',

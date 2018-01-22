@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Drone;
+
 class HomeController extends Controller
 {
     /**
@@ -30,4 +32,13 @@ class HomeController extends Controller
     {
         return view('newOrder');
     }
+
+	public function getDiaries()
+	{
+		$drones = Drone::where('type', 'drone')->get();
+		$pilots = Drone::where('type', 'pilot')->get();
+		$technicians = Drone::where('type', 'technician')->get();
+
+		return view('diaries', ["drones" => $drones, "pilots" => $pilots, "technicians" => $technicians]);
+	}
 }
