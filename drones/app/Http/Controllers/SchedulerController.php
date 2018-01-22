@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\TransportOrder;
+use App\Events\ResourcesReserved;
 use App\Models\Slot;
 use App\Utility\Scheduler;
 use Illuminate\Http\Request;
@@ -36,6 +37,13 @@ class SchedulerController extends Controller
             $s->state = "busy";
             $s->save();
         }
+
+		$drones = collect(["droneId" => 1, "slot" => 5, "consecutive" => 3]);
+		$pilots = collect(["pilotId" => 2, "slot" => 5, "consecutive" => 3]);
+		$technicians = collect(["techniciansId" => 3, "slot" => 5]);
+
+		event(new ResourcesReserved($drones, $pilots, $technicians));
+
         return view('totalConfirm');
 
     }
