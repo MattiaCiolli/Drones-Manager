@@ -11,10 +11,7 @@ return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\DataMappers\\PathMapper' => $baseDir . '/app/DataMappers/PathMapper.php',
     'App\\DataMappers\\RegulationMapper' => $baseDir . '/app/DataMappers/RegulationMapper.php',
-<<<<<<< HEAD
-=======
     'App\\Events\\ResourcesReserved' => $baseDir . '/app/Events/ResourcesReserved.php',
->>>>>>> cb9be58cd0da34788036f0b0c5fff54e155c1a16
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
@@ -52,10 +49,7 @@ return array(
     'App\\Models\\ProductDescription' => $baseDir . '/app/Models/ProductDescription.php',
     'App\\Models\\Resource' => $baseDir . '/app/Models/Resource.php',
     'App\\Models\\Slot' => $baseDir . '/app/Models/Slot.php',
-<<<<<<< HEAD
     'App\\Models\\SyncTable' => $baseDir . '/app/Models/SyncTable.php',
-=======
->>>>>>> cb9be58cd0da34788036f0b0c5fff54e155c1a16
     'App\\Models\\Technician' => $baseDir . '/app/Models/Technician.php',
     'App\\Models\\TransportEnterprise' => $baseDir . '/app/Models/TransportEnterprise.php',
     'App\\Models\\TransportMaitre' => $baseDir . '/app/Models/TransportMaitre.php',

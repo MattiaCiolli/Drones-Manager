@@ -14,9 +14,9 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
+        'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
-        'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -390,10 +390,7 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\DataMappers\\PathMapper' => __DIR__ . '/../..' . '/app/DataMappers/PathMapper.php',
         'App\\DataMappers\\RegulationMapper' => __DIR__ . '/../..' . '/app/DataMappers/RegulationMapper.php',
-<<<<<<< HEAD
-=======
         'App\\Events\\ResourcesReserved' => __DIR__ . '/../..' . '/app/Events/ResourcesReserved.php',
->>>>>>> cb9be58cd0da34788036f0b0c5fff54e155c1a16
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
@@ -431,10 +428,7 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         'App\\Models\\ProductDescription' => __DIR__ . '/../..' . '/app/Models/ProductDescription.php',
         'App\\Models\\Resource' => __DIR__ . '/../..' . '/app/Models/Resource.php',
         'App\\Models\\Slot' => __DIR__ . '/../..' . '/app/Models/Slot.php',
-<<<<<<< HEAD
         'App\\Models\\SyncTable' => __DIR__ . '/../..' . '/app/Models/SyncTable.php',
-=======
->>>>>>> cb9be58cd0da34788036f0b0c5fff54e155c1a16
         'App\\Models\\Technician' => __DIR__ . '/../..' . '/app/Models/Technician.php',
         'App\\Models\\TransportEnterprise' => __DIR__ . '/../..' . '/app/Models/TransportEnterprise.php',
         'App\\Models\\TransportMaitre' => __DIR__ . '/../..' . '/app/Models/TransportMaitre.php',
