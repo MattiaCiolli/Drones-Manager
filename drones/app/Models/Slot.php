@@ -45,6 +45,12 @@ class Slot extends Model
         $minTot = $slotNumber * config('slot.size');
         $hour = floor($minTot / 60);
         $min = $minTot % 60;
+        if($hour<10){
+            $hour = "0".$hour;
+        }
+        if($min<10){
+            $min = "0".$min;
+        }
         $arrivalTime = "$hour:$min";
         return $arrivalTime;
 

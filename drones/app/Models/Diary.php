@@ -10,7 +10,7 @@ class Diary extends Model
 
     public function slots()
     {
-        return $this->hasMany('App\Models\Slot');
+        return $this->hasMany('App\Models\Slot')->orderBy('index');
     }
 
     public function setSlots($slots)

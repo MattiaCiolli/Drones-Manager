@@ -1,128 +1,85 @@
-<!doctype html>
-<html lang="en">
-    <head>
-		<meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <meta name="description" content="">
-	    <meta name="author" content="">
+@extends('layout.app2')
 
-	    <title>Drones Manager - @yield('title')</title>
+@section('title', 'Diaries')
 
-	    <meta name="csrf-token" content="{{ csrf_token() }}">
+@section('content')
+        <div class="tables">
 
-		<link rel="stylesheet" href="/css/bootstrap.css">
-		<link rel="stylesheet" href="/css/app.css">
+			<table class="table table-bordered">
+				<thead class="thead-light">
+					<tr>
+					<th scope="col">Orario</th>
+					@foreach($drones as $drone)
+						<th scope="col">Drone {{$drone->diary->id}}</th>
+					@endforeach
+					@foreach($pilots as $pilot)
+						<th scope="col">Pilota {{$pilot->diary->id}}</th>
+					@endforeach
+					@foreach($technicians as $tech)
+						<th scope="col">Tecnico {{$tech->diary->id}}</th>
+					@endforeach
+					</tr>
+				</thead>
+				<tbody>
 
-		<script src="/js/app.js"></script>
+				@for ($i = 0; $i < 96; $i++)
+					<tr>
+						<th scope="row">
+							@php
+								$minTot = $i * config('slot.size');
+								$hour = floor($minTot / 60);
+								$min = $minTot % 60;
+								if($hour<10){
+								$hour = "0".$hour;
+								}
+								if($min<10){
+								$min = "0".$min;
+								}
+								$arrivalTime = "$hour:$min";
+							@endphp
+							{{$arrivalTime}}
+						</th>
+						@foreach($drones as $drone)
+							@if($drone->diary->slots[$i]->state == "reserved")
+								<th class="warning " id="droneId{{$drone->diary->id}}{{$i}}" >{{$drone->diary->slots[$i]->state}}</th>
+							@elseif($drone->diary->slots[$i]->state == "busy")
+								<th class="danger " id="droneId{{$drone->diary->id}}{{$i}}">{{$drone->diary->slots[$i]->state}}</th>
+							@else
+								<th class="success " id="droneId{{$drone->diary->id}}{{$i}}">{{$drone->diary->slots[$i]->state}}</th>
+							@endif
 
-		<style>
-			table, th, td {
-			border: 1px solid black;
-			}
-			body {
-			    margin-top: 0px;
-			    background-color: #FFFFFF;
-			}
-		</style>
-    </head>
+						@endforeach
 
-    <body>
-        <div class="container-fluid">
-			@foreach ($drones as $drone)
-				<div class="row">
-					<div class="col-md-12">
-						<h4>Drone {{$drone->diary->id}}</h4>
-					</div>
-				</div>
-				<div class="row">
-				   <div class="col-md-12">
-					   <table id="drone{{$drone->diary->id}}">
-						   <tr>
-							   @for($i = 0; $i < 96; $i++)
-								   <th>{{$i}}</th>
-							   @endfor
-						   </tr>
-						   <tr>
-								@foreach($drone->diary->slots->sortBy('index') as $i => $slot)
-									@if($slot->state == "reserved")
-										<td bgcolor="#ffff00" id="{{$i}}">{{$slot->state}}</td>
-									@elseif($slot->state == "busy")
-										<td bgcolor="#ff0000" id="{{$i}}">{{$slot->state}}</td>
-									@else
-										<td bgcolor="#ffffff" id="{{$i}}">{{$slot->state}}</td>
-									@endif
-								@endforeach
-						   </tr>
-					   </table>
-				   </div>
-			   </div>
-			   <br>
-			@endforeach
+						@foreach($pilots as $pilot)
 
-			@foreach ($pilots as $pilot)
-				<div class="row">
-					<div class="col-md-12">
-						<h4>Pilota {{$pilot->diary->id}}</h4>
-					</div>
-				</div>
-				<div class="row">
-				   <div class="col-md-12">
-					   <table id="pilot{{$pilot->diary->id}}">
-						   <tr>
-							   @for ($i = 0; $i < 96; $i++)
-								   <th>{{$i}}</th>
-							   @endfor
-						   </tr>
-						   <tr>
-								@foreach($pilot->diary->slots->sortBy('index') as $j => $slot)
-									@if($slot->state == "reserved")
-										<td bgcolor="#ffff00" id="{{$j}}">{{$slot->state}}</td>
-									@elseif($slot->state == "busy")
-										<td bgcolor="#ff0000" id="{{$j}}">{{$slot->state}}</td>
-									@else
-										<td bgcolor="#ffffff" id="{{$j}}">{{$slot->state}}</td>
-									@endif
-								@endforeach
-						   </tr>
-					   </table>
-				   </div>
-			   </div>
-			   <br>
-			@endforeach
+							@if($pilot->diary->slots[$i]->state == "reserved")
+								<th class="warning " id="pilotId{{$pilot->diary->id}}{{$i}}">{{$pilot->diary->slots[$i]->state}}</th>
+							@elseif($pilot->diary->slots[$i]->state == "busy")
+								<th class="danger " id="pilotId{{$pilot->diary->id}}{{$i}}">{{$pilot->diary->slots[$i]->state}}</th>
+							@else
+								<th class="success " id="pilotId{{$pilot->diary->id}}{{$i}}">{{$pilot->diary->slots[$i]->state}}</th>
+							@endif
 
-			@foreach ($technicians as $technician)
-				<div class="row">
-					<div class="col-md-12">
-						<h4>Addetti al drone {{$technician->diary->id}}</h4>
-					</div>
-				</div>
-				<div class="row">
-				   <div class="col-md-12">
-					   <table id="technician{{$technician->diary->id}}">
-						   <tr>
-							   @for ($i = 0; $i < 96; $i++)
-								   <th>&nbsp{{$i}}</th>
-							   @endfor
-						   </tr>
-						   <tr>
-								@foreach($technician->diary->slots->sortBy('index') as $p => $slot)
-									@if($slot->state == "reserved")
-										<td bgcolor="#ffff00" id="{{$p}}">{{$slot->state}}</td>
-									@elseif($slot->state == "busy")
-										<td bgcolor="#ff0000" id="{{$p}}">{{$slot->state}}</td>
-									@else
-										<td bgcolor="#ffffff" id="{{$p}}">{{$slot->state}}</td>
-									@endif
-								@endforeach
-						   </tr>
-					   </table>
-				   </div>
-			   </div>
-			   <br>
-			@endforeach
+						@endforeach
+						@foreach($technicians as $tech)
+
+							@if($tech->diary->slots[$i]->state == "reserved")
+								<th class="warning" id="technicianId{{$tech->diary->id}}{{$i}}">{{$tech->diary->slots[$i]->state}}</th>
+							@elseif($tech->diary->slots[$i]->state == "busy")
+								<th class="danger " id="technicianId{{$tech->diary->id}}{{$i}}">{{$tech->diary->slots[$i]->state}}</th>
+							@else
+								<th class="success " id="technicianId{{$tech->diary->id}}{{$i}}">{{$tech->diary->slots[$i]->state}}</th>
+							@endif
+
+						@endforeach
+					</tr>
+				@endfor
+
+				</tbody>
+			</table>
         </div>
-    </body>
+
+@endsection
 
 	<script src="https://js.pusher.com/4.1/pusher.min.js"></script>
 
@@ -140,21 +97,21 @@
 			channel.bind("App\\Events\\ResourcesReserved", function(data) {
 				data.drones.forEach(function(drone){
 					for (var i = drone.slot; i < drone.slot + drone.consecutive; i++) {
-						var droneSearch = "#drone" + drone.droneId + " td[id='" + i + "']";
+						var droneSearch = "#drone" + drone.droneId + "" + i;
 						$(droneSearch).css("background-color", "red");
 					}
 				});
 
 				data.pilots.forEach(function(pilot){
 					for (var i = pilot.slot; i < pilot.slot + pilot.consecutive; i++) {
-						var droneSearch = "#pilot" + pilot.pilotId + " td[id='" + i + "']";
+						var droneSearch = "#pilot" + pilot.pilotId + "" + i;
 						$(droneSearch).css("background-color", "red");
 					}
 				});
 
 				data.technicians.forEach(function(technician){
 					for (var i = technician.slot; i < technician.slot + technician.consecutive; i++) {
-						var droneSearch = "#technician" + technician.technicianId + " td[id='" + i + "']";
+						var droneSearch = "#technician" + technician.technicianId + "" + i;
 						$(droneSearch).css("background-color", "red");
 					}
 				});
@@ -162,4 +119,16 @@
 	    	});
 
   	</script>
-</html>
+
+<script>
+
+    oreMin = new Array();
+
+    for(i=0; i<96; i++){
+        minTot = i * 15;
+        ore = Math.round(minTot / 60);
+        minuti = minTot%60;
+        oreMin[i] = ore+":"+minuti;
+	}
+
+</script>
