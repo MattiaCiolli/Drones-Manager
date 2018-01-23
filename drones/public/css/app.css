@@ -294,6 +294,13 @@ h1.continued{
 .check{
   color: green;
 }
+.tables{
+  padding: 30px;
+}
+
+.over-wrapper{
+  background-color: whitesmoke;
+}
 /*!
  * Start Bootstrap - SB Admin (http://startbootstrap.com/)
  * Copyright 2013-2016 Start Bootstrap
