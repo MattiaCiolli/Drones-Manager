@@ -99,6 +99,7 @@
 					for (var i = drone.slot; i < drone.slot + drone.consecutive; i++) {
 						var droneSearch = "#droneId" + drone.droneId + "" + i;
                         $(droneSearch).addClass("danger");
+                        document.getElementById(droneSearch).innerHTML = "Busy";
 					}
 				});
 
@@ -106,6 +107,7 @@
 					for (var i = pilot.slot; i < pilot.slot + pilot.consecutive; i++) {
 						var pilotSearch = "#pilotId" + pilot.pilotId + "" + i;
 						$(pilotSearch).addClass("danger");
+                        document.getElementById(pilotSearch).innerHTML = "Busy";
 					}
 				});
 
@@ -113,6 +115,7 @@
 					for (var i = technician.slot; i < technician.slot + technician.consecutive; i++) {
 						var techSearch = "#technicianId" + technician.technicianId + "" + i;
 						$(techSearch).addClass("danger");
+                        document.getElementById(techSearch).innerHTML = "Busy";
 					}
 				});
 
