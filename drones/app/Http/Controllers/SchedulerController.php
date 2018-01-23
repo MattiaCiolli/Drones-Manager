@@ -47,7 +47,7 @@ class SchedulerController extends Controller
 			$technicians->push(["technicianId" => $carri->syncTable->findTechnicianIndex, "slot" => $carri->syncTable->scanIndex, "consecutive" => $carri->syncTable->journey_slots]);
         }
 
-		event(new ResourcesReserved($drones, $pilots, $technicians));
+		//event(new ResourcesReserved($drones, $pilots, $technicians));
 
         return view('totalConfirm');
 

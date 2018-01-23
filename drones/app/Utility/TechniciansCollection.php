@@ -16,7 +16,7 @@ class TechniciansCollection extends ResourcesCollection
         $freeTechList = [];
         $techList = \App\Models\Technician::where('type', 'technician')->get();
         foreach ($techList as $tech){
-            $stateTech = $tech->isFree($slot);
+            $stateTech = $tech->isFree($slot);;
             if ($stateTech == 'free'){
                 array_push($freeTechList,$tech);
             }
@@ -27,7 +27,6 @@ class TechniciansCollection extends ResourcesCollection
     public function setState($idResource, $startIndexSlot, $journeySlot, $state)
     {
         $resource = \App\Models\Technician::where('id',$idResource)->first();
-        //dd($journeySlot);
         $resource->setState($startIndexSlot, $journeySlot, $state);
     }
 }
