@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\TransportOrder;
 use App\Events\ResourcesReserved;
 use App\Models\Slot;
-use App\Utility\Scheduler;
+use App\Utility\SchedulerContext;
+
 use Illuminate\Http\Request;
+
 
 class SchedulerController extends Controller
 {
@@ -20,8 +22,8 @@ class SchedulerController extends Controller
         $slot = new Slot();
         $journeySlots = $slot->convertTimeIntoSlots($journeyTime);
         $numCarriers = $transportOrder->getNumCarriers();
-        $scheduler = new Scheduler();
-        $timeDelivery = $scheduler->getTimeDelivery($journeySlots, $numCarriers, $idOrder);
+        $schedulerContext = new SchedulerContext($transportOrder);
+        $timeDelivery = $schedulerContext->getTimeDelivery($journeySlots);
         return view('confirm', ['timeDelivery' => $timeDelivery]);
         //return $arrayListTime;
     }
@@ -31,8 +33,8 @@ class SchedulerController extends Controller
         $transportOrder = new TransportOrder();
         $transportOrder = \App\Models\TransportOrder::find($idOrder);
 
-        $scheduler = new Scheduler();
-        $scheduler->confirmedOrder($idOrder);
+        $scheduler = new SchedulerContext($transportOrder);
+        $scheduler->confirmedOrder();
 
         $carrier = $transportOrder->carrier;
 
@@ -47,7 +49,7 @@ class SchedulerController extends Controller
 			$technicians->push(["technicianId" => $carri->syncTable->findTechnicianIndex, "slot" => $carri->syncTable->scanIndex, "consecutive" => $carri->syncTable->journey_slots]);
         }
 
-		//event(new ResourcesReserved($drones, $pilots, $technicians));
+		event(new ResourcesReserved($drones, $pilots, $technicians));
 
         return view('totalConfirm');
 
