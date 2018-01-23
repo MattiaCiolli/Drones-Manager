@@ -14,8 +14,9 @@ class AddPilotidAndDroneidToSynctable extends Migration
     public function up()
     {
         Schema::table('sync_tables', function (Blueprint $table) {
-            $table->integer('findDronIndex')->nullable();;
-            $table->integer('findPilotIndex')->nullable();;
+            $table->integer('findDronIndex')->nullable();
+            $table->integer('findPilotIndex')->nullable();
+            $table->integer('findTechnicianIndex')->nullable();
         });
     }
 

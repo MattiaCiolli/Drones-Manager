@@ -28,14 +28,10 @@ class Scheduler
             $journeySlots = (int)$journeySlots;
 
 
-            /******************/
             $syncTable = new \App\Models\SyncTable();
             $syncTable->inizializzaSyncTable($dronesList, $pilotsList, $journeySlots);
             $carrier->setSyncTable($syncTable);
             $carrier->save();
-            /******************/
-
-            $schedulerSyncTable = new SchedulerSyncTable($dronesList, $pilotsList, $journeySlots);
 
 
             $sizeOfDiary = config('slot.numberInADay');
@@ -43,6 +39,7 @@ class Scheduler
             $pilotCollection = new PilotsCollection();
             $technicianCollection = new TechniciansCollection();
             $time[0] = Carbon::Now()->hour +1;
+            if($time[0] == 24){$time[0]=0;}
             $time[1] = Carbon::Now()->minute;
             $minutes = $time[0]*60 + $time[1] ;
             $j = Slot::convertTimeIntoSlots($minutes);
@@ -51,6 +48,10 @@ class Scheduler
             $startIndexSlot = 0;
             $timeDelivery = null;
             $trovatoTutto = false;
+
+
+            $syncTable->setScanIndex($j);
+            $syncTable->save();
             while ($trovatoTutto == false && $j < $sizeOfDiary) {
 
                 $trovato = false;
@@ -62,7 +63,6 @@ class Scheduler
                     $listResources = $syncTable->updateSyncTable($freeDronesIds, $freePilotsIds);
 
 
-                    //$listResources = $schedulerSyncTable->updateSyncTable($freeDronesIds, $freePilotsIds);
 
 
                     if(count($listResources)>0 && $listResources[2] == $journeySlots)
@@ -77,12 +77,16 @@ class Scheduler
                             $idDrone = $listResources[0];
                             $idPilot = $listResources[1];
                             $idTechnician = $freeTechniciansIds[0];
+
+                            $syncTable->setFindTechnicianIndex($idTechnician->id);
+                            $syncTable->save();
+
                             $state = 'reserved';
                             $startIndexSlot = $j - $journeySlots;
 
                             $droneCollection->setState($idDrone, $startIndexSlot, $journeySlots, $state, $orderId);
                             $pilotCollection->setState($idPilot, $startIndexSlot, $journeySlots, $state, $orderId);
-                            $technicianCollection->setState($idTechnician->id, $startIndexSlot, $journeySlots, $state, $orderId);
+                            $technicianCollection->setState($idTechnician->id, $startIndexSlot, 1, $state, $orderId);
 
                             //corrisponde allo slot finale, cioè l'orario di arrivo dell'ordine
                             $slotNumber = $j;
@@ -93,6 +97,8 @@ class Scheduler
 
                     }
 
+                    $syncTable->setScanIndex($j-1);
+                    $syncTable->save();
                     $j++;
                 }
 

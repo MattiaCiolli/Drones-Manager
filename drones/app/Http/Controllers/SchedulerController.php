@@ -32,10 +32,29 @@ class SchedulerController extends Controller
         $transportOrder = \App\Models\TransportOrder::find($idOrder);
         $slots = $transportOrder->slots;
 
+        /*
         foreach ($slots as $s)
         {
             $s->state = "busy";
             $s->save();
+        }
+        */
+
+        $carrier = $transportOrder->carrier;
+
+        //trovato bug per il tecnico per il caso di piu carrier. Sono affidati allo stesso tecnico
+        foreach ($carrier as $carri){
+            echo 'd'.$carri->syncTable->findDronIndex;
+            echo 'p'.$carri->syncTable->findPilotIndex;
+            echo 't'.$carri->syncTable->findTechnicianIndex;
+            echo 'i'.$indiceFound= $carri->syncTable->scanIndex;
+            echo 'j'.$numSlot=$carri->syncTable->journey_slots;
+            echo '___';
+            for($i=$indiceFound-$numSlot+1; $i<=$indiceFound; $i++){
+                // l'inidice $i corrisponde agli index degli slot dei droni e piloti da occupare
+                // trovare modo semplice per occuparli o nel caso creare funzione esterna che li trova
+                // per poi occuparli
+            }
         }
 
 		$drones = collect(["droneId" => 1, "slot" => 5, "consecutive" => 3]);

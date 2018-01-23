@@ -8,12 +8,15 @@ class SyncTable extends Model
 {
 
     protected $table = 'sync_tables';
-    protected $fillable = ['matrice', 'scanIndex', 'journey_slots'];
+    protected $fillable = ['matrice', 'scanIndex', 'journey_slots', 'findDronIndex', 'findPilotIndex', 'findTechnicianIndex'];
 
 
     private $matrice;
     private $scanIndex;
     private $journey_slots;
+    private $findDronIndex;
+    private $findPilotIndex;
+    private $findTechnicianIndex;
 
     public function inizializzaSyncTable($dronesIds, $pilotsIds, $journeySlots)
     {
@@ -67,6 +70,12 @@ class SyncTable extends Model
 
         $listResources = $this->checkReachability($idsDronesMatrix, $idsPilotsMatrix);
 
+
+        if(count($listResources)!=0){
+            $this->setFindDronIndex($listResources[0]);
+            $this->setFindPilotIndex($listResources[1]);
+            $this->save();
+        }
         return $listResources;
     }
 
@@ -103,6 +112,21 @@ class SyncTable extends Model
     public function setScanIndex($scanIndex)
     {
         $this->fill(['scanIndex' => $scanIndex]);
+    }
+
+    public function setFindDronIndex($findDronIndex)
+    {
+        $this->fill(['findDronIndex' => $findDronIndex]);
+    }
+
+    public function setFindPilotIndex($findPilotIndex)
+    {
+        $this->fill(['findPilotIndex' => $findPilotIndex]);
+    }
+
+    public function setFindTechnicianIndex($findTechnicianIndex)
+    {
+        $this->fill(['findTechnicianIndex' => $findTechnicianIndex]);
     }
 
     public function getJourneySlots(){
