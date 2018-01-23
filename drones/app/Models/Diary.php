@@ -40,6 +40,11 @@ class Diary extends Model
                         $s->order_id = $orderId;
                         $s->save();
                     }
+                    if($s->state == "reserved") {
+                        $s->state = $state;
+                        $s->order_id = $orderId;
+                        $s->save();
+                    }
                 }
             }
 

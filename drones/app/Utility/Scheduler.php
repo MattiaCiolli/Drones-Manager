@@ -110,5 +110,22 @@ class Scheduler
         return $timeDeliveryArray;
     }
 
+    public function confirmedOrder($orderId){
+        $transportOrder = \App\Models\TransportOrder::find($orderId);
+        $carrier = $transportOrder->carrier;
+        $droneCollection = new DronesCollection();
+        $pilotCollection = new PilotsCollection();
+        $technicianCollection = new TechniciansCollection();
+
+        $state = 'busy';
+        foreach ($carrier as $carri){
+            $syncTable = $carri->syncTable;
+            $startIndexSlot = ($syncTable->scanIndex)-($syncTable->journey_slots)+1;
+            $droneCollection->setState($syncTable->findDronIndex, $startIndexSlot, $syncTable-> journey_slots, $state, $orderId);
+            $pilotCollection->setState($syncTable->findPilotIndex, $startIndexSlot, $syncTable-> journey_slots, $state, $orderId);
+            $technicianCollection->setState($syncTable->findTechnicianIndex, $startIndexSlot, 1, $state, $orderId);
+        }
+    }
+
 
 }
