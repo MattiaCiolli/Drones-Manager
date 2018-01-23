@@ -458,7 +458,6 @@ class ComposerStaticInitdcf9ba6f00388841f5251b4da7117fc7
         'App\\Utility\\QuantityStrategy' => __DIR__ . '/../..' . '/app/Utility/Strategies/QuantityStrategy.php',
         'App\\Utility\\ResourcesCollection' => __DIR__ . '/../..' . '/app/Utility/ResourcesCollection.php',
         'App\\Utility\\Scheduler' => __DIR__ . '/../..' . '/app/Utility/Scheduler.php',
-        'App\\Utility\\SchedulerSyncTable' => __DIR__ . '/../..' . '/app/Utility/SchedulerSyncTable.php',
         'App\\Utility\\SummerStrategy' => __DIR__ . '/../..' . '/app/Utility/Strategies/SummerStrategy.php',
         'App\\Utility\\TechniciansCollection' => __DIR__ . '/../..' . '/app/Utility/TechniciansCollection.php',
         'App\\Utility\\TransportPriceCalculator' => __DIR__ . '/../..' . '/app/Utility/TransportPriceCalculator.php',

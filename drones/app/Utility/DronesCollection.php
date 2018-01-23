@@ -25,10 +25,10 @@ class DronesCollection extends ResourcesCollection
         return $freeDronesList;
     }
 
-    public function setState($idResource, $startIndexSlot, $journeySlot, $state, $orderId)
+    public function setState($idResource, $startIndexSlot, $journeySlot, $state)
     {
         $resource = \App\Models\Drone::where('id',$idResource)->first();
         //dd($journeySlot);
-        $resource->setState($startIndexSlot, $journeySlot, $state, $orderId);
+        $resource->setState($startIndexSlot, $journeySlot, $state);
     }
 }

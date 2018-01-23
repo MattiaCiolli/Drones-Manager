@@ -33,7 +33,7 @@ class SchedulerController extends Controller
 
         $scheduler = new Scheduler();
         $scheduler->confirmedOrder($idOrder);
-        
+
         $carrier = $transportOrder->carrier;
 
 		$drones = collect([]);

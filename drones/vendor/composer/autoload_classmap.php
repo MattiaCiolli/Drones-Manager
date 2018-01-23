@@ -79,7 +79,6 @@ return array(
     'App\\Utility\\QuantityStrategy' => $baseDir . '/app/Utility/Strategies/QuantityStrategy.php',
     'App\\Utility\\ResourcesCollection' => $baseDir . '/app/Utility/ResourcesCollection.php',
     'App\\Utility\\Scheduler' => $baseDir . '/app/Utility/Scheduler.php',
-    'App\\Utility\\SchedulerSyncTable' => $baseDir . '/app/Utility/SchedulerSyncTable.php',
     'App\\Utility\\SummerStrategy' => $baseDir . '/app/Utility/Strategies/SummerStrategy.php',
     'App\\Utility\\TechniciansCollection' => $baseDir . '/app/Utility/TechniciansCollection.php',
     'App\\Utility\\TransportPriceCalculator' => $baseDir . '/app/Utility/TransportPriceCalculator.php',

@@ -28,7 +28,7 @@ class Diary extends Model
 
     }
 
-    public function setStateSlot($startIndexSlot, $journeySlot, $state, $orderId)
+    public function setStateSlot($startIndexSlot, $journeySlot, $state)
     {
         $slots = $this->slots;
         for ($i=$startIndexSlot; $i < $startIndexSlot + $journeySlot; $i++){
@@ -37,12 +37,10 @@ class Diary extends Model
                 if($s->index == $i){
                     if($s->state == "free") {
                         $s->state = $state;
-                        $s->order_id = $orderId;
                         $s->save();
                     }
                     if($s->state == "reserved") {
                         $s->state = $state;
-                        $s->order_id = $orderId;
                         $s->save();
                     }
                 }

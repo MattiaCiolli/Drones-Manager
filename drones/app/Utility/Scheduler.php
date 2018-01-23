@@ -84,9 +84,9 @@ class Scheduler
                             $state = 'reserved';
                             $startIndexSlot = $j - $journeySlots;
 
-                            $droneCollection->setState($idDrone, $startIndexSlot, $journeySlots, $state, $orderId);
-                            $pilotCollection->setState($idPilot, $startIndexSlot, $journeySlots, $state, $orderId);
-                            $technicianCollection->setState($idTechnician->id, $startIndexSlot, 1, $state, $orderId);
+                            $droneCollection->setState($idDrone, $startIndexSlot, $journeySlots, $state);
+                            $pilotCollection->setState($idPilot, $startIndexSlot, $journeySlots, $state);
+                            $technicianCollection->setState($idTechnician->id, $startIndexSlot, 1, $state);
 
                             //corrisponde allo slot finale, cioè l'orario di arrivo dell'ordine
                             $slotNumber = $j;
@@ -121,9 +121,9 @@ class Scheduler
         foreach ($carrier as $carri){
             $syncTable = $carri->syncTable;
             $startIndexSlot = ($syncTable->scanIndex)-($syncTable->journey_slots)+1;
-            $droneCollection->setState($syncTable->findDronIndex, $startIndexSlot, $syncTable-> journey_slots, $state, $orderId);
-            $pilotCollection->setState($syncTable->findPilotIndex, $startIndexSlot, $syncTable-> journey_slots, $state, $orderId);
-            $technicianCollection->setState($syncTable->findTechnicianIndex, $startIndexSlot, 1, $state, $orderId);
+            $droneCollection->setState($syncTable->findDronIndex, $startIndexSlot, $syncTable-> journey_slots, $state);
+            $pilotCollection->setState($syncTable->findPilotIndex, $startIndexSlot, $syncTable-> journey_slots, $state);
+            $technicianCollection->setState($syncTable->findTechnicianIndex, $startIndexSlot, 1, $state);
         }
     }
 
