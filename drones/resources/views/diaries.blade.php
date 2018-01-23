@@ -97,22 +97,22 @@
 			channel.bind("App\\Events\\ResourcesReserved", function(data) {
 				data.drones.forEach(function(drone){
 					for (var i = drone.slot; i < drone.slot + drone.consecutive; i++) {
-						var droneSearch = "#drone" + drone.droneId + "" + i;
-						$(droneSearch).css("background-color", "red");
+						var droneSearch = "#droneId" + drone.droneId + "" + i;
+                        $(droneSearch).addClass("danger");
 					}
 				});
 
 				data.pilots.forEach(function(pilot){
 					for (var i = pilot.slot; i < pilot.slot + pilot.consecutive; i++) {
-						var droneSearch = "#pilot" + pilot.pilotId + "" + i;
-						$(droneSearch).css("background-color", "red");
+						var pilotSearch = "#pilotId" + pilot.pilotId + "" + i;
+						$(pilotSearch).addClass("danger");
 					}
 				});
 
 				data.technicians.forEach(function(technician){
 					for (var i = technician.slot; i < technician.slot + technician.consecutive; i++) {
-						var droneSearch = "#technician" + technician.technicianId + "" + i;
-						$(droneSearch).css("background-color", "red");
+						var techSearch = "#technicianId" + technician.technicianId + "" + i;
+						$(techSearch).addClass("danger");
 					}
 				});
 
