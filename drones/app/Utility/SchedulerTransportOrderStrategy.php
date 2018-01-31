@@ -114,8 +114,6 @@ class SchedulerTransportOrderStrategy implements Scheduler
             }
         }
 
-
-
         return $timeDeliveryArray;
     }
 
@@ -129,9 +127,25 @@ class SchedulerTransportOrderStrategy implements Scheduler
         foreach ($carrier as $carri){
             $syncTable = $carri->syncTable;
             $startIndexSlot = ($syncTable->scanIndex)-($syncTable->journey_slots)+1;
-            $droneCollection->setState($syncTable->findDronIndex, $startIndexSlot+1, $syncTable-> journey_slots, $state);
-            $pilotCollection->setState($syncTable->findPilotIndex, $startIndexSlot+1, $syncTable-> journey_slots, $state);
+            $droneCollection->setState($syncTable->findDronIndex, $startIndexSlot+1, $syncTable->journey_slots, $state);
+            $pilotCollection->setState($syncTable->findPilotIndex, $startIndexSlot+1, $syncTable->journey_slots, $state);
             $technicianCollection->setState($syncTable->findTechnicianIndex, $startIndexSlot+1, 1, $state);
         }
     }
+
+	public function cancelOrder(){
+		$carrier = $this->transportOrder->carrier;
+        $droneCollection = new DronesCollection();
+        $pilotCollection = new PilotsCollection();
+        $technicianCollection = new TechniciansCollection();
+
+        $state = 'free';
+        foreach ($carrier as $carri){
+            $syncTable = $carri->syncTable;
+            $startIndexSlot = ($syncTable->scanIndex)-($syncTable->journey_slots)+1;
+            $droneCollection->setState($syncTable->findDronIndex, $startIndexSlot+1, $syncTable->journey_slots, $state);
+            $pilotCollection->setState($syncTable->findPilotIndex, $startIndexSlot+1, $syncTable->journey_slots, $state);
+            $technicianCollection->setState($syncTable->findTechnicianIndex, $startIndexSlot+1, 1, $state);
+        }
+	}
 }

@@ -55,4 +55,14 @@ class SchedulerController extends Controller
 
     }
 
+	public function cancelOrder(){
+		$idOrder = 1;  //????
+        $transportOrder = new TransportOrder();
+        $transportOrder = \App\Models\TransportOrder::find($idOrder);
+
+        $scheduler = new SchedulerContext($transportOrder);
+        $scheduler->cancelOrder();
+
+		return view('newOrder');
+	}
 }

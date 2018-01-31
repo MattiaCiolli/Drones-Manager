@@ -77,7 +77,7 @@
             <div class="row ">
                 <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-4 col-xs-offset-1 botton-order">
                     <a href="{{ url("/confirmation") }}"><button class="btn btn-success btn-lg btn-confirm ">Conferma</button></a>
-                    <a href="{{ url("/newOrder") }}"><button class="btn btn-danger btn-lg btn-confirm">Annulla</button></a>
+                    <a href="{{ url("/cancellation") }}"><button class="btn btn-danger btn-lg btn-confirm">Annulla</button></a>
                 </div>
             </div>
 

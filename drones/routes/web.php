@@ -38,8 +38,9 @@ Route::get('/orderSummary', 'TransportOrderController@orderSummary');
 
 Route::get('/confirm', 'SchedulerController@getTimeDelivery');
 
-
 Route::get('/confirmation', 'SchedulerController@confirmOrder');
+Route::get('/cancellation', 'SchedulerController@cancelOrder');
+
 
 /*
 Route::get('/confirmation', function () {

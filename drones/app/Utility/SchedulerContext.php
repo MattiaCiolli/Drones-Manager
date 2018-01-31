@@ -24,4 +24,9 @@ class SchedulerContext
 	{
 		return $this->strategy->confirmedOrder();
 	}
+
+	public function cancelOrder()
+	{
+		return $this->strategy->cancelOrder();
+	}
 }

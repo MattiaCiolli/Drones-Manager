@@ -12,4 +12,5 @@ interface Scheduler
 {
 	public function getTimeDelivery($journeySlots);
 	public function confirmedOrder();
+	public function cancelOrder();
 }
